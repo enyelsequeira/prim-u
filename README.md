@@ -2,16 +2,14 @@
 
 ## Introduction
 
-This repo is a simple starting template for next js applications using typescript/eslint/prettier/jest and tailwindcss
+This repo is a simple starting template Prim-u
 
 ## Codebase
 
 ### Technologies
 
 - **NextJs**: Front-end framework
-- **Typescript**: Javascript superset
-- **Tailwind**: CSS framework
-- **Jest**: Testing framework
+- **StyledComponents**: CSS framework
 - **Eslint**: Linter
 - **Prettier** Code formatter
 
@@ -20,7 +18,6 @@ This repo is a simple starting template for next js applications using typescrip
 ```sh
 template/
 ├── components     # Reusabble parts
-├── hooks          # React custom hooks
 ├── layouts        # View templates
 ├── styles         # General app styles
 └── pages          # Application views
