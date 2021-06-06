@@ -25,6 +25,7 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         return (
           <div key={card.fields.title}>
             <p>{card.fields.title}</p>
+            <img src={card.fields.image.fields.file.url} />
           </div>
         );
       })}
