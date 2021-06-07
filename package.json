@@ -8,6 +8,7 @@
     "lint": "eslint src --ext js,ts,jsx,tsx"
   },
   "dependencies": {
+    "contentful": "^8.3.7",
     "next": "10.1.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
