@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import Head from "next/head";
 import Accordion from "../components/accordion/accordion";
+import Services from "../components/services/services"
 import Example from "../components/example/example";
 import BaseLayout from "../layouts/base";
 
@@ -22,6 +23,7 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Example />
+      <Services data={services}/>
       <Accordion data={faqQuestions} />
       {/* {services.map((card) => {
         return (
