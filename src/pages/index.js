@@ -1,19 +1,20 @@
 import { createClient } from "contentful";
 import Head from "next/head";
+import Accordion from "../components/accordion/accordion";
 import Example from "../components/example/example";
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
-  console.log(data);
+  // console.log(data);
 
-  console.log("+++++++++");
-  console.log(services);
-  console.log("=========");
-  console.log(faqQuestions);
-  console.log("=====pquestions=====");
-  console.log(partnersQuestions);
-  console.log("=====big cards======");
-  console.log(bigCards);
+  // console.log("+++++++++");
+  // console.log(services);
+  // console.log("==== faq questions=====");
+  // console.log(faqQuestions);
+  // console.log("=====pquestions=====");
+  // console.log(partnersQuestions);
+  // console.log("=====big cards======");
+  // console.log(bigCards);
   return (
     <BaseLayout>
       <Head>
@@ -21,14 +22,15 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Example />
-      {services.map((card) => {
+      <Accordion data={faqQuestions} />
+      {/* {services.map((card) => {
         return (
           <div key={card.fields.title}>
             <p>{card.fields.title}</p>
-            <img src={card.fields.image.fields.file.url} />
+            <Image src={`http:${card.fields.image.fields.file.url}`} width="500" height="500" />
           </div>
         );
-      })}
+      })} */}
     </BaseLayout>
   );
 }
