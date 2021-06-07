@@ -29,12 +29,14 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         span="questions"
       />
       <Accordion data={partnersQuestions} subtitle="For Partners" />
+
       {/* {services.map((card) => {
         return (
           <div key={card.fields.title}>
             <p>{card.fields.title}</p>
             <Image src={`http:${card.fields.image.fields.file.url}`} width="500" height="500" />
-          </div>
+          </div>\
+
         );
       })} */}
     </BaseLayout>
