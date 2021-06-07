@@ -14,7 +14,8 @@ function theme() {
       black: "#000000;",
       purple: "#683D83",
       gray: "#F2F2F2",
-      background: "#E5E5E5;",
+      background: "#000;",
+      // background: "#E5E5E5;",
     },
     breakpoints: {
       // all the breakpoints we need, we can change theme if we need

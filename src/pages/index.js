@@ -2,6 +2,7 @@ import { createClient } from "contentful";
 import Head from "next/head";
 import Accordion from "../components/accordion/accordion";
 import Example from "../components/example/example";
+import Nav from "../components/nav/nav.js";
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
@@ -21,16 +22,8 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Example />
-      <Accordion data={faqQuestions} />
-      {/* {services.map((card) => {
-        return (
-          <div key={card.fields.title}>
-            <p>{card.fields.title}</p>
-            <Image src={`http:${card.fields.image.fields.file.url}`} width="500" height="500" />
-          </div>
-        );
-      })} */}
+      {/* <Example /> */}
+      <Nav />
     </BaseLayout>
   );
 }
