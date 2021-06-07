@@ -115,7 +115,7 @@ export const NavLinks = styled.ul`
     }
 `
 
-export const NavLink = styled.li`
+export const NavLink = styled.a`
     font-family: ${props => props.theme.fonts.condensed};
     font-style: normal;
     font-weight: bold;

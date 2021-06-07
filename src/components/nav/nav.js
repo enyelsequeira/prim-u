@@ -12,9 +12,9 @@ function NavBar() {
             </LogoContainer>
             <NavIcon onClick={() => setIsOpen(!isOpen)} />
             <NavLinks isOpen={isOpen}>
-                <NavLink>MAKE A BOOKING</NavLink>
-                <NavLink>WORK WITH US</NavLink>
-                <NavLink>FAQ</NavLink>
+                <NavLink href='#'>MAKE A BOOKING</NavLink>
+                <NavLink href='#'>WORK WITH US</NavLink>
+                <NavLink href='#'>FAQ</NavLink>
             </NavLinks>
         </Nav>
     )
