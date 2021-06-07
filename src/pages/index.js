@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import Head from "next/head";
+import Image from "next/image";
 import Example from "../components/example/example";
 import BaseLayout from "../layouts/base";
 
@@ -25,7 +26,7 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         return (
           <div key={card.fields.title}>
             <p>{card.fields.title}</p>
-            <img src={card.fields.image.fields.file.url} />
+            <Image src={`http:${card.fields.image.fields.file.url}`} width="500" height="500" />
           </div>
         );
       })}

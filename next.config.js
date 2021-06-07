@@ -3,6 +3,6 @@ module.exports = {
     webpack5: true,
   },
   images: {
-    domains: ["ctfassets.net"],
+    domains: ["images.ctfassets.net"],
   },
 };
