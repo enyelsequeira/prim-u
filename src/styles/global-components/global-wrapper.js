@@ -8,10 +8,14 @@ export const GlobalWrapper = styled.main`
 `;
 
 export const GlobalSection = styled.section`
-  padding: 80px 60px;
+  padding: 0 60px;
   max-width: 1320px;
-  border: 2px solid red;
   margin: auto;
+  ${(props) =>
+    props.pt &&
+    css`
+      padding-top: ${props.pt};
+    `};
 `;
 
 /**
@@ -76,15 +80,40 @@ export const SpanTitle = styled.span`
 export const GlobalSubtitle = styled.p`
   font-family: ${({ theme, condensed }) =>
     condensed ? theme.fonts.condensed : theme.fonts.roboto};
-
   font-style: normal;
   font-weight: bold;
   ${(props) =>
     props.size &&
     css`
-      font-size: ${props.p};
+      font-size: ${props.size};
     `};
   line-height: 37px;
   letter-spacing: -0.01em;
-  color: #000000;
+  color: ${({ theme, white }) => (white ? theme.colors.white : theme.colors.black)};
+  ${(props) =>
+    props.margin &&
+    css`
+      margin: ${props.margin};
+    `};
+  ${(props) =>
+    props.border &&
+    css`
+      border-bottom: ${props.border};
+    `};
+  width: fit-content;
+  ${(props) =>
+    props.padding &&
+    css`
+      padding-bottom: ${props.padding};
+    `};
+  ${(props) =>
+    props.maxW &&
+    css`
+      max-width: ${props.maxW};
+    `};
+  ${(props) =>
+    props.align &&
+    css`
+      text-align: ${props.align};
+    `};
 `;
