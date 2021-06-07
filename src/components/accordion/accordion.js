@@ -6,7 +6,6 @@ import {
 } from "../../styles/global-components/global-wrapper";
 
 const Accordion = ({ data }) => {
-  console.log(data);
   return (
     <GlobalSection>
       <GlobalTitle>

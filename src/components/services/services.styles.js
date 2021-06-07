@@ -10,22 +10,36 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-    /* width: 400px;
-    height: 300px; */
+    width: 400px;
+    height: 400px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-content: center;
     position: relative;
     overflow: hidden;
+    
+    &:after {
+    content: "";
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover {
+        cursor: pointer;
+        
+    }
 `;
 
 export const Image = styled.img`
     src: ${props => props.src};
-    width: 400px;
-    height: 400px;
 `;
-
 
 export const CardTitle = styled.h2`
     font-family: ${({ theme }) => theme.fonts.condensed};
@@ -43,4 +57,8 @@ export const CardTitle = styled.h2`
     color: #fff;
     position: absolute;
     z-index: 2;
+
+    &:hover {
+        cursor: pointer;
+    }
 `;

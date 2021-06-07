@@ -1,6 +1,5 @@
 import {
     GlobalSection,
-    GlobalSubtitle,
     GlobalTitle,
     SpanTitle,
 } from "../../styles/global-components/global-wrapper";
@@ -21,8 +20,9 @@ const Services = ({data}) => {
             <Container>
                 
                 {data.map((card) => {
-                    console.log(card)
                     return (
+
+                        //Make Up is written different than in the Figma file.
                         <Card key={card.fields.title}>
                             
                             <Image src={`http:${card.fields.image.fields.file.url}`} />

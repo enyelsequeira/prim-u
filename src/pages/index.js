@@ -2,6 +2,8 @@ import { createClient } from "contentful";
 import Head from "next/head";
 import Accordion from "../components/accordion/accordion";
 import Services from "../components/services/services"
+import Events from "../components/events/events";
+import Coop from "../components/coop/coop";
 import Example from "../components/example/example";
 import BaseLayout from "../layouts/base";
 
@@ -24,6 +26,8 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
       </Head>
       <Example />
       <Services data={services}/>
+      <Events data={bigCards}/>
+      <Coop data={bigCards}/>
       <Accordion data={faqQuestions} />
       {/* {services.map((card) => {
         return (
