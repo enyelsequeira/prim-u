@@ -86,6 +86,8 @@ export const GlobalSubtitle = styled.p`
     condensed ? theme.fonts.condensed : theme.fonts.roboto};
   font-style: normal;
   font-weight: bold;
+  ${fontSize}
+
   ${(props) =>
     props.size &&
     css`
