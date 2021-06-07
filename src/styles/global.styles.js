@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
     text-size-adjust: 100%;
     font-size: 62.5%;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
   }
 
 /**
