@@ -33,8 +33,7 @@ export const LogoContainer = styled.div`
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='32' height='51' viewBox='0 0 32 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C28 37 32 22.5 32 16.5C31.5 5.5 23 0 16 0L16 9C19.866 9 23 12.134 23 16C23 19.866 19.866 23 16 23L16 51Z' fill='%23A791B8'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C4 37 0 22.5 0 16.5C0.5 5.5 9 0 16 0L16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23L16 51Z' fill='%23683D83'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM16 23C19.866 23 23 19.866 23 16C23 12.134 19.866 9 16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23Z' fill='%23683D83'/%3E%3C/svg%3E");
         }
     }
-    @media  screen and (max-width: 640px) {
-        column-gap: 9px;
+    @media  screen and (max-width: 768px) {
         :hover {
             p {
                 color: ${props => props.theme.colors.white};
@@ -43,6 +42,9 @@ export const LogoContainer = styled.div`
                 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='32' height='51' viewBox='0 0 32 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C28 37 32 22.5 32 16.5C31.5 5.5 23 0 16 0L16 9C19.866 9 23 12.134 23 16C23 19.866 19.866 23 16 23L16 51Z' fill='white' fill-opacity='0.6'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C4 37 0 22.5 0 16.5C0.5 5.5 9 0 16 0L16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23L16 51Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM16 23C19.866 23 23 19.866 23 16C23 12.134 19.866 9 16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23Z' fill='white'/%3E%3C/svg%3E");
             }
         }
+    }
+    @media  screen and (max-width: 640px) {
+        column-gap: 9px;
     }
 `
 
@@ -100,8 +102,13 @@ export const NavLinks = styled.ul`
         width: 100%;
         flex-direction: column;
         padding: 30px 0 0 45px;
+        padding-top: ${props => props.isOpen ? '30px' : 0};
+        opacity: ${props => props.isOpen ? 1 : 0};
+        visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
+        max-height: ${props => props.isOpen ? '100vh' : 0};
         row-gap: 30px;
         align-items: flex-start;
+        transition: all .3s;
     }
     @media  screen and (max-width: 640px) {
         padding-left: 30px;
@@ -122,10 +129,12 @@ export const NavLink = styled.li`
     &:hover {
         color: ${props => props.theme.colors.purple};
     }
-    @media  screen and (max-width: 640px) {
-        font-size: 16px;
+    @media  screen and (max-width: 768px) {
         :hover {
             color: ${props => props.theme.colors.white};
         }
+    }
+    @media  screen and (max-width: 640px) {
+        font-size: 16px;
     }
 `
