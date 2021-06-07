@@ -2,7 +2,7 @@ import { createClient } from "contentful";
 import Head from "next/head";
 import Accordion from "../components/accordion/accordion";
 import Example from "../components/example/example";
-import Nav from "../components/Nav/Nav";
+import Nav from "../components/nav/nav.js";
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {

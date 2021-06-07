@@ -1,4 +1,4 @@
-import { Nav, LogoContainer, LogoIcon, LogoTitle, NavLinks, NavLink, NavIcon } from './Nav.styles.js'
+import { Nav, LogoContainer, LogoIcon, LogoTitle, NavLinks, NavLink, NavIcon } from './nav.styles.js'
 
 function NavBar() {
     return (
