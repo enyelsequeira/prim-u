@@ -22,7 +22,13 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Example />
-      <Accordion data={faqQuestions} />
+      <Accordion
+        data={faqQuestions}
+        subtitle="For Customers"
+        title="Frequently asked"
+        span="questions"
+      />
+      <Accordion data={partnersQuestions} subtitle="For Partners" />
       {/* {services.map((card) => {
         return (
           <div key={card.fields.title}>
