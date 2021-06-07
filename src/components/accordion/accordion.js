@@ -34,7 +34,7 @@ const Accordion = ({ data, subtitle, title, span }) => {
   return (
     <GlobalSection>
       {title && (
-        <GlobalTitle>
+        <GlobalTitle fontSize={[16, 20, 50]}>
           {title}
           {""} <SpanTitle>{span}</SpanTitle>
         </GlobalTitle>
@@ -53,7 +53,7 @@ const Accordion = ({ data, subtitle, title, span }) => {
           .map((question, index) => {
             const { fields } = question;
             return (
-              <FaqQuestionsWrapper key={fields.faqTitle}>
+              <FaqQuestionsWrapper key={index}>
                 <FaqQuestion>
                   <GlobalSubtitle condensed maxW="586px" size="32px" align="left">
                     {fields.faqTitle || fields.partnersQuestions}

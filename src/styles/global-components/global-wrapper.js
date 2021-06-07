@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { fontSize } from "styled-system";
 
 export const GlobalWrapper = styled.main`
   max-width: 1440px;
@@ -11,6 +12,7 @@ export const GlobalSection = styled.section`
   padding: 0 60px;
   max-width: 1320px;
   margin: auto;
+
   ${(props) =>
     props.pt &&
     css`
@@ -33,6 +35,8 @@ export const GlobalTitle = styled.p`
   line-height: 59px;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  ${fontSize}
+
   ${(props) =>
     props.color &&
     css`
