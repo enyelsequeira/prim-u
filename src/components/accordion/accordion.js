@@ -58,7 +58,7 @@ const Accordion = ({ data, subtitle, title, span }) => {
                   lineHeight={["sub", "smaller"]}
                   condensed
                   maxW="586px"
-                  width={[295, 256, 364, 586]}
+                  width={[295, 256, 364, 364, 586]}
                   fontSize={[24, 28, 32]}
                   align="left">
                   {fields.faqTitle || fields.partnersQuestions}
