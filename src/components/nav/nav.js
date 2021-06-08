@@ -5,13 +5,13 @@ function NavBar() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <Nav>
+        <Nav isOpen={isOpen}>
             <LogoContainer>
                 <LogoIcon />
                 <LogoTitle>PRIM–U</LogoTitle>
             </LogoContainer>
             <NavIcon onClick={() => setIsOpen(!isOpen)} />
-            <NavLinks isOpen={isOpen}>
+            <NavLinks>
                 <NavLink href='#'>MAKE A BOOKING</NavLink>
                 <NavLink href='#'>WORK WITH US</NavLink>
                 <NavLink href='#'>FAQ</NavLink>

@@ -1,6 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Nav = styled.nav`
+    --padding: ${props => props.isOpen ? '45px' : 0};
+    --opacity: ${props => props.isOpen ? 1 : 0};
+    --visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
+    --maxheight: ${props => props.isOpen ? '100vh' : 0};
     position: absolute;
     top: 0;
     left: 50%;
@@ -16,6 +20,14 @@ export const Nav = styled.nav`
     }
     @media  screen and (max-width: 640px) {
         padding: 20px 16px 0;
+    }
+    button {
+        ${props => props.isOpen ?
+            css`
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.12109' width='30' height='3' transform='rotate(45 2.12109 0)' fill='white'/%3E%3Crect y='21.2134' width='30' height='3' transform='rotate(-45 0 21.2134)' fill='white'/%3E%3C/svg%3E")` : 
+            css`
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='30' height='14' viewBox='0 0 30 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='30' height='3' fill='white'/%3E%3Crect y='11' width='30' height='3' fill='white'/%3E%3C/svg%3E")`
+        };
     }
 `
 
@@ -101,17 +113,12 @@ export const NavLinks = styled.ul`
     @media screen and (max-width: 768px) {
         width: 100%;
         flex-direction: column;
-        padding: 30px 0 0 45px;
-        padding-top: ${props => props.isOpen ? '30px' : 0};
-        opacity: ${props => props.isOpen ? 1 : 0};
-        visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
-        max-height: ${props => props.isOpen ? '100vh' : 0};
-        row-gap: 30px;
-        align-items: flex-start;
-        transition: all .3s;
-    }
-    @media  screen and (max-width: 640px) {
-        padding-left: 30px;
+        padding-top: var(--padding);
+        opacity: var(--opacity);
+        visibility: var(--visibility);
+        max-height: var(--maxheight);
+        row-gap: 20px;
+        transition: all .3s ease-out;
     }
 `
 
@@ -133,8 +140,5 @@ export const NavLink = styled.a`
         :hover {
             color: ${props => props.theme.colors.white};
         }
-    }
-    @media  screen and (max-width: 640px) {
-        font-size: 16px;
     }
 `
