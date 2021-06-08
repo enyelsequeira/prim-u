@@ -93,7 +93,6 @@ export const LogoTitle = styled.p`
 export const NavIcon = styled.button`
     all: unset;
     width: 30px;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='30' height='14' viewBox='0 0 30 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='30' height='3' fill='white'/%3E%3Crect y='11' width='30' height='3' fill='white'/%3E%3C/svg%3E");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
