@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { fontSize } from "styled-system";
+import { fontSize, lineHeight, space, width } from "styled-system";
 
 export const GlobalWrapper = styled.main`
   max-width: 1440px;
@@ -9,10 +9,10 @@ export const GlobalWrapper = styled.main`
 `;
 
 export const GlobalSection = styled.section`
-  padding: 0 60px;
+  /* padding: 0 60px; */
   max-width: 1320px;
   margin: auto;
-
+  ${space}
   ${(props) =>
     props.pt &&
     css`
@@ -31,11 +31,13 @@ export const GlobalTitle = styled.p`
   font-family: ${({ theme }) => theme.fonts.condensed};
   font-style: normal;
   font-weight: bold;
-  font-size: 50px;
-  line-height: 59px;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   ${fontSize}
+  ${space}
+  ${lineHeight}
+  ${width}
+
 
   ${(props) =>
     props.color &&
@@ -86,14 +88,17 @@ export const GlobalSubtitle = styled.p`
     condensed ? theme.fonts.condensed : theme.fonts.roboto};
   font-style: normal;
   font-weight: bold;
-  ${fontSize}
+  ${fontSize};
+  ${space};
+  ${lineHeight};
+  ${width}
 
   ${(props) =>
     props.size &&
     css`
       font-size: ${props.size};
     `};
-  line-height: 37px;
+  /* line-height: 37px; */
   letter-spacing: -0.01em;
   color: ${({ theme, white }) => (white ? theme.colors.white : theme.colors.black)};
   ${(props) =>
@@ -106,7 +111,7 @@ export const GlobalSubtitle = styled.p`
     css`
       border-bottom: ${props.border};
     `};
-  width: fit-content;
+  width: ${({ width }) => width || "fit-content"};
   ${(props) =>
     props.padding &&
     css`

@@ -1,9 +1,18 @@
 import styled from "styled-components";
+import { fontSize, lineHeight, space } from "styled-system";
 
 export const FaqContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
+  @media only screen and (max-width: 768px) {
+    gap: 15px;
+  }
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+  }
 `;
 
 export const FaqQuestionsWrapper = styled.div`
@@ -35,36 +44,50 @@ export const Answer = styled.p`
   font-family: ${({ theme }) => theme.fonts.condensed};
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 28px;
   letter-spacing: -0.01em;
   color: ${({ theme }) => theme.colors.black};
-  padding: 30px 0 60px 0;
+  ${lineHeight};
+  ${space};
+  ${fontSize};
 `;
 
 export const ShowMore = styled.button`
-  padding: 11px 118px;
   display: flex;
   align-self: center;
   width: fit-content;
   background: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.purple};
-  box-sizing: border-box;
   border-radius: 10px;
-  font-family: Roboto Condensed;
+  font-family: ${({ theme }) => theme.fonts.condensed};
   font-style: normal;
   font-weight: bold;
-  font-size: 32px;
-  line-height: 37px;
   text-align: center;
   letter-spacing: -0.01em;
   color: ${({ theme }) => theme.colors.purple};
   text-transform: uppercase;
-  margin: 100px auto;
   transition: 0.9s;
+  ${lineHeight};
+  ${space};
+  ${fontSize};
   &:hover {
     cursor: pointer;
     background-color: ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.white};
+  }
+  @media only screen and (max-width: 640px) {
+    padding: 16px 105px;
+    margin-top: 60px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 16px 105px;
+    margin-top: 60px;
+  }
+  @media only screen and (max-width: 1024px) {
+    padding: 11px 57px;
+    margin-top: 80px;
+  }
+  @media only screen and (max-width: 1440px) {
+    padding: 11px 118px;
+    margin-top: 100px;
   }
 `;
