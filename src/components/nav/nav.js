@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Nav, NavContainer, LogoContainer, LogoIcon, LogoTitle, NavLinks, NavLink, NavIcon } from './nav.styles.js'
+import Link from 'next/link'
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -7,10 +8,12 @@ function NavBar() {
     return (
         <Nav isOpen={isOpen}>
             <NavContainer>
-                <LogoContainer href='#'>
-                    <LogoIcon />
-                    <LogoTitle>PRIM–U</LogoTitle>
-                </LogoContainer>
+                <Link href='/'>
+                    <LogoContainer href='/'>
+                        <LogoIcon />
+                        <LogoTitle>PRIM–U</LogoTitle>
+                    </LogoContainer>
+                </Link>
                 <NavIcon onClick={() => setIsOpen(!isOpen)} />
                 <NavLinks>
                     <NavLink href='#'>MAKE A BOOKING</NavLink>
