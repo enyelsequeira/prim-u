@@ -36,6 +36,7 @@
     "react/jsx-props-no-spreading": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
+    "no-sparse-arrays": "off",
 
     "react/jsx-filename-extension": [
       1,

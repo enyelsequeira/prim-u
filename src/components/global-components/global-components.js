@@ -14,6 +14,9 @@ export const GlobalSection = styled.section`
 
   margin: auto;
   ${space}
+  ${fontSize}
+  ${lineHeight}
+  ${width}
   ${(props) =>
     props.pt &&
     css`
@@ -39,7 +42,11 @@ export const GlobalTitle = styled.p`
   ${lineHeight}
   ${width}
 
-
+ ${(props) =>
+    props.textAlign &&
+    css`
+      text-align: ${props.textAlign};
+    `};
   ${(props) =>
     props.color &&
     css`
