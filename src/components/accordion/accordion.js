@@ -6,6 +6,10 @@ import {
   GlobalTitle,
   SpanTitle,
 } from "../../styles/global-components/global-wrapper";
+
+
+const Accordion = ({ data }) => {
+
 import {
   Answer,
   ButtonWrapper,
@@ -30,6 +34,7 @@ const Accordion = ({ data, subtitle, title, span }) => {
   const onLoadMoreClick = () => {
     setIsVisible((v) => v + 1);
   };
+
 
   return (
     <GlobalSection px={[20, 20, 40, 40, 61]} pt={[20, 60, 80]}>

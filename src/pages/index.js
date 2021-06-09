@@ -1,28 +1,31 @@
 import { createClient } from "contentful";
 import Head from "next/head";
 import Accordion from "../components/accordion/accordion";
+
+import Services from "../components/services/services"
+import Events from "../components/events/events";
+import Coop from "../components/coop/coop";
+import Example from "../components/example/example";
+
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
-  // console.log(data);
 
-  // console.log("+++++++++");
-  // console.log(services);
-  // console.log("==== faq questions=====");
-  // console.log(faqQuestions);
-  // console.log("=====pquestions=====");
-  // console.log(partnersQuestions);
-  // console.log("=====big cards======");
-  // console.log(bigCards);
   return (
     <BaseLayout>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Example />
+      <Services data={services}/>
+      <Events data={bigCards}/>
+      <Coop data={bigCards}/>
+      <Accordion data={faqQuestions} />
+
       {/* <Nav /> */}
 
-      {/* <Example /> */}
       <Accordion
         data={faqQuestions}
         subtitle="For Customers"
@@ -30,6 +33,7 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         span="questions"
       />
       <Accordion data={partnersQuestions} subtitle="For Partners" />
+
     </BaseLayout>
   );
 }

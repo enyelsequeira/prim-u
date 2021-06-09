@@ -9,8 +9,13 @@ export const GlobalWrapper = styled.main`
 `;
 
 export const GlobalSection = styled.section`
-  /* padding: 0 60px; */
+
+  /* padding: 80px 60px; */
   max-width: 1320px;
+  border: 1px solid red;
+
+  max-width: 1320px;
+
   margin: auto;
   ${space}
   ${(props) =>
