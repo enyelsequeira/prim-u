@@ -1,28 +1,19 @@
+/* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
 import Accordion from "../components/accordion/accordion";
+import NavBar from "../components/nav/nav";
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
-  // console.log(data);
-
-  // console.log("+++++++++");
-  // console.log(services);
-  // console.log("==== faq questions=====");
-  // console.log(faqQuestions);
-  // console.log("=====pquestions=====");
-  // console.log(partnersQuestions);
-  // console.log("=====big cards======");
-  // console.log(bigCards);
   return (
     <BaseLayout>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Nav /> */}
+      <NavBar />
 
-      {/* <Example /> */}
       <Accordion
         data={faqQuestions}
         subtitle="For Customers"

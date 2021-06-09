@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import styled, { css } from "styled-components";
 import { fontSize, lineHeight, space, width } from "styled-system";
 
