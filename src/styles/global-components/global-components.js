@@ -10,8 +10,8 @@ export const GlobalWrapper = styled.main`
 `;
 
 export const GlobalSection = styled.section`
-  /* padding: 0 60px; */
   max-width: 1320px;
+
   margin: auto;
   ${space}
   ${(props) =>
@@ -89,10 +89,11 @@ export const GlobalSubtitle = styled.p`
     condensed ? theme.fonts.condensed : theme.fonts.roboto};
   font-style: normal;
   font-weight: bold;
+  letter-spacing: -0.01em;
   ${fontSize};
   ${space};
   ${lineHeight};
-  ${width}
+  ${width}/* in case we need to pass different props */;
 
   ${(props) =>
     props.size &&
@@ -100,7 +101,6 @@ export const GlobalSubtitle = styled.p`
       font-size: ${props.size};
     `};
   /* line-height: 37px; */
-  letter-spacing: -0.01em;
   color: ${({ theme, white }) => (white ? theme.colors.white : theme.colors.black)};
   ${(props) =>
     props.margin &&

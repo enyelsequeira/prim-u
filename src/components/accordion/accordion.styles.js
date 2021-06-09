@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSize, lineHeight, space } from "styled-system";
+import { fontSize, lineHeight, space, width } from "styled-system";
 
 export const FaqContainer = styled.div`
   display: grid;
@@ -21,6 +21,7 @@ export const FaqContainer = styled.div`
 export const FaqQuestionsWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  ${width}
 `;
 
 export const FaqQuestion = styled.div`
