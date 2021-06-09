@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { GlobalSubtitle } from "../../styles/global-components/global-wrapper";
+
 import { fontSize, lineHeight, space } from "styled-system";
 
 export const Container = styled.div`
@@ -22,7 +24,7 @@ export const Card = styled.div`
     justify-content: center;
     align-content: center;
     position: relative;
-    
+    overflow: hidden;
     
     &:after {
     content: "";
@@ -35,8 +37,6 @@ export const Card = styled.div`
     right: 0;
     background: rgba(0, 0, 0, 0.5);
     }
-
-    
 `;
 
 
@@ -44,18 +44,23 @@ export const Image = styled.img`
     src: ${props => props.src};
 `;
 
-export const Title = styled.h2`
+export const Title = styled(GlobalSubtitle)`
+    align-self: center;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
     position: absolute;
     left: 60px;
     top: 40px;
     z-index: 10;
-    color: ${({ theme }) => theme.colors.white};
-    font-family: ${({ theme }) => theme.fonts.condensed};
-    font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
-    line-height: 59px;
-    text-transform: uppercase;
+
+    ${lineHeight};
+    ${space};
+    ${fontSize};
+
+    @media only screen and (max-width: 1024px) {
+        left: 40px;
+    }
 `;
 
 export const Text = styled.p`
@@ -63,13 +68,19 @@ export const Text = styled.p`
     font-family: ${({ theme }) => theme.fonts.roboto};
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
     width: 584px;
     position: absolute;
     z-index: 10;
     left: 60px;
     bottom: 40px;
+    ${lineHeight};
+    ${space};
+    ${fontSize};
+
+    @media only screen and (max-width: 1024px) {
+        left: 40px;
+        bottom: 130px;
+    }
 `;
 
 export const Button = styled.button`
@@ -87,8 +98,6 @@ export const Button = styled.button`
     font-family: ${({ theme }) => theme.fonts.condensed};
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
     text-align: center;
     letter-spacing: -0.01em;
     color: ${({ theme }) => theme.colors.purple};
@@ -96,10 +105,19 @@ export const Button = styled.button`
 
     background: #FFFFFF;
 
+    ${lineHeight};
+    ${space};
+    ${fontSize};
+
     &:hover {
         cursor: pointer;
         background: ${({ theme }) => theme.colors.purple};
         color: ${({ theme }) => theme.colors.white};
+    }
+
+    @media only screen and (max-width: 1024px) {
+        left: 40px;
+        bottom: 40px;
     }
 
 `;

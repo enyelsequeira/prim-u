@@ -2,19 +2,20 @@ import styled from 'styled-components';
 import { fontSize, lineHeight, space } from "styled-system";
 
 export const Container = styled.div`
-max-width: 100%;
+    max-width: 100%;
     margin: 60px 0 100px 0;
-    width: 100%;
     display: grid;
     grid-gap: 60px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
 
 
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 768px) {
+        max-width: 100vw;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
     }
+
 `;
 
 export const CardContainer = styled.div`
@@ -44,6 +45,10 @@ export const Card = styled.div`
         width: 446px;
         height: 326px;   
     }
+
+    @media only screen and (max-width: 768px) {
+        margin: auto;
+    }
 `;
     
 
@@ -63,7 +68,9 @@ export const Title = styled.h2`
     font-weight: bold;
     font-size: 50px;
     line-height: 59px;
-    
+    ${lineHeight};
+    ${space};
+    ${fontSize};
 `;
 
 export const Button = styled.button`
@@ -94,6 +101,9 @@ export const Button = styled.button`
         color: ${({ theme }) => theme.colors.white};
     }
 
+    @media only screen and (max-width: 1024px) {
+        bottom: 41px; 
+    }
 `;
 
 export const Text = styled.p`
@@ -103,9 +113,14 @@ export const Text = styled.p`
     font-weight: normal;
     font-size: 20px;
     line-height: 28px;
-    width: 584px;
+    max-width: 584px;
     margin-top: 40px;
+    @media only screen and (max-width: 768px) {
+        margin: auto;
+        width: 446px;
+    }
 `;
+
 
 
 

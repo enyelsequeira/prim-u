@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { GlobalSubtitle } from "../../styles/global-components/global-wrapper";
+import { fontSize, lineHeight, space } from "styled-system";
 
 export const Container = styled.div`
     display: grid;
@@ -8,15 +10,15 @@ export const Container = styled.div`
     background-color: white;
     margin: 60px 0 100px 0;
     
-
-    
     @media only screen and (max-width: 768px) {
     gap: 40px;
     }
 
-    @media only screen and (max-width: 680px) {
+    @media only screen and (max-width: 774px) {
+        grid-gap: 10.5px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        margin: 60px auto 100px auto;
     }
 `;
 
@@ -47,6 +49,10 @@ export const Card = styled.div`
     max-width: 286px;
     max-height: 286px;
     }
+
+    @media only screen and (max-width: 774px) {
+    max-width: 100%;
+    }
 `;
 
 export const Image = styled.img`
@@ -56,26 +62,32 @@ export const Image = styled.img`
     left: 0;
     bottom: 0;
     right: 0;
+    display: block;
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+
+    @media only screen and (max-width: 1280px) {
+        max-width: 288px;
+        max-height: 288px;
+        width: auto;
+        height: auto;
+    }
 `;
 
-export const CardTitle = styled.h2`
-    font-family: ${({ theme }) => theme.fonts.condensed};
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 45px;
-
+export const CardTitle = styled(GlobalSubtitle)`
     align-self: center;
     text-align: center;
-    letter-spacing: -0.01em;
     text-transform: uppercase;
     display: flex;
-
-    color: #fff;
     position: absolute;
     z-index: 2;
-
     &:hover {
-        cursor: pointer;
+    cursor: pointer;
     }
+
+    ${lineHeight};
+    ${space};
+    ${fontSize};
 `;

@@ -11,7 +11,7 @@ const Coop = ({ data }) => {
     const bigCards = data.slice(0, 2);
     console.log(bigCards);
     return (
-        <GlobalSection px={[20, 20, 40, 40, 61]} pt={[20, 60, 80]}>
+        <GlobalSection px={[20, 20, 40, 40, 0]} pt={[20, 60, 80]}>
             <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
                 For those who provide <SpanTitle> beauty services </SpanTitle>
             </GlobalTitle>
