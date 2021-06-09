@@ -3,7 +3,7 @@ import Head from "next/head";
 import Accordion from "../components/accordion/accordion";
 import Services from "../components/services/services"
 import Events from "../components/events/events";
-import Coop from "../components/coop/coop";
+import Coop from "../components/contact/contact";
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
@@ -19,22 +19,22 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
   // console.log(bigCards);
   return (
     <BaseLayout>
-      <Head>
+      {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+      */}
       <Services data={services}/>
-      <Events data={bigCards}/>
+      <Events data={bigCards}/> 
       <Coop data={bigCards}/>
       
-      <Accordion
+      {/* <Accordion
         data={faqQuestions}
         subtitle="For Customers"
         title="Frequently asked"
         span="questions"
       />
-      <Accordion data={partnersQuestions} subtitle="For Partners" />
+      <Accordion data={partnersQuestions} subtitle="For Partners" /> */}
     </BaseLayout>
   );
 }

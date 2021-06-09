@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 import {
     GlobalSection,
     GlobalTitle,
     SpanTitle,
 } from "../../styles/global-components/global-wrapper";
 
-import { Container, Card, CardTitle, Image } from './services.styles';
+import { Container, Card, CardTitle } from './services.styles';
 
 
 
@@ -26,9 +28,9 @@ const Services = ({ data }) => {
                         //Make Up is written different than in the Figma file.
                         <Card key={card.fields.title}>
 
-                            <Image src={`http:${card.fields.image.fields.file.url}`} />
+                            <Image src={`http:${card.fields.image.fields.file.url}`} width="400" height="400" intrinsic/>
                             <CardTitle
-                                fontSize={[32, 34, 38]}
+                                fontSize={[25, 32, 34, 38]}
                                 condensed
                                 white
                                 lineHeight={["xs", "smaller", "medium"]}>

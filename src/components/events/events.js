@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 import {
     GlobalSection,
     GlobalSubtitle,
     GlobalTitle,
     SpanTitle,
 } from "../../styles/global-components/global-wrapper";
-import { Container, Card, Image, Title, Text, Button } from "../events/events.styles";
+import { Container, Card, Title, Text, Button } from "../events/events.styles";
 
 
 const Events = ({ data }) => {
@@ -23,14 +25,21 @@ const Events = ({ data }) => {
                     bigCards.map((card) => {
                         return (
                             <Card key={card.fields.bigCardsTitle}>
-                                <Image src={`http:${card.fields.servicesImages.fields.file.url}`} />
-                                <Title 
+
+                                <Image
+                                    src={`http:${card.fields.servicesImages.fields.file.url}`}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    quality={100} />
+
+                                <Title
                                     condensed
                                     white
-                                    fontSize={[50]}
+                                    fontSize={[25, 34, 50]}
                                     lineHeight={["large"]}>
                                     {card.fields.bigCardsTitle}
                                 </Title>
+
                                 <Text fontSize={[20]} lineHeight={["sub"]}>{card.fields.description.content[0].content[0].value}</Text>
                                 <Button fontSize={[24]} lineHeight={["sub"]}>Make a Booking</Button>
                             </Card>

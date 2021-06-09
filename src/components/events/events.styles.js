@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const Card = styled.div`
     max-width: 1318px;
     height: 460px;
-    border-radius: 50px;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -37,11 +37,11 @@ export const Card = styled.div`
     right: 0;
     background: rgba(0, 0, 0, 0.5);
     }
-`;
 
-
-export const Image = styled.img`
-    src: ${props => props.src};
+    @media only screen and (max-width: 500px) {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 `;
 
 export const Title = styled(GlobalSubtitle)`
@@ -60,6 +60,12 @@ export const Title = styled(GlobalSubtitle)`
 
     @media only screen and (max-width: 1024px) {
         left: 40px;
+    }
+
+    @media only screen and (max-width: 370px) {
+        left: 0;
+        padding-left: 20px;
+        top: 0;
     }
 `;
 
@@ -81,6 +87,17 @@ export const Text = styled.p`
         left: 40px;
         bottom: 130px;
     }
+
+    @media only screen and (max-width: 645px) {
+        width: 400px;
+    }
+
+    @media only screen and (max-width: 370px) {
+        width: 250px;
+        left: 20px;
+    } 
+
+    
 `;
 
 export const Button = styled.button`
@@ -118,6 +135,12 @@ export const Button = styled.button`
     @media only screen and (max-width: 1024px) {
         left: 40px;
         bottom: 40px;
+    }
+
+    
+
+    @media only screen and (max-width: 370px) {
+        left: 20px;
     }
 
 `;

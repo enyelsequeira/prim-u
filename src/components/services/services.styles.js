@@ -10,7 +10,7 @@ export const Container = styled.div`
     background-color: white;
     margin: 60px 0 100px 0;
     
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 1024px) {
     gap: 40px;
     }
 
@@ -23,7 +23,7 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-    border-radius: 50px;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -52,27 +52,6 @@ export const Card = styled.div`
 
     @media only screen and (max-width: 774px) {
     max-width: 100%;
-    }
-`;
-
-export const Image = styled.img`
-    src: ${props => props.src};
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: block;
-    max-width: 400px;
-    max-height: 400px;
-    width: auto;
-    height: auto;
-
-    @media only screen and (max-width: 1280px) {
-        max-width: 288px;
-        max-height: 288px;
-        width: auto;
-        height: auto;
     }
 `;
 
