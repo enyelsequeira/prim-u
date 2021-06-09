@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GlobalSubtitle } from "../../styles/global-components";
+import { GlobalSubtitle } from "../global-components";
 
 export const Container = styled.div`
   display: grid;

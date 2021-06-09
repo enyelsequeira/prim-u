@@ -1,4 +1,4 @@
-import { GlobalSection, GlobalTitle, SpanTitle } from "../../styles/global-components";
+import { GlobalSection, GlobalTitle, SpanTitle } from "../global-components";
 import { Card, CardTitle, Container, Image } from "./services.styles";
 
 const Services = ({ data }) => {

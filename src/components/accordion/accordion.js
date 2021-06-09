@@ -1,11 +1,6 @@
 import { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-import {
-  GlobalSection,
-  GlobalSubtitle,
-  GlobalTitle,
-  SpanTitle,
-} from "../../styles/global-components";
+import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
   Answer,
   ButtonWrapper,

@@ -1,10 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
-import Accordion from "../components/accordion/accordion";
-import Events from "../components/events/events";
-import NavBar from "../components/nav/nav";
-import Services from "../components/services/services";
+import { Accordion, Events, NavBar, Services } from "../components";
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {

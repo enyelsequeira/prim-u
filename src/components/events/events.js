@@ -1,8 +1,4 @@
-import {
-  GlobalSection,
-  GlobalTitle,
-  SpanTitle,
-} from "../../styles/global-components/global-components";
+import { GlobalSection, GlobalTitle, SpanTitle } from "../global-components";
 import { Button, Card, Container, Image, Text, Title } from "./events.styles";
 
 const Events = ({ data }) => {
