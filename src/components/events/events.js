@@ -6,13 +6,14 @@ import {
 } from "../../styles/global-components/global-wrapper";
 import { Container, Card, Image, Title, Text, Button } from "../events/events.styles";
 
+
 const Events = ({ data }) => {
 
     const bigCards = data.slice(2, 5).reverse();
 
     return (
-        <GlobalSection>
-            <GlobalTitle>
+        <GlobalSection px={[20, 20, 40, 40, 61]} pt={[20, 60, 80]}>
+            <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
                 for <SpanTitle>more </SpanTitle> than just u
             </GlobalTitle>
 
@@ -28,14 +29,6 @@ const Events = ({ data }) => {
                                 <Button>Make a Booking</Button>
                             </Card>
                         )
-                        
-
-                        // <Card key={card.fields.title}>
-                            
-                        //     <Title />
-                        //     <Text />
-                        //     <Button />
-                        // </Card>
                     })
                 }
             </Container>

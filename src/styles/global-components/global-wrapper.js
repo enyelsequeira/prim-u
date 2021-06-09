@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { fontSize, lineHeight, space, width } from "styled-system";
 
 export const GlobalWrapper = styled.main`
   max-width: 1440px;
@@ -12,6 +13,12 @@ export const GlobalSection = styled.section`
   max-width: 1320px;
   border: 1px solid red;
   margin: auto;
+  ${space}
+  ${(props) =>
+    props.pt &&
+    css`
+      padding-top: ${props.pt};
+    `};
 `;
 
 /**
@@ -25,10 +32,14 @@ export const GlobalTitle = styled.p`
   font-family: ${({ theme }) => theme.fonts.condensed};
   font-style: normal;
   font-weight: bold;
-  font-size: 50px;
-  line-height: 59px;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  ${fontSize}
+  ${space}
+  ${lineHeight}
+  ${width}
+
+
   ${(props) =>
     props.color &&
     css`
@@ -76,15 +87,45 @@ export const SpanTitle = styled.span`
 export const GlobalSubtitle = styled.p`
   font-family: ${({ theme, condensed }) =>
     condensed ? theme.fonts.condensed : theme.fonts.roboto};
-
   font-style: normal;
   font-weight: bold;
+  ${fontSize};
+  ${space};
+  ${lineHeight};
+  ${width}
+
   ${(props) =>
     props.size &&
     css`
-      font-size: ${props.p};
+      font-size: ${props.size};
     `};
-  line-height: 37px;
+  /* line-height: 37px; */
   letter-spacing: -0.01em;
-  color: #000000;
+  color: ${({ theme, white }) => (white ? theme.colors.white : theme.colors.black)};
+  ${(props) =>
+    props.margin &&
+    css`
+      margin: ${props.margin};
+    `};
+  ${(props) =>
+    props.border &&
+    css`
+      border-bottom: ${props.border};
+    `};
+  width: ${({ width }) => width || "fit-content"};
+  ${(props) =>
+    props.padding &&
+    css`
+      padding-bottom: ${props.padding};
+    `};
+  ${(props) =>
+    props.maxW &&
+    css`
+      max-width: ${props.maxW};
+    `};
+  ${(props) =>
+    props.align &&
+    css`
+      text-align: ${props.align};
+    `};
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fontSize, lineHeight, space } from "styled-system";
 
 export const Container = styled.div`
     width: 100%;
@@ -8,17 +9,20 @@ export const Container = styled.div`
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
     background: white;
+    margin: 60px 0 100px 0;
+
+    
 `;
 
 export const Card = styled.div`
-    width: 1318px;
+    max-width: 1318px;
     height: 460px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-content: center;
     position: relative;
-    overflow: hidden;
+    
     
     &:after {
     content: "";
@@ -31,6 +35,8 @@ export const Card = styled.div`
     right: 0;
     background: rgba(0, 0, 0, 0.5);
     }
+
+    
 `;
 
 

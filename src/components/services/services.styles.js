@@ -7,11 +7,20 @@ export const Container = styled.div`
     grid-template-rows: repeat(2, 1fr);
     background-color: white;
     margin: 60px 0 100px 0;
+    
+
+    
+    @media only screen and (max-width: 768px) {
+    gap: 40px;
+    }
+
+    @media only screen and (max-width: 680px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
 `;
 
 export const Card = styled.div`
-    width: 400px;
-    height: 400px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -21,8 +30,6 @@ export const Card = styled.div`
     
     &:after {
     content: "";
-    width: 400px;
-    height: 400px;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,11 +41,21 @@ export const Card = styled.div`
     &:hover {
         cursor: pointer;
         
+    } 
+
+    @media only screen and (max-width: 1024px) {
+    max-width: 286px;
+    max-height: 286px;
     }
 `;
 
 export const Image = styled.img`
     src: ${props => props.src};
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 `;
 
 export const CardTitle = styled.h2`

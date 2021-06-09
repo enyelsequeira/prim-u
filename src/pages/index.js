@@ -4,7 +4,6 @@ import Accordion from "../components/accordion/accordion";
 import Services from "../components/services/services"
 import Events from "../components/events/events";
 import Coop from "../components/coop/coop";
-import Example from "../components/example/example";
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
@@ -24,19 +23,18 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Example />
+      
       <Services data={services}/>
       <Events data={bigCards}/>
       <Coop data={bigCards}/>
-      <Accordion data={faqQuestions} />
-      {/* {services.map((card) => {
-        return (
-          <div key={card.fields.title}>
-            <p>{card.fields.title}</p>
-            <Image src={`http:${card.fields.image.fields.file.url}`} width="500" height="500" />
-          </div>
-        );
-      })} */}
+      
+      <Accordion
+        data={faqQuestions}
+        subtitle="For Customers"
+        title="Frequently asked"
+        span="questions"
+      />
+      <Accordion data={partnersQuestions} subtitle="For Partners" />
     </BaseLayout>
   );
 }

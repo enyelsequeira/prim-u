@@ -11,8 +11,9 @@ import { Container, Card, CardTitle,Image } from './services.styles';
 const Services = ({data}) => {
     return (
 
-        <GlobalSection>
-            <GlobalTitle>
+        <GlobalSection px={[20, 20, 40, 40, 61]} pt={[20, 60, 80]}>
+            
+            <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
                 treat yourself with  <SpanTitle>our services </SpanTitle>
             </GlobalTitle>
 
