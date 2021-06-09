@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
-import { Accordion, Events, NavBar, Services } from "../components";
+import { Accordion, Events, NavBar, Services, Hero } from "../components";
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
@@ -12,7 +12,9 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
+      <Hero />
 
+{/* 
       <Services data={services} />
       <Events data={bigCards} />
 
@@ -22,7 +24,7 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         title="Frequently asked"
         span="questions"
       />
-      <Accordion data={partnersQuestions} subtitle="For Partners" />
+      <Accordion data={partnersQuestions} subtitle="For Partners" /> */}
     </BaseLayout>
   );
 }
