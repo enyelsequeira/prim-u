@@ -6,7 +6,7 @@ import {
     GlobalTitle,
     SpanTitle,
 } from "../../styles/global-components/global-wrapper";
-import { Container, Card, Title, Text, Button } from "../events/events.styles";
+import { Container, Card, Title, Text, Button, ImageWrapper } from "../events/events.styles";
 
 
 const Events = ({ data }) => {
@@ -25,13 +25,13 @@ const Events = ({ data }) => {
                     bigCards.map((card) => {
                         return (
                             <Card key={card.fields.bigCardsTitle}>
-
-                                <Image
-                                    src={`http:${card.fields.servicesImages.fields.file.url}`}
-                                    layout="fill"
-                                    objectFit="cover"
-                                    quality={100} />
-
+                                <ImageWrapper>
+                                    <Image
+                                        src={`http:${card.fields.servicesImages.fields.file.url}`}
+                                        layout="fill"
+                                        objectFit="cover"
+                                        quality={100} />
+                                </ImageWrapper>
                                 <Title
                                     condensed
                                     white
@@ -41,6 +41,7 @@ const Events = ({ data }) => {
                                 </Title>
 
                                 <Text fontSize={[20]} lineHeight={["sub"]}>{card.fields.description.content[0].content[0].value}</Text>
+                                
                                 <Button fontSize={[24]} lineHeight={["sub"]}>Make a Booking</Button>
                             </Card>
                         )

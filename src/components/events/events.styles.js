@@ -20,11 +20,12 @@ export const Card = styled.div`
     max-width: 1318px;
     height: 460px;
     border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
     
     &:after {
     content: "";
@@ -38,35 +39,39 @@ export const Card = styled.div`
     background: rgba(0, 0, 0, 0.5);
     }
 
-    @media only screen and (max-width: 500px) {
-        flex-direction: column;
-        justify-content: space-evenly;
+    @media screen and (max-width: 500px) {
+        
     }
 `;
 
+export const ImageWrapper = styled.div`
+    width: 100%;
+`; 
+
 export const Title = styled(GlobalSubtitle)`
-    align-self: center;
-    text-align: center;
     text-transform: uppercase;
-    display: flex;
-    position: absolute;
-    left: 60px;
-    top: 40px;
+
+    margin-left: 60px;
+    margin-top: 40px;
+
+    align-self: flex-start;
     z-index: 10;
+    
 
     ${lineHeight};
     ${space};
     ${fontSize};
 
-    @media only screen and (max-width: 1024px) {
-        left: 40px;
+   
+
+    @media only screen and (max-width: 682px) {
+        
+        margin: auto 0 auto 60px;
     }
 
-    @media only screen and (max-width: 370px) {
-        left: 0;
-        padding-left: 20px;
-        top: 0;
-    }
+    @media only screen and (max-width: 515px) {
+        margin: auto;
+    } 
 `;
 
 export const Text = styled.p`
@@ -75,26 +80,31 @@ export const Text = styled.p`
     font-style: normal;
     font-weight: normal;
     width: 584px;
-    position: absolute;
+
+    margin-left: 60px;
+    margin-bottom: 40px;
+    margin-top: 209px;
+
     z-index: 10;
-    left: 60px;
-    bottom: 40px;
+
     ${lineHeight};
     ${space};
     ${fontSize};
 
     @media only screen and (max-width: 1024px) {
-        left: 40px;
-        bottom: 130px;
+        margin-bottom: 30px;
+        margin-top: 119px;
     }
 
-    @media only screen and (max-width: 645px) {
+    @media only screen and (max-width: 682px) {
         width: 400px;
+        margin: auto 0 auto 60px;
     }
 
-    @media only screen and (max-width: 370px) {
-        width: 250px;
-        left: 20px;
+    @media only screen and (max-width: 510px) {
+        margin: auto;
+        max-width: 245px;
+        text-align: justify;
     } 
 
     
@@ -132,16 +142,18 @@ export const Button = styled.button`
         color: ${({ theme }) => theme.colors.white};
     }
 
-    @media only screen and (max-width: 1024px) {
-        left: 40px;
-        bottom: 40px;
+    @media screen and (max-width: 1024px) {
+        width: 235px;
+        height: 60px;
+        position: static;
+        margin-left: 60px;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
 
-    
-
-    @media only screen and (max-width: 370px) {
-        left: 20px;
-    }
+    @media only screen and (max-width: 515px) {
+        margin: auto;
+    } 
 
 `;
 

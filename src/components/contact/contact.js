@@ -6,7 +6,7 @@ import {
 } from "../../styles/global-components/global-wrapper";
 
 
-import { Container, Card, Title, Button, Text, CardContainer } from './contact.styles';
+import { Container, Card, Title, Button, Text, CardContainer, ImageContainer } from './contact.styles';
 
 const Contact = ({ data }) => {
     const bigCards = data.slice(0, 2);
@@ -23,18 +23,23 @@ const Contact = ({ data }) => {
                         return (
                             <CardContainer>
                                 <Card key={card.fields.bigCardsTitle}>
-                                    <Image 
-                                    src={`http:${card.fields.servicesImages.fields.file.url}`} 
-                                    width="630" 
-                                    height="460" 
-                                    objectFit="cover"
-                                    quality={100}/>
-                                    <Title 
+                                    <ImageContainer>
+                                        <Image
+                                            src={`http:${card.fields.servicesImages.fields.file.url}`}
+                                            intrinsic
+                                            width={630}
+                                            height={460}
+                                            quality={100} />
+                                    </ImageContainer>
+                                    <Title
                                         fontSize={[32, 34, 38]}
                                         condensed
                                         white
-                                        lineHeight={["xs", "smaller", "medium"]}>{card.fields.bigCardsTitle}</Title>
+                                        lineHeight={["xs", "smaller", "medium"]}>
+                                        {card.fields.bigCardsTitle}
+                                    </Title>
                                     <Button fontSize={[24]} lineHeight={["sub"]}>Sign Up</Button>
+
                                 </Card>
 
                                 <Text fontSize={[20]} lineHeight={["sub"]}>{card.fields.description.content[0].content[0].value}</Text>

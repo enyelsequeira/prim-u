@@ -4,6 +4,7 @@ import { GlobalSubtitle } from "../../styles/global-components/global-wrapper";
 import { fontSize, lineHeight, space } from "styled-system";
 
 export const Container = styled.div`
+    width: auto;    
     margin: 60px 0 100px 0;
     display: grid;
     grid-gap: 60px;
@@ -12,7 +13,6 @@ export const Container = styled.div`
 
 
     @media only screen and (max-width: 768px) {
-        max-width: 100vw;
         gap: 0;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
@@ -23,21 +23,25 @@ export const Container = styled.div`
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    
+    width: auto;    
     text-align: left;
 `;
 
 export const Card = styled.div`
     border-radius: 25px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     position: relative;
     overflow: hidden;
+
     
     &:after {
     content: "";
     position: absolute;
+    z-index: 11;
     top: 0;
     left: 0;
     bottom: 0;
@@ -46,14 +50,24 @@ export const Card = styled.div`
     }
 `;
 
-export const Title = styled(GlobalSubtitle)`
+export const ImageContainer = styled.div`
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+`; 
 
+export const Title = styled(GlobalSubtitle)`
     align-self: center;
-    text-align: center;
+    justify-self: center;
     text-transform: uppercase;
     display: flex;
-    position: absolute;
-    z-index: 2;
+    z-index: 13;
+    /* margin-bottom: 40px; */
 
     ${lineHeight};
     ${space};
@@ -62,9 +76,10 @@ export const Title = styled(GlobalSubtitle)`
 
 export const Button = styled.button`
     position: absolute;
-    z-index: 10;
     bottom: 107px;
-    width: 235px;
+    left: 224px;
+    z-index: 20;
+    width: 182px;
     height: 60px;
     background: ${({ theme }) => theme.colors.white};
     border: none;
@@ -73,8 +88,6 @@ export const Button = styled.button`
     font-family: ${({ theme }) => theme.fonts.condensed};
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
     text-align: center;
     letter-spacing: -0.01em;
     color: ${({ theme }) => theme.colors.purple};
