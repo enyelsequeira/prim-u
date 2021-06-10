@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
-import { Accordion, Carrousel, Contact, Events, Hero, NavBar, Services } from "../components";
+import { Accordion, Carrousel, Contact, Events, Hero, NavBar, Banner, Services } from "../components";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -21,8 +21,9 @@ export default function Home({
 
       <NavBar />
       <Hero />
+      <Banner />
 
-      <Services data={services} />
+      {/* <Services data={services} />
 
       <Events data={bigCards} />
       <Contact data={bigCards} />
@@ -33,9 +34,9 @@ export default function Home({
         title="Frequently asked"
         span="questions"
       />
-      <Accordion data={partnersQuestions} subtitle="For Partners" />
+      <Accordion data={partnersQuestions} subtitle="For Partners" /> */}
 
-      <Carrousel data={reviews} />
+      {/* <Carrousel data={reviews} /> */}
     </BaseLayout>
   );
 }
