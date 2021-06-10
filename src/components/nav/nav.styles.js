@@ -8,6 +8,7 @@ export const Nav = styled.nav`
   --color: ${(props) => (props.isOpen ? props.theme.colors.black : props.theme.colors.white)};
   --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : 'transparent')};
   position: absolute;
+  /* position: fixed; */
   top: 0;
   left: 50%;
   transform: translateX(-50%);

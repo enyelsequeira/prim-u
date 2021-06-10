@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Banner = styled.div`
-    padding: 60px;
+    padding: 60px 60px 20px;
     @media screen and (max-width: 1124px) {
-        padding: 60px 40px;
+        padding: 60px 40px 20px;
     }
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 768px) {
         padding: 20px 10px;
     }
 `
@@ -24,11 +24,11 @@ export const Card = styled.div`
         flex-direction: column;
     }
     @media screen and (max-width: 768px) {
+        background-image: url('./images/Mask.jpg');
         row-gap: 40px;
         padding: 32px;
     }
     @media screen and (max-width: 640px) {
-        background-image: url('./images/Mask.jpg');
         padding: 36px 16px 24px;
         justify-content: flex-start;
         row-gap: 40px;
