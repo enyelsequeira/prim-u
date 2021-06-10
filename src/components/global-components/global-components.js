@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 import styled, { css } from "styled-components";
-import { fontSize, lineHeight, space, width } from "styled-system";
+import { fontSize, lineHeight, space, width, textAlign } from "styled-system";
 
 export const GlobalWrapper = styled.main`
   max-width: 1440px;
@@ -10,8 +10,14 @@ export const GlobalWrapper = styled.main`
 `;
 
 export const GlobalSection = styled.section`
+<<<<<<< HEAD:src/styles/global-components/global-wrapper.js
+  /* padding: 80px 60px; */
+  max-width: 1320px;
+  border: 1px solid red;
+=======
   max-width: 1320px;
 
+>>>>>>> main:src/components/global-components/global-components.js
   margin: auto;
   ${space}
   ${fontSize}
@@ -41,6 +47,7 @@ export const GlobalTitle = styled.p`
   ${space}
   ${lineHeight}
   ${width}
+  ${textAlign}
 
  ${(props) =>
     props.textAlign &&

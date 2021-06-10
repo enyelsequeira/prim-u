@@ -1,7 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
+
 import Head from "next/head";
 import { Carrousel } from "../components";
+
+import { Hero, NavBar } from "../components";
+
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -14,23 +18,36 @@ export default function Home({
 }) {
   return (
     <BaseLayout>
-      <Head>
+      {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       {/* <NavBar /> */}
 
       {/* <Services data={services} />
-      <Events data={bigCards} />
 
-      <Accordion
+      */}
+      <NavBar />
+      <Hero />
+
+      {/* 
+      <Services data={services} />
+
+      <Events data={bigCards} />
+      <Coop data={bigCards} />
+
+      {/* <Accordion
         data={faqQuestions}
         subtitle="For Customers"
         title="Frequently asked"
         span="questions"
       />
       <Accordion data={partnersQuestions} subtitle="For Partners" /> */}
+
       <Carrousel data={reviews} />
+
+
     </BaseLayout>
   );
 }
