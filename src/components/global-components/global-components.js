@@ -10,8 +10,14 @@ export const GlobalWrapper = styled.main`
 `;
 
 export const GlobalSection = styled.section`
+<<<<<<< HEAD:src/styles/global-components/global-wrapper.js
+  /* padding: 80px 60px; */
+  max-width: 1320px;
+  border: 1px solid red;
+=======
   max-width: 1320px;
 
+>>>>>>> main:src/components/global-components/global-components.js
   margin: auto;
   ${space}
   ${(props) =>

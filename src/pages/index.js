@@ -1,28 +1,29 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
-import Head from "next/head";
-import { Accordion, Events, NavBar, Services } from "../components";
+import Coop from "../components/contact/contact";
+import Events from "../components/events/events";
+import Services from "../components/services/services";
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
   return (
     <BaseLayout>
-      <Head>
+      {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
-
+      */}
       <Services data={services} />
       <Events data={bigCards} />
+      <Coop data={bigCards} />
 
-      <Accordion
+      {/* <Accordion
         data={faqQuestions}
         subtitle="For Customers"
         title="Frequently asked"
         span="questions"
       />
-      <Accordion data={partnersQuestions} subtitle="For Partners" />
+      <Accordion data={partnersQuestions} subtitle="For Partners" /> */}
     </BaseLayout>
   );
 }
