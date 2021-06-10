@@ -7,7 +7,6 @@ export const Nav = styled.nav`
   --maxheight: ${(props) => (props.isOpen ? "100vh" : 0)};
   --color: ${(props) => (props.isOpen || props.lightNav ? props.theme.colors.black : props.theme.colors.white)};
   --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : 'transparent')};
-  /* position: absolute; */
   position: fixed;
   z-index: 100;
   top: 0;
@@ -23,21 +22,16 @@ export const Nav = styled.nav`
       max-height: 80px;
     `
   }};
-  padding: ${props => props.lightNav ? '20px 50px 20px' : '40px 50px 0'};
-  /* padding: 40px 50px 0; */
+  padding: ${props => props.lightNav ? '20px 50px 20px' : '25px 50px 0'};
   background-color: ${(props) => (props.lightNav ? props.theme.colors.white : 'transparent')};
   transition: all .2s;
   @media screen and (max-width: 1024px) {
-    /* padding: 40px 40px 0; */
-    padding: ${props => props.lightNav ? '20px 40px 20px' : '40px 40px 0'};
+    padding: ${props => props.lightNav ? '20px 40px 20px' : '25px 40px 0'};
   }
   @media screen and (max-width: 767.9px) {
-    /* padding: 30px 30px 0; */
-    padding: ${props => props.lightNav ? '10px 30px 10px' : '30px 30px 0'};
-    /* background-color: ${(props) => (props.lightNav ? props.theme.colors.white : 'transparent')}; */
+    padding: ${props => props.lightNav ? '7px 30px 15px' : '20px 30px 0'};
   }
   @media screen and (max-width: 640px) {
-    /* padding: 10px 6px 0; */
     padding: ${props => props.lightNav ? '10px 6px 10px' : '10px 6px 0'};
   }
   button {
@@ -57,13 +51,10 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   border-radius: 10px;
-  /* transition: all 0.6s; */
   transition: all 0.2s;
   background-color: var(--bgColor);
   @media screen and (max-width: 767.9px) {
     padding: 10px 10px var(--padding);
-    /* padding: 10px 10px 40px; */
-    /* background-color: var(--bgColor); */
   }
 `;
 
@@ -118,13 +109,9 @@ export const LogoTitle = styled.p`
   font-size: 30px;
   line-height: 35px;
   letter-spacing: -0.03em;
-  /* color: ${(props) => props.theme.colors.white}; */
   color: var(--color);
   margin: 0;
   transition: all 0.2s;
-  @media screen and (max-width: 767.9px) {
-    /* color: var(--color); */
-  }
   @media screen and (max-width: 640px) {
     line-height: 14px;
     font-size: 20px;
@@ -158,7 +145,6 @@ export const NavLinks = styled.ul`
     visibility: var(--visibility);
     max-height: var(--maxheight);
     row-gap: 20px;
-    /* transition: all 0.3s ease-out; */
     transition: all 0.2s ease-out;
   }
 `;
@@ -170,16 +156,13 @@ export const NavLink = styled.a`
   font-size: 20px;
   line-height: 23px;
   letter-spacing: -0.01em;
-  /* color: ${(props) => props.theme.colors.white}; */
   color: var(--color);
   cursor: pointer;
-  /* transition: all 0.4s .1s; */
 
   &:hover {
     color: ${(props) => props.theme.colors.purple};
   }
   @media screen and (max-width: 767.9px) {
-    /* color: var(--color); */
     transition: all 0.4s .1s;
     :hover {
       color: var(--color);
