@@ -10,7 +10,6 @@ import { Container, Card, Title, Button, Text, CardContainer, ImageContainer } f
 
 const Contact = ({ data }) => {
     const bigCards = data.slice(0, 2);
-    console.log(bigCards);
     return (
         <GlobalSection px={[20, 20, 40, 40, 0]} pt={[20, 60, 80]}>
             <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
@@ -21,14 +20,13 @@ const Contact = ({ data }) => {
                 {
                     bigCards.map((card) => {
                         return (
-                            <CardContainer>
-                                <Card key={card.fields.bigCardsTitle}>
+                            <CardContainer key={card.fields.bigCardsTitle}>
+                                <Card>
                                     <ImageContainer>
                                         <Image
                                             src={`http:${card.fields.servicesImages.fields.file.url}`}
-                                            intrinsic
-                                            width={630}
-                                            height={460}
+                                            layout="fill"
+                                            objectFit="cover"
                                             quality={100} />
                                     </ImageContainer>
                                     <Title

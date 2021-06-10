@@ -62,8 +62,6 @@ export const Title = styled(GlobalSubtitle)`
     ${space};
     ${fontSize};
 
-   
-
     @media only screen and (max-width: 682px) {
         
         margin: auto 0 auto 60px;
