@@ -23,7 +23,7 @@ export default function Home({
       <Hero />
       <Banner />
 
-      <Services data={services} />
+      {/* <Services data={services} /> */}
 
       {/* <Events data={bigCards} />
       <Contact data={bigCards} />

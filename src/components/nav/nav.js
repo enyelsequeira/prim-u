@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   LogoContainer,
   LogoIcon,
@@ -13,9 +13,20 @@ import {
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [lightNav, setLightNav] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  })
+
+  function handleScroll() {
+    if(window.scrollY > 60) setLightNav(true);
+    else setLightNav(false);
+  }
 
   return (
-    <Nav isOpen={isOpen}>
+    <Nav isOpen={isOpen} lightNav={lightNav}>
       <NavContainer>
         <Link href="/">
           <LogoContainer href="/">
