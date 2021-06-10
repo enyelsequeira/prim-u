@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+<<<<<<< HEAD
 import {
   GlobalSection,
   GlobalSubtitle,
   GlobalTitle,
   SpanTitle,
 } from "../../styles/global-components/global-wrapper";
+=======
+import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
+>>>>>>> main
 import {
   Answer,
   ButtonWrapper,
@@ -14,6 +18,7 @@ import {
   FaqQuestionsWrapper,
   ShowMore,
 } from "./accordion.styles";
+
 const Accordion = ({ data, subtitle, title, span }) => {
   console.log(data);
   const [isAnswerShowing, setIsAnswerShowing] = useState(false);
@@ -30,7 +35,11 @@ const Accordion = ({ data, subtitle, title, span }) => {
   const onLoadMoreClick = () => {
     setIsVisible((v) => v + 1);
   };
+<<<<<<< HEAD
 
+=======
+  //
+>>>>>>> main
   return (
     <GlobalSection px={[20, 20, 40, 40, 61]} pt={[20, 60, 80]}>
       {title && (
@@ -58,7 +67,7 @@ const Accordion = ({ data, subtitle, title, span }) => {
                   lineHeight={["sub", "smaller"]}
                   condensed
                   maxW="586px"
-                  width={[295, 256, 364, 586]}
+                  width={[295, 256, 364, 364]}
                   fontSize={[24, 28, 32]}
                   align="left">
                   {fields.faqTitle || fields.partnersQuestions}

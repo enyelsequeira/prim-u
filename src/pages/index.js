@@ -1,22 +1,11 @@
+/* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
-import Head from "next/head";
-import Accordion from "../components/accordion/accordion";
-import Services from "../components/services/services"
-import Events from "../components/events/events";
 import Coop from "../components/contact/contact";
+import Events from "../components/events/events";
+import Services from "../components/services/services";
 import BaseLayout from "../layouts/base";
 
 export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
-  // console.log(data);
-
-  // console.log("+++++++++");
-  // console.log(services);
-  // console.log("==== faq questions=====");
-  // console.log(faqQuestions);
-  // console.log("=====pquestions=====");
-  // console.log(partnersQuestions);
-  // console.log("=====big cards======");
-  // console.log(bigCards);
   return (
     <BaseLayout>
       {/* <Head>
@@ -24,10 +13,10 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         <link rel="icon" href="/favicon.ico" />
       </Head>
       */}
-      <Services data={services}/>
-      <Events data={bigCards}/> 
-      <Coop data={bigCards}/>
-      
+      <Services data={services} />
+      <Events data={bigCards} />
+      <Coop data={bigCards} />
+
       {/* <Accordion
         data={faqQuestions}
         subtitle="For Customers"
