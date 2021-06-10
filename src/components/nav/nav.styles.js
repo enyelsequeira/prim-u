@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   --visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
   --maxheight: ${(props) => (props.isOpen ? "100vh" : 0)};
   --color: ${(props) => (props.isOpen ? props.theme.colors.black : props.theme.colors.white)};
-  --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : props.theme.colors.black)};
+  --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : 'transparent')};
   position: absolute;
   top: 0;
   left: 50%;
@@ -17,7 +17,7 @@ export const Nav = styled.nav`
   @media screen and (max-width: 1024px) {
     padding: 40px 40px 0;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     padding: 30px 30px 0;
   }
   @media screen and (max-width: 640px) {
@@ -41,7 +41,7 @@ export const NavContainer = styled.div`
   flex-wrap: wrap;
   border-radius: 10px;
   transition: all 0.2s;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     padding: 10px 10px 40px;
     background-color: var(--bgColor);
   }
@@ -61,7 +61,7 @@ export const LogoContainer = styled.a`
       background-color: ${(props) => props.theme.colors.purple};
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     :hover {
       p {
         color: var(--color);
@@ -101,7 +101,7 @@ export const LogoTitle = styled.p`
   color: ${(props) => props.theme.colors.white};
   margin: 0;
   transition: all 0.2s;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     color: var(--color);
   }
   @media screen and (max-width: 640px) {
@@ -118,7 +118,7 @@ export const NavIcon = styled.button`
   background-color: var(--color);
   cursor: pointer;
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     display: inline-block;
   }
 `;
@@ -129,7 +129,7 @@ export const NavLinks = styled.ul`
   column-gap: 40px;
   align-items: center;
   padding-top: 10px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     width: 100%;
     flex-direction: column;
     padding-top: var(--padding);
@@ -150,12 +150,12 @@ export const NavLink = styled.a`
   letter-spacing: -0.01em;
   color: ${(props) => props.theme.colors.white};
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.4s .1s;
 
   &:hover {
     color: ${(props) => props.theme.colors.purple};
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     color: var(--color);
     :hover {
       color: var(--color);
