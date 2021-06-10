@@ -3,23 +3,27 @@ import GlobalStyles from "../global.styles";
 
 function theme() {
   return {
-    // This is the fonts we are using
     breakpoints: ["640px", "768px", "1024px", "1280px"],
     space: [
-      "11px",
+      "10px",
       "20px",
+      "16px",
+      "18px",
       "29px",
       "30px",
       "40px",
+      "50px",
       "54px",
       "60px",
       "80px",
       "105px",
       "256px",
+      "268px",
+      "335px",
       "295px",
-      "364px",
       "630px",
-      512,
+      "434px",
+      "24px",
     ],
     fontSizes: [
       "14px",
@@ -41,6 +45,7 @@ function theme() {
       xs: "35px",
       small: "40px",
       medium: "45px",
+      mediumTwo: "48px",
       large: "59px",
       sub: "28px",
       title: 1.25,
@@ -51,7 +56,6 @@ function theme() {
       condensed: "Roboto Condensed, sans-serif",
     },
     colors: {
-      // The colors we are using are already here
       white: "#FFFFFF",
       black: "#000000;",
       purple: "#683D83",
@@ -59,14 +63,6 @@ function theme() {
       background: "#000;",
       // background: "#E5E5E5;",
     },
-    // breakpoints: {
-    //   // all the breakpoints we need, we can change theme if we need
-    //   sm: "media  screen and (min-width: 640px)",
-    //   md: "media  screen and (min-width: 768px)",
-    //   lg: "@media screen and (min-width: 1024px)",
-    //   xl: "@media  screen and (min-width: 1280px)",
-    //   xxl: "@media  screen and (min-width: 1440px)",
-    // },
   };
 }
 

@@ -20,6 +20,9 @@ export const GlobalSection = styled.section`
 >>>>>>> main:src/components/global-components/global-components.js
   margin: auto;
   ${space}
+  ${fontSize}
+  ${lineHeight}
+  ${width}
   ${(props) =>
     props.pt &&
     css`
@@ -46,7 +49,11 @@ export const GlobalTitle = styled.p`
   ${width}
   ${textAlign}
 
-
+ ${(props) =>
+    props.textAlign &&
+    css`
+      text-align: ${props.textAlign};
+    `};
   ${(props) =>
     props.color &&
     css`

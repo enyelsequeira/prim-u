@@ -1,21 +1,39 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
+
+import Head from "next/head";
+import { Carrousel } from "../components";
+
 import { Hero, NavBar } from "../components";
+
 import BaseLayout from "../layouts/base";
 
-export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
+export default function Home({
+  data,
+  services,
+  faqQuestions,
+  partnersQuestions,
+  bigCards,
+  reviews,
+}) {
   return (
     <BaseLayout>
       {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      {/* <NavBar /> */}
+
+      {/* <Services data={services} />
+
       */}
       <NavBar />
       <Hero />
 
       {/* 
       <Services data={services} />
+
       <Events data={bigCards} />
       <Coop data={bigCards} />
 
@@ -26,6 +44,10 @@ export default function Home({ data, services, faqQuestions, partnersQuestions, 
         span="questions"
       />
       <Accordion data={partnersQuestions} subtitle="For Partners" /> */}
+
+      <Carrousel data={reviews} />
+
+
     </BaseLayout>
   );
 }
@@ -40,6 +62,7 @@ export async function getStaticProps() {
   const faqQuestions = [];
   const partnersQuestions = [];
   const bigCards = [];
+  const reviews = [];
   // this needs to be changed to make things more readable
   // pay attention to this, you should have all the data that you need
   // beauty products needs to be added to the array as well
@@ -52,6 +75,8 @@ export async function getStaticProps() {
       partnersQuestions.push(entry);
     } else if (entry.fields.bigCardsTitle) {
       bigCards.push(entry);
+    } else if (entry.fields.name) {
+      reviews.push(entry);
     }
   });
 
@@ -62,6 +87,7 @@ export async function getStaticProps() {
       faqQuestions,
       partnersQuestions,
       bigCards,
+      reviews,
     },
   };
 }
