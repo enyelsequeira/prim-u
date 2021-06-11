@@ -15,10 +15,10 @@ export const Nav = styled.nav`
   transform: translateX(-50%);
   width: 100%;
   max-width: 1440px;
-  max-height: ${props => props.lightNav ? '80px' : '100vh'};
+  max-height: ${props => props.lightNav ? '80px' : '80px'};
   padding: ${props => props.lightNav ? '20px 50px 20px' : '25px 50px 0'};
   background-color: ${(props) => (props.lightNav ? props.theme.colors.white : 'transparent')};
-  transition: all .2s;
+  transition: all .2s, background .2s .1s, padding .2s;
   @media screen and (max-width: 1024px) {
     padding: ${props => props.lightNav ? '20px 40px 20px' : '25px 40px 0'};
   }
@@ -97,8 +97,8 @@ export const LogoIcon = styled.div`
   mask-repeat: no-repeat;
   mask-position: center;
   background-color: var(--colour);
-  transition: all 0.2s;
   @media screen and (max-width: 767.9px) {
+    transition: all 0.2s;
     background-color: var(--color);
   }
   @media screen and (max-width: 640px) {
@@ -116,8 +116,8 @@ export const LogoTitle = styled.p`
   letter-spacing: -0.03em;
   color: var(--colour);
   margin: 0;
-  transition: all 0.2s;
   @media screen and (max-width: 767.9px) {
+    transition: all 0.2s;
     color: var(--color);
   }
   @media screen and (max-width: 640px) {
