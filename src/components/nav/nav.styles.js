@@ -15,14 +15,7 @@ export const Nav = styled.nav`
   transform: translateX(-50%);
   width: 100%;
   max-width: 1440px;
-  ${props => {
-    if(props.isOpen) return css`
-      max-height: 100vh;
-    `
-    if(props.lightNav) return css`
-      max-height: 80px;
-    `
-  }};
+  max-height: ${props => props.lightNav ? '80px' : '100vh'};
   padding: ${props => props.lightNav ? '20px 50px 20px' : '25px 50px 0'};
   background-color: ${(props) => (props.lightNav ? props.theme.colors.white : 'transparent')};
   transition: all .2s;
@@ -30,6 +23,14 @@ export const Nav = styled.nav`
     padding: ${props => props.lightNav ? '20px 40px 20px' : '25px 40px 0'};
   }
   @media screen and (max-width: 767.9px) {
+    ${props => {
+      if(props.isOpen) return css`
+        max-height: 100vh;
+      `
+      if(props.lightNav) return css`
+        max-height: 80px;
+      `
+    }};
     padding: ${props => props.lightNav ? '7px 30px 15px' : '20px 30px 0'};
   }
   @media screen and (max-width: 640px) {
