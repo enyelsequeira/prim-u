@@ -6,6 +6,7 @@ export const Nav = styled.nav`
   --visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
   --maxheight: ${(props) => (props.isOpen ? "100vh" : 0)};
   --color: ${(props) => (props.isOpen || props.lightNav ? props.theme.colors.black : props.theme.colors.white)};
+  --colour: ${(props) => (props.lightNav ? props.theme.colors.black : props.theme.colors.white)};
   --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : 'transparent')};
   position: fixed;
   z-index: 100;
@@ -52,8 +53,8 @@ export const NavContainer = styled.div`
   flex-wrap: wrap;
   border-radius: 10px;
   transition: all 0.2s;
-  background-color: var(--bgColor);
   @media screen and (max-width: 767.9px) {
+    background-color: var(--bgColor);
     padding: 10px 10px var(--padding);
   }
 `;
@@ -94,8 +95,11 @@ export const LogoIcon = styled.div`
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
   mask-position: center;
-  background-color: var(--color);
+  background-color: var(--colour);
   transition: all 0.2s;
+  @media screen and (max-width: 767.9px) {
+    background-color: var(--color);
+  }
   @media screen and (max-width: 640px) {
     width: 21px;
     height: 33px;
@@ -109,10 +113,14 @@ export const LogoTitle = styled.p`
   font-size: 30px;
   line-height: 35px;
   letter-spacing: -0.03em;
-  color: var(--color);
+  color: var(--colour);
   margin: 0;
   transition: all 0.2s;
+  @media screen and (max-width: 767.9px) {
+    color: var(--color);
+  }
   @media screen and (max-width: 640px) {
+    color: var(--color);
     line-height: 14px;
     font-size: 20px;
   }
@@ -156,13 +164,14 @@ export const NavLink = styled.a`
   font-size: 20px;
   line-height: 23px;
   letter-spacing: -0.01em;
-  color: var(--color);
+  color: var(--colour);
   cursor: pointer;
-
+  
   &:hover {
     color: ${(props) => props.theme.colors.purple};
   }
   @media screen and (max-width: 767.9px) {
+    color: var(--color);
     transition: all 0.4s .1s;
     :hover {
       color: var(--color);
