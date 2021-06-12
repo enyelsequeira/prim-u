@@ -17,7 +17,6 @@ const Carrousel = ({ data }) => {
           const {
             fields: { name, rating, review },
           } = r;
-          console.log(review);
           return (
             <CarrouselCard key={name} mb={[60, 40]} width={[, , 434]}>
               <TitleReviewWrapper pt={[20]} pl={[20]} width={[268, 335]}>

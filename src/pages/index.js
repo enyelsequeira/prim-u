@@ -11,7 +11,9 @@ export default function Home({
   partnersQuestions,
   bigCards,
   reviews,
+  banner,
 }) {
+  console.log(banner);
   return (
     <BaseLayout>
       <Head>
@@ -50,6 +52,7 @@ export async function getStaticProps() {
   const faqQuestions = [];
   const partnersQuestions = [];
   const bigCards = [];
+  const banner = [];
   const reviews = [];
   // this needs to be changed to make things more readable
   // pay attention to this, you should have all the data that you need
@@ -65,6 +68,8 @@ export async function getStaticProps() {
       bigCards.push(entry);
     } else if (entry.fields.name) {
       reviews.push(entry);
+    } else if (entry.fields.title) {
+      banner.push(entry);
     }
   });
 
@@ -76,6 +81,7 @@ export async function getStaticProps() {
       partnersQuestions,
       bigCards,
       reviews,
+      banner,
     },
   };
 }

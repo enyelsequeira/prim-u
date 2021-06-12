@@ -13,7 +13,7 @@ const Contact = ({ data }) => {
       <Container>
         {bigCards.map((card) => {
           return (
-            <CardContainer>
+            <CardContainer key={card.fields.bigCardsTitle}>
               <Card key={card.fields.bigCardsTitle}>
                 <Image
                   src={`http:${card.fields.servicesImages.fields.file.url}`}

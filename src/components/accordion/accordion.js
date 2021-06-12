@@ -11,7 +11,6 @@ import {
 } from "./accordion.styles";
 
 const Accordion = ({ data, subtitle, title, span }) => {
-  console.log(data);
   const [isAnswerShowing, setIsAnswerShowing] = useState(false);
   const [visible, setIsVisible] = useState(6);
 
