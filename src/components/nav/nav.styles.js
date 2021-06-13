@@ -16,7 +16,7 @@ export const Nav = styled.nav`
   width: 100%;
   max-width: 1440px;
   max-height: ${props => props.lightNav ? '80px' : '80px'};
-  padding: ${props => props.lightNav ? '20px 50px 20px' : '25px 50px 0'};
+  padding: ${props => props.lightNav ? '20px 60px 20px 50px' : '25px 60px 0 50px'};
   background-color: ${(props) => (props.lightNav ? props.theme.colors.white : 'transparent')};
   transition: all .2s, background 0.3s .05s, padding-bottom 0.3s;
   @media screen and (max-width: 1024px) {
