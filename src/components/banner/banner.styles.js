@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { GlobalTitle } from '../global-components'
 
 export const Banner = styled.div`
     padding: 60px 60px 20px;
@@ -44,14 +45,9 @@ export const Body = styled.div`
     }
 `
 
-export const Title = styled.p`
-    font-family: ${props => props.theme.fonts.condensed};
-    font-style: normal;
-    font-weight: bold;
+export const Title = styled(GlobalTitle)`
     font-size: 50px;
     line-height: 59px;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
     color: ${props => props.theme.colors.white};
     margin-bottom: 264px;
     @media screen and (max-width: 1124px) {
