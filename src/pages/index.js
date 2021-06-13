@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
-import { Accordion, Carrousel, Contact, Events, Hero, NavBar, Services } from "../components";
+import FooterBanner from "../components/footer-banner/footer-banner";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -12,15 +12,16 @@ export default function Home({
   bigCards,
   reviews,
   banner,
+  footerData,
 }) {
-  console.log(banner);
+  // console.log(footerData);
   return (
     <BaseLayout>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      {/* 
       <NavBar />
       <Hero />
 
@@ -35,9 +36,11 @@ export default function Home({
         title="Frequently asked"
         span="questions"
       />
+
       <Accordion data={partnersQuestions} subtitle="For Partners" />
 
-      <Carrousel data={reviews} />
+      <Carrousel data={reviews} /> */}
+      <FooterBanner data={footerData} />
     </BaseLayout>
   );
 }
@@ -54,6 +57,7 @@ export async function getStaticProps() {
   const bigCards = [];
   const banner = [];
   const reviews = [];
+  const footerData = [];
   // this needs to be changed to make things more readable
   // pay attention to this, you should have all the data that you need
   // beauty products needs to be added to the array as well
@@ -70,6 +74,8 @@ export async function getStaticProps() {
       reviews.push(entry);
     } else if (entry.fields.title) {
       banner.push(entry);
+    } else if (entry.fields.footerTittle) {
+      footerData.push(entry);
     }
   });
 
@@ -82,6 +88,7 @@ export async function getStaticProps() {
       bigCards,
       reviews,
       banner,
+      footerData,
     },
   };
 }

@@ -11,7 +11,6 @@ export const GlobalWrapper = styled.main`
 
 export const GlobalSection = styled.section`
   max-width: 1320px;
-
   margin: auto;
   ${space}
   ${fontSize}
