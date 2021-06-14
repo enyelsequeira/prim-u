@@ -160,7 +160,7 @@ export const NavLinks = styled.ul`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.li`
   font-family: ${(props) => props.theme.fonts.condensed};
   font-style: normal;
   font-weight: bold;
@@ -172,6 +172,11 @@ export const NavLink = styled.a`
   
   &:hover {
     color: ${(props) => props.theme.colors.purple};
+  }
+
+  & a {
+    all: unset;
+    display: contents;
   }
   @media screen and (max-width: 767.9px) {
     color: var(--color);

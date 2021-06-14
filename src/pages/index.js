@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
+import { useRef } from "react";
 import { Accordion, Carrousel, Contact, Events, Hero, NavBar, Banner, Platform, Services } from "../components";
 import BaseLayout from "../layouts/base";
 
@@ -12,6 +13,8 @@ export default function Home({
   bigCards,
   reviews,
 }) {
+  const faq = useRef();
+
   return (
     <BaseLayout>
       <Head>
@@ -19,7 +22,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar />
+      <NavBar faq={faq} />
       <Hero />
       <Banner />
 
@@ -30,13 +33,14 @@ export default function Home({
       <Platform />
 
 
-      {/* <Accordion
+      <Accordion
+        ref={faq}
         data={faqQuestions}
         subtitle="For Customers"
         title="Frequently asked"
         span="questions"
       />
-      <Accordion data={partnersQuestions} subtitle="For Partners" /> */}
+      <Accordion data={partnersQuestions} subtitle="For Partners" />
 
       {/* <Carrousel data={reviews} /> */}
     </BaseLayout>
