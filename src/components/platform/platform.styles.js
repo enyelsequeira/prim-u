@@ -1,18 +1,26 @@
 import styled from 'styled-components'
 
 export const Main = styled.section`
+    display: grid;
     width: 100%;
-    height: 752px;
-    padding: 80px 0;
+    height: 100%;
+    min-height: 752px;
+    padding: 80px 20px 80px 60px;
     background-color: ${props => props.theme.colors.purple};
+    @media screen and (max-width: 1024px) {
+        min-height: 669px;
+        padding: 100px 42px 90px;
+    }
 `
 
 export const Container = styled.div`
     display: flex;
-    column-gap: min(12vw, 210px);
-    padding: 0 20px 0 60px;
+    column-gap: 14.6vw;
     width: 100%;
     height: 100%;
+    @media screen and (max-width: 1024px) {
+        column-gap: 90px;
+    }
 `
 
 export const Body = styled.div`
@@ -22,6 +30,9 @@ export const Body = styled.div`
     row-gap: 32px;
     margin-top: 20px;
     grid-auto-rows: min-content;
+    @media screen and (max-width: 1024px) {
+        margin-top: 0;
+    }
 `
 
 export const Title = styled.p`
@@ -50,6 +61,10 @@ export const Img = styled.div`
     background-image: url('images/platform.png');
     background-repeat: no-repeat;
     background-size: cover;
+    @media screen and (max-width: 1024px) {
+        width: 240px;
+        height: 101%;
+    }
 `
 
 export const ButtonContainer = styled.div`
