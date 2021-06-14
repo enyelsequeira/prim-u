@@ -11,6 +11,9 @@ export const Main = styled.section`
         min-height: 669px;
         padding: 100px 42px 90px;
     }
+    @media screen and (max-width: 899px) {
+        padding: 60px 20px;
+    }
 `
 
 export const Container = styled.div`
@@ -20,6 +23,10 @@ export const Container = styled.div`
     height: 100%;
     @media screen and (max-width: 1024px) {
         column-gap: 90px;
+    }
+    @media screen and (max-width: 899px) {
+        flex-direction: column-reverse;
+        row-gap: 60px;
     }
 `
 
@@ -32,6 +39,10 @@ export const Body = styled.div`
     grid-auto-rows: min-content;
     @media screen and (max-width: 1024px) {
         margin-top: 0;
+    }
+    @media screen and (max-width: 899px) {
+        max-width: 480px;
+        margin: auto;
     }
 `
 
@@ -60,10 +71,11 @@ export const Img = styled.div`
     height: 100%;
     background-image: url('images/platform.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     @media screen and (max-width: 1024px) {
         width: 240px;
-        height: 101%;
+        height: 486px;
+        align-self: center;
     }
 `
 
