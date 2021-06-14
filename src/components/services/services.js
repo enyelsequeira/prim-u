@@ -18,7 +18,7 @@ const Services = ({ data }) => {
                 src={`http:${card.fields.image.fields.file.url}`}
                 width="400"
                 height="400"
-                intrinsic
+                intrinsic="true"
               />
               <CardTitle
                 fontSize={[25, 32, 34, 38]}
