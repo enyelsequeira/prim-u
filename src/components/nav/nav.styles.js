@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   --visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
   --maxheight: ${(props) => (props.isOpen ? "100vh" : 0)};
   --color: ${(props) => (props.isOpen ? props.theme.colors.black : props.theme.colors.white)};
-  --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : 'transparent')};
+  --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : "transparent")};
   position: absolute;
   top: 0;
   left: 50%;
@@ -150,7 +150,7 @@ export const NavLink = styled.a`
   letter-spacing: -0.01em;
   color: ${(props) => props.theme.colors.white};
   cursor: pointer;
-  transition: all 0.4s .1s;
+  transition: all 0.4s 0.1s;
 
   &:hover {
     color: ${(props) => props.theme.colors.purple};

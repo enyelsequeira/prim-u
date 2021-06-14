@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
-import FooterBanner from "../components/footer-banner/footer-banner";
+import { Footer, FooterBanner } from "../components";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -21,8 +21,9 @@ export default function Home({
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <NavBar /> */}
       {/* 
-      <NavBar />
+      <
       <Hero />
 
       <Services data={services} />
@@ -41,6 +42,7 @@ export default function Home({
 
       <Carrousel data={reviews} /> */}
       <FooterBanner data={footerData} />
+      <Footer />
     </BaseLayout>
   );
 }
