@@ -136,3 +136,10 @@ export const GlobalSubtitle = styled.p`
       text-align: ${props.align};
     `};
 `;
+
+export const Divider = styled.div`
+  width: 100%;
+  border: 1px solid ${({ theme }) => theme.colors.black};
+  ${space};
+  /* margin: 70px 0 70px 0; */
+`;

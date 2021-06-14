@@ -54,7 +54,7 @@ export const FooterTitles = styled(GlobalSubtitle)`
 `;
 
 export const FooterList = styled.p`
-  font-family: Roboto;
+  font-family: ${({ theme }) => theme.fonts.roboto};
   font-size: 18px;
   line-height: 28px;
   padding-bottom: 10px;
