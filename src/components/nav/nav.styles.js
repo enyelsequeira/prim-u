@@ -16,11 +16,11 @@ export const Nav = styled.nav`
   width: 100%;
   max-width: 1440px;
   max-height: ${props => props.lightNav ? '80px' : '80px'};
-  padding: ${props => props.lightNav ? '20px 60px 20px 50px' : '25px 60px 0 50px'};
+  padding: ${props => props.lightNav ? '20px 2vw' : '25px 2vw 0'};
   background-color: ${(props) => (props.lightNav ? props.theme.colors.white : 'transparent')};
   transition: all .2s, background 0.3s .05s, padding-bottom 0.3s;
   @media screen and (max-width: 1024px) {
-    padding: ${props => props.lightNav ? '20px 40px 20px' : '25px 40px 0'};
+    padding: ${props => props.lightNav ? '20px 2vw 20px' : '25px 2vw 0'};
   }
   @media screen and (max-width: 767.9px) {
     ${props => {
@@ -31,7 +31,7 @@ export const Nav = styled.nav`
         max-height: 80px;
       `
     }};
-    padding: ${props => props.lightNav ? '7px 30px 15px' : '20px 30px 0'};
+    padding: ${props => props.lightNav ? '7px 2vw 15px' : '20px 2vw 0'};
   }
   @media screen and (max-width: 640px) {
     padding: ${props => props.lightNav ? '10px 6px 10px' : '10px 6px 0'};
@@ -54,6 +54,8 @@ export const NavContainer = styled.div`
   flex-wrap: wrap;
   border-radius: 10px;
   transition: all 0.2s;
+  max-width: 1320px;
+  margin: auto;
   @media screen and (max-width: 767.9px) {
     background-color: var(--bgColor);
     padding: 10px 10px var(--padding);
@@ -158,7 +160,7 @@ export const NavLinks = styled.ul`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.li`
   font-family: ${(props) => props.theme.fonts.condensed};
   font-style: normal;
   font-weight: bold;
@@ -170,6 +172,11 @@ export const NavLink = styled.a`
   
   &:hover {
     color: ${(props) => props.theme.colors.purple};
+  }
+
+  & a {
+    all: unset;
+    display: contents;
   }
   @media screen and (max-width: 767.9px) {
     color: var(--color);
