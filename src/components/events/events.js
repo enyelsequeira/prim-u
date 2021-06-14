@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { GlobalSection, GlobalTitle, SpanTitle } from "../global-components";
-import { Button, Card, Container, Text, Title } from "./events.styles";
+import { Button, Card, Container, ImageWrapper, Text, Title } from "./events.styles";
 
 const Events = ({ data }) => {
   const bigCards = data.slice(2, 5).reverse();
@@ -15,13 +15,14 @@ const Events = ({ data }) => {
         {bigCards.map((card) => {
           return (
             <Card key={card.fields.bigCardsTitle}>
-              <Image
-                src={`http:${card.fields.servicesImages.fields.file.url}`}
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-              />
-
+              <ImageWrapper>
+                <Image
+                  src={`http:${card.fields.servicesImages.fields.file.url}`}
+                  layout="fill"
+                  objectFit="cover"
+                  quality={100}
+                />
+              </ImageWrapper>
               <Title condensed white fontSize={[25, 34, 50]} lineHeight={["large"]}>
                 {card.fields.bigCardsTitle}
               </Title>
@@ -29,6 +30,7 @@ const Events = ({ data }) => {
               <Text fontSize={[20]} lineHeight={["sub"]}>
                 {card.fields.description.content[0].content[0].value}
               </Text>
+
               <Button fontSize={[24]} lineHeight={["sub"]}>
                 Make a Booking
               </Button>

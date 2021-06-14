@@ -17,11 +17,11 @@ export const Card = styled.div`
   max-width: 1318px;
   height: 460px;
   border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
 
   &:after {
     content: "";
@@ -35,34 +35,37 @@ export const Card = styled.div`
     background: rgba(0, 0, 0, 0.5);
   }
 
+  @media screen and (max-width: 500px) {
+  }
   @media only screen and (max-width: 500px) {
     flex-direction: column;
     justify-content: space-evenly;
   }
 `;
 
+export const ImageWrapper = styled.div`
+  width: 100%;
+`;
+
 export const Title = styled(GlobalSubtitle)`
-  align-self: center;
-  text-align: center;
   text-transform: uppercase;
-  display: flex;
-  position: absolute;
-  left: 60px;
-  top: 40px;
+
+  margin-left: 60px;
+  margin-top: 40px;
+
+  align-self: flex-start;
   z-index: 10;
 
   ${lineHeight};
   ${space};
   ${fontSize};
 
-  @media only screen and (max-width: 1024px) {
-    left: 40px;
+  @media only screen and (max-width: 682px) {
+    margin: auto 0 auto 60px;
   }
 
-  @media only screen and (max-width: 370px) {
-    left: 0;
-    padding-left: 20px;
-    top: 0;
+  @media only screen and (max-width: 515px) {
+    margin: auto;
   }
 `;
 
@@ -127,6 +130,42 @@ export const Button = styled.button`
     color: ${({ theme }) => theme.colors.white};
   }
 
+  background: ${({ theme }) => theme.colors.white};
+  border: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: ${({ theme }) => theme.fonts.condensed};
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: ${({ theme }) => theme.colors.purple};
+  text-transform: uppercase;
+
+  background: #ffffff;
+
+  ${lineHeight};
+  ${space};
+  ${fontSize};
+
+  &:hover {
+    cursor: pointer;
+    background: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 235px;
+    height: 60px;
+    position: static;
+    margin-left: 60px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  @media only screen and (max-width: 515px) {
+    margin: auto;
+  }
   @media only screen and (max-width: 1024px) {
     left: 40px;
     bottom: 40px;

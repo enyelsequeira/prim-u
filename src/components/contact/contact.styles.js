@@ -3,14 +3,14 @@ import { fontSize, lineHeight, space } from "styled-system";
 import { GlobalSubtitle } from "../global-components";
 
 export const Container = styled.div`
+  width: auto;
   margin: 60px 0 100px 0;
   display: grid;
   grid-gap: 60px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
 
-  @media only screen and (max-width: 768px) {
-    max-width: 100vw;
+  @media only screen and (max-width: 670px) {
     gap: 0;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
@@ -35,12 +35,36 @@ export const Card = styled.div`
   &:after {
     content: "";
     position: absolute;
+    z-index: 11;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
   }
+
+  @media screen and (max-width: 1024px) {
+    max-width: 446px;
+    height: 326px;
+  }
+  @media screen and (max-width: 670px) {
+    max-width: 630px;
+    height: 430px;
+  }
+
+  @media screen and (max-width: 400px) {
+    min-width: 330px;
+    height: 326px;
+  }
+`;
+
+export const ImageContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
 `;
 
 export const Title = styled(GlobalSubtitle)`

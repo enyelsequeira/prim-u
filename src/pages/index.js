@@ -1,7 +1,17 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
-import { Footer, FooterBanner } from "../components";
+import { useRef } from "react";
+import {
+  Accordion,
+  Banner,
+  Contact,
+  Events,
+  Hero,
+  NavBar,
+  Platform,
+  Services,
+} from "../components";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -14,24 +24,27 @@ export default function Home({
   banner,
   footerData,
 }) {
-  // console.log(footerData);
+  const faq = useRef();
+
   return (
     <BaseLayout>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <NavBar /> */}
-      {/* 
-      <
+
+      <NavBar faq={faq} />
       <Hero />
+      <Banner />
 
       <Services data={services} />
-
       <Events data={bigCards} />
       <Contact data={bigCards} />
 
+      <Platform />
+
       <Accordion
+        ref={faq}
         data={faqQuestions}
         subtitle="For Customers"
         title="Frequently asked"
@@ -40,9 +53,7 @@ export default function Home({
 
       <Accordion data={partnersQuestions} subtitle="For Partners" />
 
-      <Carrousel data={reviews} /> */}
-      <FooterBanner data={footerData} />
-      <Footer />
+      {/* <Carrousel data={reviews} /> */}
     </BaseLayout>
   );
 }

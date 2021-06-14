@@ -1,6 +1,14 @@
 import Image from "next/image";
 import { GlobalSection, GlobalTitle, SpanTitle } from "../global-components";
-import { Button, Card, CardContainer, Container, Text, Title } from "./contact.styles";
+import {
+  Button,
+  Card,
+  CardContainer,
+  Container,
+  ImageContainer,
+  Text,
+  Title,
+} from "./contact.styles";
 
 const Contact = ({ data }) => {
   const bigCards = data.slice(0, 2);
@@ -14,14 +22,15 @@ const Contact = ({ data }) => {
         {bigCards.map((card) => {
           return (
             <CardContainer key={card.fields.bigCardsTitle}>
-              <Card key={card.fields.bigCardsTitle}>
-                <Image
-                  src={`http:${card.fields.servicesImages.fields.file.url}`}
-                  width="630"
-                  height="460"
-                  objectFit="cover"
-                  quality={100}
-                />
+              <Card>
+                <ImageContainer>
+                  <Image
+                    src={`http:${card.fields.servicesImages.fields.file.url}`}
+                    layout="fill"
+                    objectFit="cover"
+                    quality={100}
+                  />
+                </ImageContainer>
                 <Title
                   fontSize={[32, 34, 38]}
                   condensed

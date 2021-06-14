@@ -3,27 +3,42 @@ import { fontSize, lineHeight, space, width } from "styled-system";
 
 export const CarrouselCards = styled.div`
   display: grid;
-  overflow-x: scroll;
-  overscroll-behavior-x: initial;
-  grid-template-columns: 1fr 1fr 1fr;
+  overflow-x: hidden;
+  scroll-behavior: scroll;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  width: 80vw;
   gap: 40px;
+  margin: 60px auto 30px auto;
+  cursor: pointer;
+  position: relative;
 
-  @media only screen and (max-width: 1024px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 30px;
+  &:active {
+    cursor: grabbing;
   }
-  @media only screen and (max-width: 640px) {
+
+  /* @media only screen and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 30px;
+  } */
+  /* @media only screen and (max-width: 640px) {
     grid-template-columns: 1fr;
   }
   @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-  }
+  } */
 `;
 
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
+  width: 520px;
+  height: 240px;
   border-radius: 20px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
   ${lineHeight};
   ${space};
   ${fontSize};
@@ -52,4 +67,61 @@ export const ReviewText = styled.p`
   ${space};
   ${fontSize};
   ${width};
+`;
+
+export const Stars = styled.div`
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+`;
+
+export const SliderContainer = styled.div`
+  width: 743px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 40px;
+`;
+
+export const Range = styled.input`
+  width: 100%;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  outline: none;
+  background: #c4c4c4;
+  border-radius: 2px;
+  margin: auto 35px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 300px;
+    height: 2px;
+    background: #000000;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 300px;
+    height: 2px;
+    background: #04aa6d;
+    cursor: pointer;
+  }
+`;
+
+export const Angle = styled.a`
+  align-self: center;
+  margin: auto;
+  cursor: pointer;
 `;
