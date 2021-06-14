@@ -10,8 +10,11 @@ import {
   ShowMore,
 } from "./accordion.styles";
 
+
 const Accordion = forwardRef(({ data, subtitle, title, span }, ref) => {
   console.log(data);
+
+
   const [isAnswerShowing, setIsAnswerShowing] = useState(false);
   const [visible, setIsVisible] = useState(6);
 
