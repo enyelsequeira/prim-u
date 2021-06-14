@@ -39,7 +39,7 @@ function NavBar(props) {
             </a>
           </NavLink>
           <NavLink>WORK WITH US</NavLink>
-          <NavLink onClick={() => props.faq.current.scrollIntoView()}>FAQ</NavLink>
+          <NavLink onClick={() => props.faq.current.scrollIntoView(false)}>FAQ</NavLink>
         </NavLinks>
       </NavContainer>
     </Nav>
