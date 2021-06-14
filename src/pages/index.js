@@ -7,6 +7,8 @@ import {
   Banner,
   Contact,
   Events,
+  Footer,
+  FooterBanner,
   Hero,
   NavBar,
   Platform,
@@ -52,6 +54,8 @@ export default function Home({
       />
 
       <Accordion data={partnersQuestions} subtitle="For Partners" />
+      <FooterBanner data={footerData} />
+      <Footer />
 
       {/* <Carrousel data={reviews} /> */}
     </BaseLayout>
