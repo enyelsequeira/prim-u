@@ -7,8 +7,8 @@ export const CarrouselCards = styled.div`
   scroll-behavior: scroll;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
-  width:  80vw;
-  gap: 40px; 
+  width: 80vw;
+  gap: 40px;
   margin: 60px auto 30px auto;
   cursor: pointer;
   position: relative;
@@ -70,17 +70,17 @@ export const ReviewText = styled.p`
 `;
 
 export const Stars = styled.div`
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 20px;
-    right: 30px
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 20px;
+  right: 30px;
 `;
 
 export const SliderContainer = styled.div`
   width: 743px;
   margin: 0 auto;
-  
+
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -94,32 +94,31 @@ export const Range = styled.input`
   width: 100%;
   height: 2px;
   outline: none;
-  background: #C4C4C4;
+  background: #c4c4c4;
   border-radius: 2px;
   margin: auto 35px;
 
+  &:hover {
+    opacity: 1;
+  }
 
-&:hover {
-  opacity: 1;
-}
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 300px;
+    height: 2px;
+    background: #000000;
+    border-radius: 20px;
+    cursor: pointer;
+  }
 
-&::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 300px;
-  height: 2px;
-  background: #000000;
-  border-radius: 20px;   
-  cursor: pointer;
-}
-
-&::-moz-range-thumb {
-  width: 300px;
-  height: 2px;
-  background: #04AA6D;
-  cursor: pointer;
-}
-`; 
+  &::-moz-range-thumb {
+    width: 300px;
+    height: 2px;
+    background: #04aa6d;
+    cursor: pointer;
+  }
+`;
 
 export const Angle = styled.a`
   align-self: center;

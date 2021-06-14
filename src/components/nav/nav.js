@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   LogoContainer,
   LogoIcon,
@@ -13,16 +13,15 @@ import {
 function NavBar(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [lightNav, setLightNav] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  })
-
   function handleScroll() {
-    if(window.scrollY > 60) setLightNav(true);
+    if (window.scrollY > 60) setLightNav(true);
     else setLightNav(false);
   }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
 
   return (
     <Nav isOpen={isOpen} lightNav={lightNav}>
@@ -34,7 +33,7 @@ function NavBar(props) {
         <NavIcon onClick={() => setIsOpen(!isOpen)} />
         <NavLinks>
           <NavLink>
-            <a href="https://www.prim-u.app/en/list" target="_blank">
+            <a href="https://www.prim-u.app/en/list" target="_blank" rel="noreferrer">
               MAKE A BOOKING
             </a>
           </NavLink>

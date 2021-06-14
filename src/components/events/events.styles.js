@@ -14,17 +14,16 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-    max-width: 1318px;
-    height: 460px;
-    border-radius: 25px;
-    position: relative;
-    overflow: hidden;
+  max-width: 1318px;
+  height: 460px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    
-    &:after {
+  &:after {
     content: "";
     width: 100%;
     height: 460px;
@@ -36,9 +35,8 @@ export const Card = styled.div`
     background: rgba(0, 0, 0, 0.5);
   }
 
-    @media screen and (max-width: 500px) {
-        
-    }
+  @media screen and (max-width: 500px) {
+  }
   @media only screen and (max-width: 500px) {
     flex-direction: column;
     justify-content: space-evenly;
@@ -46,88 +44,28 @@ export const Card = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-    width: 100%;
-`; 
-
-export const Title = styled(GlobalSubtitle)`
-    text-transform: uppercase;
-
-    margin-left: 60px;
-    margin-top: 40px;
-
-    align-self: flex-start;
-    z-index: 10;
-    
-
-    ${lineHeight};
-    ${space};
-    ${fontSize};
-
-    @media only screen and (max-width: 682px) {
-        
-        margin: auto 0 auto 60px;
-    }
-
-    @media only screen and (max-width: 515px) {
-        margin: auto;
-    } 
+  width: 100%;
 `;
 
-export const Text = styled.p`
-    color: ${({ theme }) => theme.colors.white};
-    font-family: ${({ theme }) => theme.fonts.roboto};
-    font-style: normal;
-    font-weight: normal;
-    width: 584px;
-
-    margin-left: 60px;
-    margin-bottom: 40px;
-    margin-top: 209px;
-
-    z-index: 10;
-
-    ${lineHeight};
-    ${space};
-    ${fontSize};
-
-    @media only screen and (max-width: 1024px) {
-        margin-bottom: 30px;
-        margin-top: 119px;
-    }
-
-    @media only screen and (max-width: 682px) {
-        width: 400px;
-        margin: auto 0 auto 60px;
-    }
-
-    @media only screen and (max-width: 510px) {
-        margin: auto;
-        max-width: 245px;
-        text-align: justify;
-    } 
-
-    
-  align-self: center;
-  text-align: center;
+export const Title = styled(GlobalSubtitle)`
   text-transform: uppercase;
-  display: flex;
-  position: absolute;
-  left: 60px;
-  top: 40px;
+
+  margin-left: 60px;
+  margin-top: 40px;
+
+  align-self: flex-start;
   z-index: 10;
 
   ${lineHeight};
   ${space};
   ${fontSize};
 
-  @media only screen and (max-width: 1024px) {
-    left: 40px;
+  @media only screen and (max-width: 682px) {
+    margin: auto 0 auto 60px;
   }
 
-  @media only screen and (max-width: 370px) {
-    left: 0;
-    padding-left: 20px;
-    top: 0;
+  @media only screen and (max-width: 515px) {
+    margin: auto;
   }
 `;
 
@@ -192,42 +130,42 @@ export const Button = styled.button`
     color: ${({ theme }) => theme.colors.white};
   }
 
-    background: ${({ theme }) => theme.colors.white};
-    border: none;
-    box-sizing: border-box;
-    border-radius: 10px;
-    font-family: ${({ theme }) => theme.fonts.condensed};
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: -0.01em;
-    color: ${({ theme }) => theme.colors.purple};
-    text-transform: uppercase;
+  background: ${({ theme }) => theme.colors.white};
+  border: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: ${({ theme }) => theme.fonts.condensed};
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: ${({ theme }) => theme.colors.purple};
+  text-transform: uppercase;
 
-    background: #FFFFFF;
+  background: #ffffff;
 
-    ${lineHeight};
-    ${space};
-    ${fontSize};
+  ${lineHeight};
+  ${space};
+  ${fontSize};
 
-    &:hover {
-        cursor: pointer;
-        background: ${({ theme }) => theme.colors.purple};
-        color: ${({ theme }) => theme.colors.white};
-    }
+  &:hover {
+    cursor: pointer;
+    background: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.white};
+  }
 
-    @media screen and (max-width: 1024px) {
-        width: 235px;
-        height: 60px;
-        position: static;
-        margin-left: 60px;
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
+  @media screen and (max-width: 1024px) {
+    width: 235px;
+    height: 60px;
+    position: static;
+    margin-left: 60px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 
-    @media only screen and (max-width: 515px) {
-        margin: auto;
-    } 
+  @media only screen and (max-width: 515px) {
+    margin: auto;
+  }
   @media only screen and (max-width: 1024px) {
     left: 40px;
     bottom: 40px;

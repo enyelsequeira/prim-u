@@ -2,7 +2,18 @@
 import { createClient } from "contentful";
 import Head from "next/head";
 import { useRef } from "react";
-import { Accordion, Carrousel, Contact, Events, Hero, NavBar, Banner, Platform, Services } from "../components";
+import {
+  Accordion,
+  Banner,
+  Contact,
+  Events,
+  Footer,
+  FooterBanner,
+  Hero,
+  NavBar,
+  Platform,
+  Services,
+} from "../components";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -13,10 +24,9 @@ export default function Home({
   bigCards,
   reviews,
   banner,
+  footerData,
 }) {
-
   const faq = useRef();
-
 
   return (
     <BaseLayout>
@@ -35,7 +45,6 @@ export default function Home({
 
       <Platform />
 
-
       <Accordion
         ref={faq}
         data={faqQuestions}
@@ -43,7 +52,10 @@ export default function Home({
         title="Frequently asked"
         span="questions"
       />
+
       <Accordion data={partnersQuestions} subtitle="For Partners" />
+      <FooterBanner data={footerData} />
+      <Footer />
 
       {/* <Carrousel data={reviews} /> */}
     </BaseLayout>
@@ -62,6 +74,7 @@ export async function getStaticProps() {
   const bigCards = [];
   const banner = [];
   const reviews = [];
+  const footerData = [];
   // this needs to be changed to make things more readable
   // pay attention to this, you should have all the data that you need
   // beauty products needs to be added to the array as well
@@ -78,6 +91,8 @@ export async function getStaticProps() {
       reviews.push(entry);
     } else if (entry.fields.title) {
       banner.push(entry);
+    } else if (entry.fields.footerTittle) {
+      footerData.push(entry);
     }
   });
 
@@ -90,6 +105,7 @@ export async function getStaticProps() {
       bigCards,
       reviews,
       banner,
+      footerData,
     },
   };
 }

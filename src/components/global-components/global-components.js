@@ -11,7 +11,6 @@ export const GlobalWrapper = styled.main`
 
 export const GlobalSection = styled.section`
   max-width: 1320px;
-
   margin: auto;
   ${space}
   ${fontSize}
@@ -136,4 +135,11 @@ export const GlobalSubtitle = styled.p`
     css`
       text-align: ${props.align};
     `};
+`;
+
+export const Divider = styled.div`
+  width: 100%;
+  border: 1px solid ${({ theme }) => theme.colors.black};
+  ${space};
+  /* margin: 70px 0 70px 0; */
 `;

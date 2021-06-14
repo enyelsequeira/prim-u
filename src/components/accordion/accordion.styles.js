@@ -80,10 +80,7 @@ export const ShowMore = styled.button`
     background-color: ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.white};
   }
-  @media only screen and (max-width: 640px) {
-    padding: 16px 105px;
-    margin-top: 60px;
-  }
+
   @media only screen and (max-width: 768px) {
     padding: 16px 105px;
     margin-top: 60px;
@@ -91,6 +88,10 @@ export const ShowMore = styled.button`
   @media only screen and (max-width: 1024px) {
     padding: 11px 57px;
     margin-top: 80px;
+  }
+  @media only screen and (max-width: 640px) {
+    padding: 16px 105px;
+    margin-top: 60px;
   }
   /* @media only screen and (max-width: 1440px) {
     padding: 11px 118px;

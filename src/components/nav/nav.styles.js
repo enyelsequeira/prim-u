@@ -5,9 +5,10 @@ export const Nav = styled.nav`
   --opacity: ${(props) => (props.isOpen ? 1 : 0)};
   --visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
   --maxheight: ${(props) => (props.isOpen ? "100vh" : 0)};
-  --color: ${(props) => (props.isOpen || props.lightNav ? props.theme.colors.black : props.theme.colors.white)};
+  --color: ${(props) =>
+    props.isOpen || props.lightNav ? props.theme.colors.black : props.theme.colors.white};
   --colour: ${(props) => (props.lightNav ? props.theme.colors.black : props.theme.colors.white)};
-  --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : 'transparent')};
+  --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : "transparent")};
   position: fixed;
   z-index: 100;
   top: 0;
@@ -15,26 +16,28 @@ export const Nav = styled.nav`
   transform: translateX(-50%);
   width: 100%;
   max-width: 1440px;
-  max-height: ${props => props.lightNav ? '80px' : '80px'};
-  padding: ${props => props.lightNav ? '20px 2vw' : '25px 2vw 0'};
-  background-color: ${(props) => (props.lightNav ? props.theme.colors.white : 'transparent')};
-  transition: all .2s, background 0.3s .05s, padding-bottom 0.3s;
+  max-height: ${(props) => (props.lightNav ? "80px" : "80px")};
+  padding: ${(props) => (props.lightNav ? "20px 2vw" : "25px 2vw 0")};
+  background-color: ${(props) => (props.lightNav ? props.theme.colors.white : "transparent")};
+  transition: all 0.2s, background 0.3s 0.05s, padding-bottom 0.3s;
   @media screen and (max-width: 1024px) {
-    padding: ${props => props.lightNav ? '20px 2vw 20px' : '25px 2vw 0'};
+    padding: ${(props) => (props.lightNav ? "20px 2vw 20px" : "25px 2vw 0")};
   }
   @media screen and (max-width: 767.9px) {
-    ${props => {
-      if(props.isOpen) return css`
-        max-height: 100vh;
-      `
-      if(props.lightNav) return css`
-        max-height: 80px;
-      `
+    ${(props) => {
+      if (props.isOpen)
+        return css`
+          max-height: 100vh;
+        `;
+      if (props.lightNav)
+        return css`
+          max-height: 80px;
+        `;
     }};
-    padding: ${props => props.lightNav ? '7px 2vw 15px' : '20px 2vw 0'};
+    padding: ${(props) => (props.lightNav ? "7px 2vw 15px" : "20px 2vw 0")};
   }
   @media screen and (max-width: 640px) {
-    padding: ${props => props.lightNav ? '10px 6px 10px' : '10px 6px 0'};
+    padding: ${(props) => (props.lightNav ? "10px 6px 10px" : "10px 6px 0")};
   }
   button {
     ${(props) =>
@@ -169,7 +172,7 @@ export const NavLink = styled.li`
   letter-spacing: -0.01em;
   color: var(--colour);
   cursor: pointer;
-  
+
   &:hover {
     color: ${(props) => props.theme.colors.purple};
   }
@@ -180,7 +183,7 @@ export const NavLink = styled.li`
   }
   @media screen and (max-width: 767.9px) {
     color: var(--color);
-    transition: all 0.4s .1s;
+    transition: all 0.4s 0.1s;
     :hover {
       color: var(--color);
     }
