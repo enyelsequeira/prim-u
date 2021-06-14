@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { GlobalTitle } from '../global-components'
 
 export const Banner = styled.div`
-    padding: 60px 60px 20px;
+    padding: 60px 2vw 20px;
+    /* padding: 60px 60px 20px; */
     @media screen and (max-width: 1124px) {
-        padding: 60px 40px 20px;
+        padding: 60px 2vw 20px;
+        /* padding: 60px 40px 20px; */
     }
     @media screen and (max-width: 768px) {
         padding: 20px 10px;
@@ -15,6 +17,7 @@ export const Card = styled.div`
     justify-content: space-between;
     max-width: 1320px;
     min-height: 643px;
+    margin: auto;
     border-radius: 20px;
     padding: 60px;
     background-image: url('./images/Mask1.jpg');
