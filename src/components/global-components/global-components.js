@@ -1,5 +1,6 @@
+/* eslint-disable no-shadow */
 import styled, { css } from "styled-components";
-import { fontSize, lineHeight, space, width } from "styled-system";
+import { fontSize, lineHeight, space, textAlign, width } from "styled-system";
 
 export const GlobalWrapper = styled.main`
   max-width: 1440px;
@@ -9,11 +10,13 @@ export const GlobalWrapper = styled.main`
 `;
 
 export const GlobalSection = styled.section`
-  /* padding: 80px 60px; */
   max-width: 1320px;
-  border: 1px solid red;
+
   margin: auto;
   ${space}
+  ${fontSize}
+  ${lineHeight}
+  ${width}
   ${(props) =>
     props.pt &&
     css`
@@ -38,8 +41,13 @@ export const GlobalTitle = styled.p`
   ${space}
   ${lineHeight}
   ${width}
+  ${textAlign}
 
-
+ ${(props) =>
+    props.textAlign &&
+    css`
+      text-align: ${props.textAlign};
+    `};
   ${(props) =>
     props.color &&
     css`
@@ -89,10 +97,11 @@ export const GlobalSubtitle = styled.p`
     condensed ? theme.fonts.condensed : theme.fonts.roboto};
   font-style: normal;
   font-weight: bold;
+  letter-spacing: -0.01em;
   ${fontSize};
   ${space};
   ${lineHeight};
-  ${width}
+  ${width}/* in case we need to pass different props */;
 
   ${(props) =>
     props.size &&
@@ -100,7 +109,6 @@ export const GlobalSubtitle = styled.p`
       font-size: ${props.size};
     `};
   /* line-height: 37px; */
-  letter-spacing: -0.01em;
   color: ${({ theme, white }) => (white ? theme.colors.white : theme.colors.black)};
   ${(props) =>
     props.margin &&

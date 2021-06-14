@@ -1,4 +1,4 @@
-import { GlobalWrapper } from "../styles/global-components/global-wrapper";
+import { GlobalWrapper } from "../components/global-components/global-components";
 
 export default function BaseLayout({ children }) {
   return (

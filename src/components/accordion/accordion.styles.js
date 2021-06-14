@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSize, lineHeight, space } from "styled-system";
+import { fontSize, lineHeight, space, width } from "styled-system";
 
 export const FaqContainer = styled.div`
   display: grid;
@@ -13,11 +13,15 @@ export const FaqContainer = styled.div`
     display: flex;
     gap: 40px;
   }
+  @media only screen and (max-width: 1024px) {
+    gap: 42px;
+  }
 `;
 
 export const FaqQuestionsWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  ${width}
 `;
 
 export const FaqQuestion = styled.div`
@@ -69,6 +73,8 @@ export const ShowMore = styled.button`
   ${lineHeight};
   ${space};
   ${fontSize};
+  padding: 11px 118px;
+  margin-top: 100px;
   &:hover {
     cursor: pointer;
     background-color: ${({ theme }) => theme.colors.purple};
@@ -86,8 +92,8 @@ export const ShowMore = styled.button`
     padding: 11px 57px;
     margin-top: 80px;
   }
-  @media only screen and (max-width: 1440px) {
+  /* @media only screen and (max-width: 1440px) {
     padding: 11px 118px;
     margin-top: 100px;
-  }
+  } */
 `;

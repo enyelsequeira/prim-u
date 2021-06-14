@@ -1,40 +1,44 @@
+/* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
-import Accordion from "../components/accordion/accordion";
-import Services from "../components/services/services"
-import Events from "../components/events/events";
-import Coop from "../components/contact/contact";
+import { Accordion, Carrousel, Contact, Events, Hero, NavBar, Banner, Services } from "../components";
 import BaseLayout from "../layouts/base";
 
-export default function Home({ data, services, faqQuestions, partnersQuestions, bigCards }) {
-  // console.log(data);
-
-  // console.log("+++++++++");
-  // console.log(services);
-  // console.log("==== faq questions=====");
-  // console.log(faqQuestions);
-  // console.log("=====pquestions=====");
-  // console.log(partnersQuestions);
-  // console.log("=====big cards======");
-  // console.log(bigCards);
+export default function Home({
+  data,
+  services,
+  faqQuestions,
+  partnersQuestions,
+  bigCards,
+  reviews,
+  banner,
+}) {
+  console.log(banner);
   return (
     <BaseLayout>
-      {/* <Head>
+      <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      */}
-      <Services data={services}/>
-      <Events data={bigCards}/> 
-      <Coop data={bigCards}/>
-      
-      {/* <Accordion
+
+      <NavBar />
+      <Hero />
+      <Banner />
+
+      {/* <Services data={services} /> */}
+
+      {/* <Events data={bigCards} />
+      <Contact data={bigCards} />
+
+      <Accordion
         data={faqQuestions}
         subtitle="For Customers"
         title="Frequently asked"
         span="questions"
       />
       <Accordion data={partnersQuestions} subtitle="For Partners" /> */}
+
+      {/* <Carrousel data={reviews} /> */}
     </BaseLayout>
   );
 }
@@ -49,6 +53,8 @@ export async function getStaticProps() {
   const faqQuestions = [];
   const partnersQuestions = [];
   const bigCards = [];
+  const banner = [];
+  const reviews = [];
   // this needs to be changed to make things more readable
   // pay attention to this, you should have all the data that you need
   // beauty products needs to be added to the array as well
@@ -61,6 +67,10 @@ export async function getStaticProps() {
       partnersQuestions.push(entry);
     } else if (entry.fields.bigCardsTitle) {
       bigCards.push(entry);
+    } else if (entry.fields.name) {
+      reviews.push(entry);
+    } else if (entry.fields.title) {
+      banner.push(entry);
     }
   });
 
@@ -71,6 +81,8 @@ export async function getStaticProps() {
       faqQuestions,
       partnersQuestions,
       bigCards,
+      reviews,
+      banner,
     },
   };
 }

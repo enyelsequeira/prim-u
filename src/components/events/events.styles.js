@@ -1,19 +1,16 @@
-import styled from 'styled-components';
-import { GlobalSubtitle } from "../../styles/global-components/global-wrapper";
-
+import styled from "styled-components";
 import { fontSize, lineHeight, space } from "styled-system";
+import { GlobalSubtitle } from "../global-components";
 
 export const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-gap: 60px;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    background: white;
-    margin: 60px 0 100px 0;
-
-    
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 60px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background: white;
+  margin: 60px 0 100px 0;
 `;
 
 export const Card = styled.div`
@@ -37,11 +34,15 @@ export const Card = styled.div`
     bottom: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
-    }
+  }
 
     @media screen and (max-width: 500px) {
         
     }
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -106,15 +107,90 @@ export const Text = styled.p`
     } 
 
     
+  align-self: center;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  position: absolute;
+  left: 60px;
+  top: 40px;
+  z-index: 10;
+
+  ${lineHeight};
+  ${space};
+  ${fontSize};
+
+  @media only screen and (max-width: 1024px) {
+    left: 40px;
+  }
+
+  @media only screen and (max-width: 370px) {
+    left: 0;
+    padding-left: 20px;
+    top: 0;
+  }
+`;
+
+export const Text = styled.p`
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fonts.roboto};
+  font-style: normal;
+  font-weight: normal;
+  width: 584px;
+  position: absolute;
+  z-index: 10;
+  left: 60px;
+  bottom: 40px;
+  ${lineHeight};
+  ${space};
+  ${fontSize};
+
+  @media only screen and (max-width: 1024px) {
+    left: 40px;
+    bottom: 130px;
+  }
+
+  @media only screen and (max-width: 645px) {
+    width: 400px;
+  }
+
+  @media only screen and (max-width: 370px) {
+    width: 250px;
+    left: 20px;
+  }
 `;
 
 export const Button = styled.button`
-    position: absolute;
-    z-index: 10;
-    width: 235px;
-    height: 60px;
-    right: 60px;
-    bottom: 40px;
+  position: absolute;
+  z-index: 10;
+  width: 235px;
+  height: 60px;
+  right: 60px;
+  bottom: 40px;
+
+  background: ${({ theme }) => theme.colors.white};
+  border: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: ${({ theme }) => theme.fonts.condensed};
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: ${({ theme }) => theme.colors.purple};
+  text-transform: uppercase;
+
+  background: #ffffff;
+
+  ${lineHeight};
+  ${space};
+  ${fontSize};
+
+  &:hover {
+    cursor: pointer;
+    background: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.white};
+  }
 
     background: ${({ theme }) => theme.colors.white};
     border: none;
@@ -152,6 +228,12 @@ export const Button = styled.button`
     @media only screen and (max-width: 515px) {
         margin: auto;
     } 
+  @media only screen and (max-width: 1024px) {
+    left: 40px;
+    bottom: 40px;
+  }
 
+  @media only screen and (max-width: 370px) {
+    left: 20px;
+  }
 `;
-
