@@ -15,7 +15,7 @@ import {
 
 const Carrousel = ({ data }) => {
   const carouselRef = useRef();
-  const [percent, setPercent] = useState()
+  const [percent, setPercent] = useState(0)
 
   useEffect(() => {
     carouselRef.current.addEventListener("scroll", e => {
