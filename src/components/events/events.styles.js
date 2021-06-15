@@ -19,7 +19,6 @@ export const Card = styled.div`
   border-radius: 25px;
   position: relative;
   overflow: hidden;
-
   display: flex;
   flex-direction: column;
 
@@ -34,12 +33,7 @@ export const Card = styled.div`
     right: 0;
     background: rgba(0, 0, 0, 0.5);
   }
-
   @media screen and (max-width: 500px) {
-  }
-  @media only screen and (max-width: 500px) {
-    flex-direction: column;
-    justify-content: space-evenly;
   }
 `;
 
@@ -49,21 +43,17 @@ export const ImageWrapper = styled.div`
 
 export const Title = styled(GlobalSubtitle)`
   text-transform: uppercase;
-
   margin-left: 60px;
   margin-top: 40px;
-
   align-self: flex-start;
   z-index: 10;
 
   ${lineHeight};
   ${space};
   ${fontSize};
-
   @media only screen and (max-width: 682px) {
     margin: auto 0 auto 60px;
   }
-
   @media only screen and (max-width: 515px) {
     margin: auto;
   }
@@ -75,26 +65,25 @@ export const Text = styled.p`
   font-style: normal;
   font-weight: normal;
   width: 584px;
-  position: absolute;
+  margin-left: 60px;
+  margin-bottom: 40px;
+  margin-top: 209px;
   z-index: 10;
-  left: 60px;
-  bottom: 40px;
   ${lineHeight};
   ${space};
   ${fontSize};
-
   @media only screen and (max-width: 1024px) {
-    left: 40px;
-    bottom: 130px;
+    margin-bottom: 30px;
+    margin-top: 119px;
   }
-
-  @media only screen and (max-width: 645px) {
+  @media only screen and (max-width: 682px) {
     width: 400px;
+    margin: auto 0 auto 60px;
   }
-
-  @media only screen and (max-width: 370px) {
-    width: 250px;
-    left: 20px;
+  @media only screen and (max-width: 510px) {
+    margin: auto;
+    max-width: 245px;
+    text-align: justify;
   }
 `;
 
@@ -105,7 +94,6 @@ export const Button = styled.button`
   height: 60px;
   right: 60px;
   bottom: 40px;
-
   background: ${({ theme }) => theme.colors.white};
   border: none;
   box-sizing: border-box;
@@ -117,43 +105,15 @@ export const Button = styled.button`
   letter-spacing: -0.01em;
   color: ${({ theme }) => theme.colors.purple};
   text-transform: uppercase;
-
   background: #ffffff;
-
   ${lineHeight};
   ${space};
   ${fontSize};
-
   &:hover {
     cursor: pointer;
     background: ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.white};
   }
-
-  background: ${({ theme }) => theme.colors.white};
-  border: none;
-  box-sizing: border-box;
-  border-radius: 10px;
-  font-family: ${({ theme }) => theme.fonts.condensed};
-  font-style: normal;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: -0.01em;
-  color: ${({ theme }) => theme.colors.purple};
-  text-transform: uppercase;
-
-  background: #ffffff;
-
-  ${lineHeight};
-  ${space};
-  ${fontSize};
-
-  &:hover {
-    cursor: pointer;
-    background: ${({ theme }) => theme.colors.purple};
-    color: ${({ theme }) => theme.colors.white};
-  }
-
   @media screen and (max-width: 1024px) {
     width: 235px;
     height: 60px;
@@ -162,16 +122,7 @@ export const Button = styled.button`
     margin-top: 0;
     margin-bottom: 30px;
   }
-
   @media only screen and (max-width: 515px) {
     margin: auto;
-  }
-  @media only screen and (max-width: 1024px) {
-    left: 40px;
-    bottom: 40px;
-  }
-
-  @media only screen and (max-width: 370px) {
-    left: 20px;
   }
 `;

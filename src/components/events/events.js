@@ -3,7 +3,7 @@ import { GlobalSection, GlobalTitle, SpanTitle } from "../global-components";
 import { Button, Card, Container, ImageWrapper, Text, Title } from "./events.styles";
 
 const Events = ({ data }) => {
-  const bigCards = data.slice(2, 5).reverse();
+  const bigCards = data.reverse();
 
   return (
     <GlobalSection px={[20, 20, 40, 40, 0]} pt={[20, 60, 80]}>
