@@ -13,6 +13,7 @@ import {
   NavBar,
   Platform,
   Services,
+  Carrousel
 } from "../components";
 import BaseLayout from "../layouts/base";
 
@@ -27,6 +28,7 @@ export default function Home({
   footerData,
 }) {
   const faq = useRef();
+  console.log(data)
 
   return (
     <BaseLayout>
@@ -57,7 +59,7 @@ export default function Home({
       <FooterBanner data={footerData} />
       <Footer />
 
-      {/* <Carrousel data={reviews} /> */}
+      <Carrousel data={reviews} />
     </BaseLayout>
   );
 }

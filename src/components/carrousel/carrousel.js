@@ -14,49 +14,63 @@ import {
 } from "./carrousel.styles";
 
 const Carrousel = ({ data }) => {
-  const dragable = useRef("");
-  const slider = useRef("");
-
-  const [slideIndex, setSlideIndex] = useState(0);
-
-  function handleChange(e) {
-    const sliderValue = e.target.value;
-    setSlideIndex(sliderValue);
-    console.log(slideIndex);
-  }
+  const carouselRef = useRef();
+  const [percent, setPercent] = useState()
 
   useEffect(() => {
-    if (dragable) {
-      let isDown = false;
-      let startX;
-      let scrollLeft;
+    carouselRef.current.addEventListener("scroll", e => {
+      // console.log(e.target.scrollLeft)
+      // console.log(e.target.scrollWidth - e.target.offsetWidth)
+      setPercent(e.target.scrollLeft/(e.target.scrollWidth - e.target.offsetWidth))
+    }) 
+  },[])
 
-      dragable.current.addEventListener("mousedown", (e) => {
-        isDown = true;
-        startX = e.pageX - dragable.current.offsetLeft;
-        scrollLeft = dragable.current.scrollLeft;
-      });
+  console.log(percent)
 
-      dragable.current.addEventListener("mouseleave", () => {
-        isDown = false;
-      });
 
-      dragable.current.addEventListener("mouseup", () => {
-        isDown = false;
-      });
+  // const dragable = useRef("");
+  // const slider = useRef("");
 
-      dragable.current.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - dragable.current.offsetLeft;
-        const scrollX = (x - startX) * 1;
+  // const [slideIndex, setSlideIndex] = useState(0);
 
-        dragable.current.scrollLeft = scrollLeft - scrollX;
-      });
-    }
+  // function handleChange(e) {
+  //   const sliderValue = e.target.value;
+  //   setSlideIndex(sliderValue);
+  //   console.log(slideIndex);
+  // }
 
-    slider.current.addEventListener("mousedown", (e) => {});
-  }, []);
+  // useEffect(() => {
+  //   if (dragable) {
+  //     let isDown = false;
+  //     let startX;
+  //     let scrollLeft;
+
+  //     dragable.current.addEventListener("mousedown", (e) => {
+  //       isDown = true;
+  //       startX = e.pageX - dragable.current.offsetLeft;
+  //       scrollLeft = dragable.current.scrollLeft;
+  //     });
+
+  //     dragable.current.addEventListener("mouseleave", () => {
+  //       isDown = false;
+  //     });
+
+  //     dragable.current.addEventListener("mouseup", () => {
+  //       isDown = false;
+  //     });
+
+  //     dragable.current.addEventListener("mousemove", (e) => {
+  //       if (!isDown) return;
+  //       e.preventDefault();
+  //       const x = e.pageX - dragable.current.offsetLeft;
+  //       const scrollX = (x - startX) * 1;
+
+  //       dragable.current.scrollLeft = scrollLeft - scrollX;
+  //     });
+  //   }
+
+  //   slider.current.addEventListener("mousedown", (e) => {});
+  // }, []);
 
   return (
     <GlobalSection px={[20, 20, 40, 40, 0]} pt={[20, 60, 80]}>
@@ -68,7 +82,8 @@ const Carrousel = ({ data }) => {
         mb={[40, 50, 54, 54, 80]}>
         What Our <SpanTitle> Customers</SpanTitle> say{" "}
       </GlobalTitle>
-      <CarrouselCards ref={dragable}>
+      {/* <CarrouselCards ref={dragable}> */}
+      <CarrouselCards ref={carouselRef}>
         {data.map((r) => {
           const {
             fields: { name, rating, review },
@@ -102,7 +117,14 @@ const Carrousel = ({ data }) => {
       </CarrouselCards>
 
       <SliderContainer>
-        <Angle id="prev">
+        <Angle 
+          // id="prev"
+          onClick={e => carouselRef.current.scrollBy({
+            left: -20,
+            behavior: 'smooth'
+          })}
+          disabled={percent === 0}
+          >
           <Image src="/LeftAngle.svg" width="20" height="20" intrinsic="true" />
         </Angle>
 
@@ -110,12 +132,19 @@ const Carrousel = ({ data }) => {
           min={0}
           max={5}
           type="range"
-          ref={slider}
-          onChange={handleChange}
-          value={slideIndex}
+          // ref={slider}
+          // onChange={handleChange}
+          // value={slideIndex}
         />
 
-        <Angle id="next">
+        <Angle 
+          // id="next" 
+          onClick={e => carouselRef.current.scrollBy({
+            left: 20,
+            behavior: 'smooth'
+          })}
+          disabled={percent >= 1}
+          >
           <Image src="/RightAngle.svg" width="20" height="20" intrinsic="true" />
         </Angle>
       </SliderContainer>
