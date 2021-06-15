@@ -18,7 +18,7 @@ const Contact = ({ data }) => {
       </GlobalTitle>
 
       <Container>
-        {data.reverse().map((card) => {
+        {data.map((card) => {
           return (
             <CardContainer key={card.fields.bigCardsTitle}>
               <Card>

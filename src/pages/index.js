@@ -14,6 +14,7 @@ import {
   Platform,
   Services,
 } from "../components";
+import { Divider } from "../components/global-components";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -45,7 +46,9 @@ export default function Home({
       <Contact data={freelancersSalons} />
 
       <Platform />
+      <div>We need the video here</div>
 
+      <Divider mt={[80]} mb={[, , , , 80]} />
       <Accordion
         ref={faq}
         data={faqQuestions}
@@ -53,8 +56,9 @@ export default function Home({
         title="Frequently asked"
         span="questions"
       />
-
       <Accordion data={partnersQuestions} subtitle="For Partners" />
+      <Divider mt={[60, 100, 80]} mb={[60, 80, 80]} />
+
       <FooterBanner data={footerData} />
       <Footer />
 
@@ -77,9 +81,7 @@ export async function getStaticProps() {
   const reviews = [];
   const freelancersSalons = [];
   const footerData = [];
-  // this needs to be changed to make things more readable
-  // pay attention to this, you should have all the data that you need
-  // beauty products needs to be added to the array as well
+
   res.items.forEach((entry) => {
     if (entry.fields.id) {
       services.push(entry);

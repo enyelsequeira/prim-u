@@ -10,7 +10,7 @@ export const Container = styled.div`
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
   background: white;
-  margin: 60px 0 100px 0;
+  margin: 60px 0 0 0;
 `;
 
 export const Card = styled.div`
