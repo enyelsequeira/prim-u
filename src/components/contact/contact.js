@@ -11,7 +11,6 @@ import {
 } from "./contact.styles";
 
 const Contact = ({ data }) => {
-  const bigCards = data.slice(0, 2);
   return (
     <GlobalSection px={[20, 20, 40, 40, 0]} pt={[20, 60, 80]}>
       <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
@@ -19,13 +18,13 @@ const Contact = ({ data }) => {
       </GlobalTitle>
 
       <Container>
-        {bigCards.map((card) => {
+        {data.reverse().map((card) => {
           return (
             <CardContainer key={card.fields.bigCardsTitle}>
               <Card>
                 <ImageContainer>
                   <Image
-                    src={`http:${card.fields.servicesImages.fields.file.url}`}
+                    src={`http:${card.fields.image.fields.file.url}`}
                     layout="fill"
                     objectFit="cover"
                     quality={100}
@@ -36,7 +35,7 @@ const Contact = ({ data }) => {
                   condensed
                   white
                   lineHeight={["xs", "smaller", "medium"]}>
-                  {card.fields.bigCardsTitle}
+                  {card.fields.freelancersSalonsTitle}
                 </Title>
                 <Button fontSize={[24]} lineHeight={["sub"]}>
                   Sign Up

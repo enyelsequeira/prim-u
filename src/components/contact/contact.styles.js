@@ -9,7 +9,6 @@ export const Container = styled.div`
   grid-gap: 60px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-
   @media only screen and (max-width: 670px) {
     gap: 0;
     grid-template-columns: 1fr;
@@ -20,15 +19,16 @@ export const Container = styled.div`
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 100%;
-  text-align: left;
+  align-content: center;
 `;
 
 export const Card = styled.div`
+  max-width: 630px;
+  height: 430px;
   border-radius: 25px;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   overflow: hidden;
 
@@ -42,7 +42,6 @@ export const Card = styled.div`
     right: 0;
     background: rgba(0, 0, 0, 0.5);
   }
-
   @media screen and (max-width: 1024px) {
     max-width: 446px;
     height: 326px;
@@ -51,7 +50,6 @@ export const Card = styled.div`
     max-width: 630px;
     height: 430px;
   }
-
   @media screen and (max-width: 400px) {
     min-width: 330px;
     height: 326px;
@@ -69,11 +67,8 @@ export const ImageContainer = styled.div`
 
 export const Title = styled(GlobalSubtitle)`
   align-self: center;
-  text-align: center;
   text-transform: uppercase;
-  display: flex;
-  position: absolute;
-  z-index: 2;
+  z-index: 13;
 
   ${lineHeight};
   ${space};
@@ -81,10 +76,10 @@ export const Title = styled(GlobalSubtitle)`
 `;
 
 export const Button = styled.button`
-  position: absolute;
-  z-index: 10;
-  bottom: 107px;
-  width: 235px;
+  align-self: center;
+  margin: 40px auto 107px auto;
+  z-index: 20;
+  width: 182px;
   height: 60px;
   background: ${({ theme }) => theme.colors.white};
   border: none;
@@ -93,39 +88,27 @@ export const Button = styled.button`
   font-family: ${({ theme }) => theme.fonts.condensed};
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
   text-align: center;
   letter-spacing: -0.01em;
   color: ${({ theme }) => theme.colors.purple};
   text-transform: uppercase;
-
   background: #ffffff;
-
   ${lineHeight};
   ${space};
   ${fontSize};
-
   &:hover {
     cursor: pointer;
     background: ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.white};
   }
-
-  @media only screen and (max-width: 1300px) {
-    bottom: 50px;
-  }
-
   @media only screen and (max-width: 1024px) {
-    bottom: 41px;
+    margin: 40px auto 40px auto;
   }
-
-  @media only screen and (max-width: 850px) {
-    bottom: 20px;
+  @media only screen and (max-width: 670px) {
+    margin: 40px auto 107px auto;
   }
-
-  @media only screen and (max-width: 340px) {
-    width: 250px;
+  @media only screen and (max-width: 400px) {
+    margin: 30px auto 80px auto;
   }
 `;
 
@@ -136,14 +119,16 @@ export const Text = styled.p`
   font-weight: normal;
   max-width: 584px;
   margin-top: 40px;
-
   ${lineHeight};
   ${space};
   ${fontSize};
-
   @media only screen and (max-width: 768px) {
     margin: 30px 0 0 0;
     max-width: 446px;
-    align-self: left;
+
+    align-self: center;
+  }
+  @media only screen and (max-width: 500px) {
+    text-align: justify;
   }
 `;
