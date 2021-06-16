@@ -25,7 +25,7 @@ const Carrousel = ({ data }) => {
     }) 
   },[])
 
-  console.log(percent)
+  // console.log(percent)
 
 
   // const dragable = useRef("");
