@@ -23,13 +23,6 @@ export const GlobalSection = styled.section`
     `};
 `;
 
-/**
-to make this work all you need is to pass props in the component like so
-example: <GlobalTitle p="2rem"> My title </GlobalTitle>
-this is one way or if you need to pass a padding to a specific side just use one of the below props pr= for padding-right pl= padding-left pt=padding-top pb=padding-bottom
- */
-
-/* if you need a different color pass this prop */
 export const GlobalTitle = styled.p`
   font-family: ${({ theme }) => theme.fonts.condensed};
   font-style: normal;
@@ -107,7 +100,6 @@ export const GlobalSubtitle = styled.p`
     css`
       font-size: ${props.size};
     `};
-  /* line-height: 37px; */
   color: ${({ theme, white }) => (white ? theme.colors.white : theme.colors.black)};
   ${(props) =>
     props.margin &&
@@ -141,5 +133,4 @@ export const Divider = styled.div`
   width: 100%;
   border: 1px solid ${({ theme }) => theme.colors.black};
   ${space};
-  /* margin: 70px 0 70px 0; */
 `;

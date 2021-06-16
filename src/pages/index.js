@@ -14,6 +14,7 @@ import {
   Platform,
   Services,
 } from "../components";
+import { Divider } from "../components/global-components";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -25,6 +26,7 @@ export default function Home({
   reviews,
   banner,
   footerData,
+  freelancersSalons,
 }) {
   const faq = useRef();
 
@@ -37,14 +39,16 @@ export default function Home({
 
       <NavBar faq={faq} />
       <Hero />
-      <Banner />
+      <Banner data={banner} />
 
       <Services data={services} />
       <Events data={bigCards} />
-      <Contact data={bigCards} />
+      <Contact data={freelancersSalons} />
 
       <Platform />
+      <div>We need the video here</div>
 
+      <Divider mt={[80]} mb={[, , , , 80]} />
       <Accordion
         ref={faq}
         data={faqQuestions}
@@ -52,8 +56,9 @@ export default function Home({
         title="Frequently asked"
         span="questions"
       />
-
       <Accordion data={partnersQuestions} subtitle="For Partners" />
+      <Divider mt={[60, 100, 80]} mb={[60, 80, 80]} />
+
       <FooterBanner data={footerData} />
       <Footer />
 
@@ -74,12 +79,11 @@ export async function getStaticProps() {
   const bigCards = [];
   const banner = [];
   const reviews = [];
+  const freelancersSalons = [];
   const footerData = [];
-  // this needs to be changed to make things more readable
-  // pay attention to this, you should have all the data that you need
-  // beauty products needs to be added to the array as well
+
   res.items.forEach((entry) => {
-    if (entry.fields.image) {
+    if (entry.fields.id) {
       services.push(entry);
     } else if (entry.fields.faqTitle) {
       faqQuestions.push(entry);
@@ -93,6 +97,8 @@ export async function getStaticProps() {
       banner.push(entry);
     } else if (entry.fields.footerTittle) {
       footerData.push(entry);
+    } else if (entry.fields.freelancersSalonsTitle) {
+      freelancersSalons.push(entry);
     }
   });
 
@@ -106,6 +112,7 @@ export async function getStaticProps() {
       reviews,
       banner,
       footerData,
+      freelancersSalons,
     },
   };
 }

@@ -19,7 +19,7 @@ const FooterBanner = ({ data }) => {
       spanText = word;
       filteredTitle = array.join(" ").replace(word, "");
     } else {
-      spanText = "this didnt";
+      spanText = "";
     }
     return spanText;
   };
@@ -27,7 +27,7 @@ const FooterBanner = ({ data }) => {
   gettingData(data[0].fields.footerTittle, "instagram");
 
   return (
-    <FooterBannerContainer px={[20, 30, 20, 60]}>
+    <FooterBannerContainer px={[20, 30, 20, 60]} pb={[, , , 100]}>
       <FooterImageWrapper>
         <Image
           src={`http:${data[0].fields.footerBannerImage.fields.file.url}`}
