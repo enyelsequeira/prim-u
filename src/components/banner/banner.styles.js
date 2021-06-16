@@ -21,7 +21,6 @@ export const Card = styled.div`
   border-radius: 20px;
   padding: 60px;
   background-image: url(${(props) => props.desktop});
-  opacity: 0.8;
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,7 +94,6 @@ export const Text = styled(SubTitle)`
       font-size: 18px;
       line-height: 24px;
       margin-bottom: 20px;
-      color: red;
     }
   }
 `;
