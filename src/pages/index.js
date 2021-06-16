@@ -6,6 +6,7 @@ import {
   Accordion,
   Banner,
   Reviews,
+  Products,
   Contact,
   Events,
   Footer,
@@ -63,7 +64,10 @@ export default function Home({
       <Reviews data={reviews}/>
 
       <Divider mt={[60, 100, 80]} mb={[60, 80, 80]} />
-      
+
+      <Products/>
+
+      <Divider mt={[60, 100, 80]} mb={[60, 80, 80]} />
 
       <FooterBanner data={footerData} />
       <Footer />

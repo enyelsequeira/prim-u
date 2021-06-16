@@ -49,8 +49,8 @@ export const CarrouselCards = styled.div`
 `;
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
-  width: 520px;
-  height: 240px;
+  width: 400px;
+  height: 470px;
   border-radius: 20px;
   overflow: hidden;
   display: inline-block;
@@ -73,7 +73,17 @@ export const CarrouselCard = styled.div`
   }
 `;
 
-export const TitleReviewWrapper = styled.div`
+export const ImageWrapper = styled.div`
+  width: 400px;
+  height: 220px;
+`;
+
+export const InfoWrapper = styled.div`
+  width: 400px;
+  height: 220px;
+`;
+
+export const TitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   ${lineHeight};
@@ -82,7 +92,7 @@ export const TitleReviewWrapper = styled.div`
   ${width};
 `;
 
-export const ReviewText = styled.p`
+export const ProductText = styled.p`
   font-family: ${({ theme }) => theme.fonts.roboto};
 
   text-align: left;
@@ -91,13 +101,14 @@ export const ReviewText = styled.p`
   ${fontSize};
   ${width};
 `;
-
-export const Stars = styled.div`
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 20px;
-    right: 30px;
+export const Price = styled.div`
+  width: 79px;
+  height: 34px;
+  background-color: ${({ theme }) => theme.colors.purple};
+  color: ${({ theme }) => theme.colors.white};
+  ${lineHeight};
+  ${space};
+  ${fontSize};
 `;
 
 export const AngleContainer = styled.div`
