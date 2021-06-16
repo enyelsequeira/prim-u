@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
-import { useRef } from "react";
 import {
   Accordion,
   Banner,
@@ -29,7 +28,6 @@ export default function Home({
   footerData,
   freelancersSalons,
 }) {
-  const faq = useRef();
   console.log(data)
 
   return (
@@ -39,7 +37,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar faq={faq} />
+      <NavBar />
       <Hero />
       <Banner data={banner} />
 
@@ -52,7 +50,6 @@ export default function Home({
 
       <Divider mt={[80]} mb={[, , , , 80]} />
       <Accordion
-        ref={faq}
         data={faqQuestions}
         subtitle="For Customers"
         title="Frequently asked"

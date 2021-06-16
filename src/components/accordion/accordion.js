@@ -1,4 +1,4 @@
-import { forwardRef, useState } from "react";
+import { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
@@ -10,7 +10,7 @@ import {
   ShowMore,
 } from "./accordion.styles";
 
-const Accordion = forwardRef(({ data, subtitle, title, span }, ref) => {
+const Accordion = ({ data, subtitle, title, span }) => {
   console.log(data);
 
   const [isAnswerShowing, setIsAnswerShowing] = useState(false);
@@ -29,7 +29,7 @@ const Accordion = forwardRef(({ data, subtitle, title, span }, ref) => {
   };
   return (
     <>
-      <GlobalSection px={[20, 20, 40, 40, 61]} pt={[20, 60, 80]} ref={ref}>
+      <GlobalSection px={[20, 20, 40, 40, 61]} pt={[20, 60, 80]} id="faq">
         {title && (
           <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
             {title}
@@ -88,6 +88,6 @@ const Accordion = forwardRef(({ data, subtitle, title, span }, ref) => {
       </GlobalSection>
     </>
   );
-});
+};
 
 export default Accordion;
