@@ -17,7 +17,7 @@ export const CarrouselCards = styled.div`
   scroll-snap-type: both mandatory;
   &::-webkit-scrollbar {
   height: 2px;
-  padding: 20px;
+  padding: 50px;
 }
 
 /* Track */
@@ -26,6 +26,7 @@ export const CarrouselCards = styled.div`
   border-radius: 2px;
   margin: 94px;
   background: #C4C4C4;
+  
 }
 
 /* Handle */
@@ -96,62 +97,34 @@ export const Stars = styled.div`
     right: 30px;
 `;
 
-export const SliderContainer = styled.div`
-  width: 743px;
+export const AngleContainer = styled.div`
+  width: 80vw;
+  height: 1px;
   margin: 0 auto;
+
+  position: relative;
 
   display: flex;
   justify-content: space-between;
   align-content: center;
   text-align: center;
-  margin-bottom: 40px;
 `;
 
-export const Range = styled.input`
-  width: 100%;
-  -webkit-appearance: none;
-  width: 100%;
-  height: 2px;
-  outline: none;
-  background: #c4c4c4;
-  border-radius: 2px;
-  margin: auto 35px;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 300px;
-    height: 2px;
-    background: #000000;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-
-&::-moz-range-thumb {
-  width: 300px;
-  height: 2px;
-  background: #04AA6D;
-  cursor: pointer;
-}
-`;
 
 export const Angle = styled.a`
   align-self: center;
   cursor: pointer;
-  position: absolute;
-  bottom: 50px;
-
-  & #prev {
-    
-  }
+  position: relative;
+  bottom: 28px;
 
   &:first-child {
+    left: 50px
+  }
+
+  &:nth-child(2) {
     align-self: flex-end;
-    right: 5px;
+    right: 50px;
+    top: -17px;
   }
 
 `;

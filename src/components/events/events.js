@@ -25,11 +25,11 @@ const Events = ({ data }) => {
                     quality={100}
                   />
                 </ImageWrapper>
-                <Title condensed white fontSize={[25, 34, 50]} lineHeight={["large"]}>
+                <Title condensed white fontSize={[34, 50]} lineHeight={["large"]}>
                   {card.fields.bigCardsTitle}
                 </Title>
 
-                <Text fontSize={[20]} lineHeight={["sub"]}>
+                <Text fontSize={[16, 20]} lineHeight={["sub"]}>
                   {card.fields.description.content[0].content[0].value}
                 </Text>
 

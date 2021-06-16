@@ -5,6 +5,7 @@ import { useRef } from "react";
 import {
   Accordion,
   Banner,
+  Reviews,
   Contact,
   Events,
   Footer,
@@ -57,12 +58,17 @@ export default function Home({
         span="questions"
       />
       <Accordion data={partnersQuestions} subtitle="For Partners" />
+      <Divider mt={[60, 100, 80]} />
+
+      <Reviews data={reviews}/>
+
       <Divider mt={[60, 100, 80]} mb={[60, 80, 80]} />
+      
 
       <FooterBanner data={footerData} />
       <Footer />
 
-      {/* <Carrousel data={reviews} /> */}
+      
     </BaseLayout>
   );
 }

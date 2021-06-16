@@ -1,21 +1,19 @@
 /* eslint-disable react/no-array-index-key */
+import React from 'react';
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
   Angle,
   CarrouselCard,
   CarrouselCards,
-  Range,
   ReviewText,
-  SliderContainer,
+  AngleContainer,
   Stars,
   TitleReviewWrapper,
-} from "./carrousel.styles";
+} from "./reviews.styles";
 
-const Carrousel = ({ data }) => {
+const Reviews = ({ data }) => {
   const carouselRef = React.useRef();
-  const dragable = React.useRef('');
   const [percent, setPercent] = React.useState(0)
 
 
@@ -23,6 +21,7 @@ const Carrousel = ({ data }) => {
     carouselRef.current.addEventListener("scroll", e => {
       setPercent(e.target.scrollLeft / (e.target.scrollWidth - e.target.offsetWidth))
     })
+
   }, [])
 
   React.useEffect(() => {
@@ -99,36 +98,31 @@ const Carrousel = ({ data }) => {
           );
         })}
       </CarrouselCards>
-      <Angle
+      <AngleContainer>
+        <Angle
           classname="prev"
           onClick={e => carouselRef.current.scrollBy({
-            left: -20,
+            left: -100,
             behavior: 'smooth'
           })}
           disabled={percent === 0}
         >
           <Image src="/LeftAngle.svg" width="20" height="20" intrinsic="true" />
         </Angle>
-
-  
-
         <Angle
-          className="next" 
+          className="next"
           onClick={e => carouselRef.current.scrollBy({
-            left: 20,
+            left: 100,
             behavior: 'smooth'
           })}
           disabled={percent >= 1}
         >
           <Image src="/RightAngle.svg" width="20" height="20" intrinsic="true" />
         </Angle>
-      <SliderContainer>
+      </AngleContainer>
 
-
-        
-      </SliderContainer>
     </GlobalSection>
   );
 };
 
-export default Carrousel;
+export default Reviews;

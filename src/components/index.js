@@ -1,6 +1,6 @@
 export { default as Accordion } from "./accordion/accordion";
 export { default as Banner } from "./banner/banner";
-export { default as Carrousel } from "./carrousel/carrousel";
+export { default as Reviews } from "./reviews/reviews";
 export { default as Contact } from "./contact/contact";
 export { default as Events } from "./events/events";
 export { default as FooterBanner } from "./footer-banner/footer-banner";
