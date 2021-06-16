@@ -15,10 +15,11 @@ export const CarrouselCards = styled.div`
   padding-bottom: 40px;
 
   scroll-snap-type: both mandatory;
+
   &::-webkit-scrollbar {
-  height: 2px;
-  padding: 50px;
-}
+    height: 2px;
+  }
+
 
 /* Track */
 
@@ -34,22 +35,17 @@ export const CarrouselCards = styled.div`
 &::-webkit-scrollbar-thumb {
   background: black; 
   border-radius: 2px;
+  
 }
-/* Handle on hover */
-/* &::-webkit-scrollbar-thumb:hover {
-} */
-  /* @media only screen and (max-width: 1024px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    column-gap: 30px;
-  } */
-  /* @media only screen and (max-width: 640px) {
-    grid-template-columns: 1fr;
+  @media only screen and (max-width: 1024px) {
+    margin: 40px auto 30px auto;
   }
-  @media only screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-  } */
+
+  @media only screen and (max-width: 500px) {
+    width: 95vw;
+    margin: 40px 0 30px 0;
+  }
+
 `;
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
@@ -64,9 +60,16 @@ export const CarrouselCard = styled.div`
   ${fontSize};
   ${width};
 
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 1024px) {
     display: flex;
     flex-direction: column;
+    width: 434px;
+    height: 268px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    width: 355px;
+    height: 288px;  
   }
 `;
 

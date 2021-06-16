@@ -53,12 +53,10 @@ export const Title = styled(GlobalSubtitle)`
   @media only screen and (max-width: 682px) {
     margin: auto 0 auto 60px;
   }
-  /* @media only screen and (max-width: 515px) {
-    margin: auto;
-  } */
   @media only screen and (max-width: 515px) {
     margin: 30px auto 0 auto;
     width: 313px;
+    height: 40px;
   }
 `;
 
@@ -83,13 +81,8 @@ export const Text = styled.p`
     width: 400px;
     margin: auto 0 auto 60px;
   }
-  /* @media only screen and (max-width: 510px) {
-    margin: auto;
-    max-width: 245px;
-    text-align: justify;
-  } */
   @media only screen and (max-width: 515px) {
-    margin: 100px auto 16px auto;
+    margin: 130px auto 16px auto;
     max-width: 313px;
     text-align: justify;
   }
@@ -130,13 +123,10 @@ export const Button = styled.button`
     margin-top: 0;
     margin-bottom: 30px;
   }
-  /* @media only screen and (max-width: 515px) {
-    margin: auto;
-  } */
   @media only screen and (max-width: 515px) {
     position: static;
     justify-self: flex-end;
-    margin: auto;
+    margin: 0 auto auto auto;
     width: 313px;
   }
 `;

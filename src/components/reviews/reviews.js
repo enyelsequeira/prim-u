@@ -48,7 +48,7 @@ const Reviews = ({ data }) => {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - carouselRef.current.offsetLeft;
-        const scrollX = (x - startX) * 2;
+        const scrollX = (x - startX) * 1;
 
         carouselRef.current.scrollLeft = scrollLeft - scrollX;
       });
@@ -57,7 +57,7 @@ const Reviews = ({ data }) => {
   }, [])
 
   return (
-    <GlobalSection px={[20, 20, 40, 40, 0]} pt={[20, 60, 80]}>
+    <GlobalSection px={[0, 40, 40, 0]} pt={[20, 60, 80]}>
       <GlobalTitle
         fontSize={[34, 40, 54, 50]}
         lineHeight={["mediumTwo", "large"]}
@@ -73,7 +73,7 @@ const Reviews = ({ data }) => {
           } = r;
           return (
             <CarrouselCard key={name} mb={[60, 40]}>
-              <TitleReviewWrapper pt={[20]} pl={[20]} width={[268, 335]}>
+              <TitleReviewWrapper pt={[20]} pl={[20]} >
                 <GlobalSubtitle fontSize={[18, 20, 16, 18]} lineHeight={["sub"]}>
                   {name}
                 </GlobalSubtitle>
