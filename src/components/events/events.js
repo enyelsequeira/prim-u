@@ -12,7 +12,7 @@ const Events = ({ data }) => {
       </GlobalTitle>
 
       <Container>
-        {bigCards.map((card) => {
+        {bigCards.map((card, index) => {
           return (
             <Card key={card.fields.bigCardsTitle}>
               <ImageWrapper>

@@ -10,7 +10,7 @@ const Services = ({ data }) => {
       </GlobalTitle>
 
       <Container>
-        {data.map((card) => {
+        {data.map((card, index) => {
           return (
             // Make Up is written different than in the Figma file.
             <Card key={card.fields.title}>
