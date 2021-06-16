@@ -11,6 +11,7 @@ import {
   Hero,
   NavBar,
   Platform,
+  Video,
   Services,
   Carrousel
 } from "../components";
@@ -46,9 +47,10 @@ export default function Home({
       <Contact data={freelancersSalons} />
 
       <Platform />
-      <div>We need the video here</div>
+      <Video />
 
-      <Divider mt={[80]} mb={[, , , , 80]} />
+      <Divider />
+      {/* <Divider mt={[80]} mb={[, , , , 80]} /> */}
       <Accordion
         data={faqQuestions}
         subtitle="For Customers"
