@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { createClient } from "contentful";
 import Head from "next/head";
-import { useRef } from "react";
 import {
   Accordion,
   Banner,
@@ -12,7 +11,9 @@ import {
   Hero,
   NavBar,
   Platform,
+  Video,
   Services,
+  Carrousel
 } from "../components";
 import { Divider } from "../components/global-components";
 import BaseLayout from "../layouts/base";
@@ -29,8 +30,9 @@ export default function Home({
   freelancersSalons,
   beautyProducts,
 }) {
+
   const faq = useRef();
-  console.log(beautyProducts);
+
   return (
     <BaseLayout>
       <Head>
@@ -38,7 +40,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar faq={faq} />
+      <NavBar />
       <Hero />
       <Banner data={banner} />
 
@@ -47,11 +49,11 @@ export default function Home({
       <Contact data={freelancersSalons} />
 
       <Platform />
-      <div>We need the video here</div>
+      <Video />
 
-      <Divider mt={[80]} mb={[, , , , 80]} />
+      <Divider />
+      {/* <Divider mt={[80]} mb={[, , , , 80]} /> */}
       <Accordion
-        ref={faq}
         data={faqQuestions}
         subtitle="For Customers"
         title="Frequently asked"
@@ -63,7 +65,7 @@ export default function Home({
       <FooterBanner data={footerData} />
       <Footer />
 
-      {/* <Carrousel data={reviews} /> */}
+      <Carrousel data={reviews} />
     </BaseLayout>
   );
 }

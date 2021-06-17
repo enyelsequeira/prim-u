@@ -8,4 +8,5 @@ export { default as Footer } from "./footer/footer";
 export { default as Hero } from "./hero/hero";
 export { default as NavBar } from "./nav/nav";
 export { default as Platform } from "./platform/platform";
+export { default as Video } from "./video/video";
 export { default as Services } from "./services/services";

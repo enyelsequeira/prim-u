@@ -3,19 +3,54 @@ import { fontSize, lineHeight, space, width } from "styled-system";
 
 export const CarrouselCards = styled.div`
   display: grid;
-  overflow-x: hidden;
-  scroll-behavior: scroll;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr;
+  /* overflow-x: hidden; */
+  overflow-x: scroll;
+  /* scrollbar-width: none;
+  -ms-overflow-style: none; */
+  scroll-behavior: smooth;
+  /* grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr; */
+  grid-auto-flow: column;
   width: 80vw;
   gap: 40px;
   margin: 60px auto 30px auto;
-  cursor: pointer;
+  /* cursor: pointer; */
   position: relative;
+  padding-bottom: 40px;
 
-  &:active {
+  /* &:active {
     cursor: grabbing;
-  }
+  } */
+
+  scroll-snap-type: both mandatory;
+
+ &::-webkit-scrollbar {
+  height: 2px;
+}
+
+/* Track */
+&::-webkit-scrollbar-track {
+  border-radius: 2px;
+  margin: 94px;
+  background: #C4C4C4;
+}
+ 
+/* Handle */
+&::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 2px;
+  //border-right: 17px green solid;
+  //border-left: 17px green solid;
+  //background-clip: padding-box;
+  //box-shadow: inset -10px 0px 0px 0px green;
+}
+
+/* Handle on hover */
+&::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+
 
   /* @media only screen and (max-width: 1024px) {
     display: grid;
@@ -39,6 +74,7 @@ export const CarrouselCard = styled.div`
   overflow: hidden;
   display: inline-block;
   position: relative;
+  scroll-snap-align: center;
   ${lineHeight};
   ${space};
   ${fontSize};
@@ -120,8 +156,12 @@ export const Range = styled.input`
   }
 `;
 
-export const Angle = styled.a`
+export const Angle = styled.button`
+  all: unset;
   align-self: center;
   margin: auto;
   cursor: pointer;
+  &:disabled {
+    background-color: yellow;
+  }
 `;

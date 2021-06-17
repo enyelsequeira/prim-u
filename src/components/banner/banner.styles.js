@@ -2,12 +2,7 @@ import styled from "styled-components";
 import { GlobalTitle } from "../global-components";
 
 export const Banner = styled.div`
-  padding: 60px 2vw 20px;
-  /* padding: 60px 60px 20px; */
-  @media screen and (max-width: 1124px) {
-    padding: 60px 2vw 20px;
-    /* padding: 60px 40px 20px; */
-  }
+  padding: 60px 4vw 20px;
   @media screen and (max-width: 768px) {
     padding: 20px 10px;
   }
@@ -21,7 +16,6 @@ export const Card = styled.div`
   border-radius: 20px;
   padding: 60px;
   background-image: url(${(props) => props.desktop});
-  opacity: 0.8;
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,7 +89,6 @@ export const Text = styled(SubTitle)`
       font-size: 18px;
       line-height: 24px;
       margin-bottom: 20px;
-      color: red;
     }
   }
 `;
