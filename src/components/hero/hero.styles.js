@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { GlobalTitle } from "../global-components";
 
 export const Main = styled.div`
-  padding: 0 3vw;
+  padding: 0 4vw;
   width: 100%;
   height: 700px;
   background-image: url("images/hero.jpg");
