@@ -15,6 +15,7 @@ import {
   Services,
 } from "../components";
 import { Divider } from "../components/global-components";
+import { dataTransformer } from "../helpers/data-transformer";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -74,37 +75,18 @@ export async function getStaticProps() {
     accessToken: "6CYnQJMm1J9PqAIfK0-i1c0h-n8krHGJfNdBOTnVoxU",
   });
   const res = await client.getEntries();
-  const services = [];
-  const faqQuestions = [];
-  const partnersQuestions = [];
-  const bigCards = [];
-  const banner = [];
-  const reviews = [];
-  const freelancersSalons = [];
-  const footerData = [];
-  const beautyProducts = [];
 
-  res.items.forEach((entry) => {
-    if (entry.fields.id) {
-      services.push(entry);
-    } else if (entry.fields.faqTitle) {
-      faqQuestions.push(entry);
-    } else if (entry.fields.partnersQuestions) {
-      partnersQuestions.push(entry);
-    } else if (entry.fields.bigCardsTitle) {
-      bigCards.push(entry);
-    } else if (entry.fields.name) {
-      reviews.push(entry);
-    } else if (entry.fields.title) {
-      banner.push(entry);
-    } else if (entry.fields.footerTittle) {
-      footerData.push(entry);
-    } else if (entry.fields.freelancersSalonsTitle) {
-      freelancersSalons.push(entry);
-    } else if (entry.fields.beautyProducts) {
-      beautyProducts.push(entry);
-    }
-  });
+  const {
+    services,
+    faqQuestions,
+    partnersQuestions,
+    bigCards,
+    banner,
+    reviews,
+    freelancersSalons,
+    footerData,
+    beautyProducts,
+  } = dataTransformer(res);
 
   return {
     props: {

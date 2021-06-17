@@ -36,7 +36,6 @@ export const MiniSectionWrapper = styled.div`
   @media only screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     width: 100%;
   }
   @media only screen and (max-width: 640px) {
