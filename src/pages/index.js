@@ -28,8 +28,10 @@ export default function Home({
   banner,
   footerData,
   freelancersSalons,
+  beautyProducts,
 }) {
-  console.log(data)
+
+  const faq = useRef();
 
   return (
     <BaseLayout>
@@ -82,6 +84,7 @@ export async function getStaticProps() {
   const reviews = [];
   const freelancersSalons = [];
   const footerData = [];
+  const beautyProducts = [];
 
   res.items.forEach((entry) => {
     if (entry.fields.id) {
@@ -100,6 +103,8 @@ export async function getStaticProps() {
       footerData.push(entry);
     } else if (entry.fields.freelancersSalonsTitle) {
       freelancersSalons.push(entry);
+    } else if (entry.fields.beautyProducts) {
+      beautyProducts.push(entry);
     }
   });
 
@@ -114,6 +119,7 @@ export async function getStaticProps() {
       banner,
       footerData,
       freelancersSalons,
+      beautyProducts,
     },
   };
 }
