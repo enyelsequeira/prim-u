@@ -33,7 +33,6 @@ export const Card = styled.div`
     right: 0;
     background: rgba(0, 0, 0, 0.5);
   }
-  
 `;
 
 export const ImageWrapper = styled.div`
