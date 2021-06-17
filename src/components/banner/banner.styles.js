@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { GlobalTitle } from "../global-components";
 
 export const Banner = styled.div`
-  padding: 60px 2vw 20px;
+  padding: 60px 4vw 20px;
+  /* padding: 60px 2vw 20px; */
   /* padding: 60px 60px 20px; */
   @media screen and (max-width: 1124px) {
-    padding: 60px 2vw 20px;
+    /* padding: 60px 2vw 20px; */
     /* padding: 60px 40px 20px; */
   }
   @media screen and (max-width: 768px) {

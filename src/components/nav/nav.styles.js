@@ -2,13 +2,16 @@ import styled, { css } from "styled-components";
 
 export const Nav = styled.nav`
   --padding: ${(props) => (props.isOpen ? "45px" : 0)};
+  /* --padding: ${(props) => (props.isOpen ? "45px" : 0)}; */
+  /* --paddingX: ${(props) => (props.isOpen ? "16px" : 0)}; */
   --opacity: ${(props) => (props.isOpen ? 1 : 0)};
   --visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
   --maxheight: ${(props) => (props.isOpen ? "100vh" : 0)};
   --color: ${(props) =>
     props.isOpen || props.lightNav ? props.theme.colors.black : props.theme.colors.white};
   --colour: ${(props) => (props.lightNav ? props.theme.colors.black : props.theme.colors.white)};
-  --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : "transparent")};
+  --bgColor: ${(props) => (props.isOpen || props.lightNav ? props.theme.colors.white : "transparent")};
+  /* --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : "transparent")}; */
   position: fixed;
   z-index: 100;
   top: 0;
@@ -16,15 +19,19 @@ export const Nav = styled.nav`
   transform: translateX(-50%);
   width: 100%;
   max-width: 1440px;
-  max-height: ${(props) => (props.lightNav ? "80px" : "80px")};
-  padding: ${(props) => (props.lightNav ? "20px 2vw" : "25px 2vw 0")};
+  max-height: 80px;
+  /* max-height: ${(props) => (props.lightNav ? "80px" : "80px")}; */
+  padding: 20px 4vw;
+  /* padding: ${(props) => (props.lightNav ? "20px 4vw" : "20px 4vw 0")}; */
+  /* padding: ${(props) => (props.lightNav ? "20px 4vw" : "25px 4vw 0")}; */
   background-color: ${(props) => (props.lightNav ? props.theme.colors.white : "transparent")};
+  /* padding: ${(props) => (props.lightNav ? "20px 2vw" : "25px 2vw 0")}; */
   transition: all 0.2s, background 0.3s 0.05s, padding-bottom 0.3s;
-  @media screen and (max-width: 1024px) {
+  /* @media screen and (max-width: 1024px) {
     padding: ${(props) => (props.lightNav ? "20px 2vw 20px" : "25px 2vw 0")};
-  }
+  } */
   @media screen and (max-width: 767.9px) {
-    ${(props) => {
+    /* ${(props) => {
       if (props.isOpen)
         return css`
           max-height: 100vh;
@@ -33,11 +40,17 @@ export const Nav = styled.nav`
         return css`
           max-height: 80px;
         `;
-    }};
-    padding: ${(props) => (props.lightNav ? "7px 2vw 15px" : "20px 2vw 0")};
+    }}; */
+    background-color: transparent;
+    max-height: 100vh;
+    padding: 10px 10px 0;
+    /* padding: ${(props) => (props.lightNav ? "7px 10px 15px" : "10px 10px 0")}; */
+    /* padding: ${(props) => (props.lightNav ? "7px 10px 15px" : "20px 10px 0")}; */
+    /* padding: ${(props) => (props.isOpen ? "7px 10px 15px" : "20px 16px 0")}; */
+    /* padding: ${(props) => (props.lightNav ? "7px 2vw 15px" : "20px 2vw 0")}; */
   }
   @media screen and (max-width: 640px) {
-    padding: ${(props) => (props.lightNav ? "10px 6px 10px" : "10px 6px 0")};
+    /* padding: ${(props) => (props.lightNav ? "10px 6px 10px" : "10px 6px 0")}; */
   }
   button {
     ${(props) =>
@@ -59,9 +72,15 @@ export const NavContainer = styled.div`
   transition: all 0.2s;
   max-width: 1320px;
   margin: auto;
+  height: min-content;
   @media screen and (max-width: 767.9px) {
+    /* padding: 10px var(--paddingX) var(--padding); */
     background-color: var(--bgColor);
-    padding: 10px 10px var(--padding);
+    padding: 10px 16px 10px;
+    /* padding: 10px 16px var(--padding); */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: all .2s;
   }
 `;
 
@@ -155,11 +174,14 @@ export const NavLinks = styled.ul`
     width: 100%;
     flex-direction: column;
     padding-top: var(--padding);
+    padding-bottom: var(--padding);
     opacity: var(--opacity);
     visibility: var(--visibility);
     max-height: var(--maxheight);
     row-gap: 20px;
-    transition: all 0.2s ease-out;
+    transition: all 0.2s, padding .3s;
+    /* transition: all 0.2s ease-out, padding .3s; */
+    /* transition: all 0.2s ease-out; */
   }
 `;
 
@@ -183,7 +205,8 @@ export const NavLink = styled.li`
   }
   @media screen and (max-width: 767.9px) {
     color: var(--color);
-    transition: all 0.4s 0.1s;
+    transition: all 0.3s 0s;
+    /* transition: all 0.4s 0.1s; */
     :hover {
       color: var(--color);
     }
