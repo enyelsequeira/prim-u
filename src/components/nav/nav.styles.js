@@ -7,11 +7,18 @@ export const Nav = styled.nav`
   --opacity: ${(props) => (props.isOpen ? 1 : 0)};
   --visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
   --maxheight: ${(props) => (props.isOpen ? "100vh" : 0)};
-  --color: ${(props) =>
-    props.isOpen || props.lightNav ? props.theme.colors.black : props.theme.colors.white};
+  --color: ${(props) => props.isOpen || props.lightNav ? props.theme.colors.black : props.theme.colors.white};
   --colour: ${(props) => (props.lightNav ? props.theme.colors.black : props.theme.colors.white)};
   --bgColor: ${(props) => (props.isOpen || props.lightNav ? props.theme.colors.white : "transparent")};
   /* --bgColor: ${(props) => (props.isOpen ? props.theme.colors.white : "transparent")}; */
+  ${props => props.isOpen || props.lightNav
+      ? css`
+          --image: url("data:image/svg+xml;charset=utf8,%3Csvg width='32' height='51' viewBox='0 0 32 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C28 37 32 22.5 32 16.5C31.5 5.5 23 0 16 0L16 9C19.866 9 23 12.134 23 16C23 19.866 19.866 23 16 23L16 51Z' fill='white' fill-opacity='0.3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C4 37 0 22.5 0 16.5C0.5 5.5 9 0 16 0L16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23L16 51Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM16 23C19.866 23 23 19.866 23 16C23 12.134 19.866 9 16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23Z' fill='white'/%3E%3C/svg%3E");
+        `
+      : css`
+          --image: url("data:image/svg+xml;charset=utf8,%3Csvg width='32' height='51' viewBox='0 0 32 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C28 37 32 22.5 32 16.5C31.5 5.5 23 0 16 0L16 9C19.866 9 23 12.134 23 16C23 19.866 19.866 23 16 23L16 51Z' fill='white' fill-opacity='0.6'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C4 37 0 22.5 0 16.5C0.5 5.5 9 0 16 0L16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23L16 51Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM16 23C19.866 23 23 19.866 23 16C23 12.134 19.866 9 16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23Z' fill='white'/%3E%3C/svg%3E");
+        `  
+    }
   position: fixed;
   z-index: 100;
   top: 0;
@@ -116,7 +123,11 @@ export const LogoContainer = styled.a`
 export const LogoIcon = styled.div`
   width: 32px;
   height: 51px;
-  mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='32' height='51' viewBox='0 0 32 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C28 37 32 22.5 32 16.5C31.5 5.5 23 0 16 0L16 9C19.866 9 23 12.134 23 16C23 19.866 19.866 23 16 23L16 51Z' fill='white' fill-opacity='0.6'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C4 37 0 22.5 0 16.5C0.5 5.5 9 0 16 0L16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23L16 51Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM16 23C19.866 23 23 19.866 23 16C23 12.134 19.866 9 16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23Z' fill='white'/%3E%3C/svg%3E");
+  mask-image: var(--image);
+  /* mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='32' height='51' viewBox='0 0 32 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C28 37 32 22.5 32 16.5C31.5 5.5 23 0 16 0L16 9C19.866 9 23 12.134 23 16C23 19.866 19.866 23 16 23L16 51Z' fill='white' fill-opacity='0.3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C4 37 0 22.5 0 16.5C0.5 5.5 9 0 16 0L16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23L16 51Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM16 23C19.866 23 23 19.866 23 16C23 12.134 19.866 9 16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23Z' fill='white'/%3E%3C/svg%3E"); */
+  /* mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='32' height='51' viewBox='0 0 32 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C28 37 32 22.5 32 16.5C31.5 5.5 23 0 16 0L16 9C19.866 9 23 12.134 23 16C23 19.866 19.866 23 16 23L16 51Z' fill='white' fill-opacity='0.6'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 51C4 37 0 22.5 0 16.5C0.5 5.5 9 0 16 0L16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23L16 51Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM16 23C19.866 23 23 19.866 23 16C23 12.134 19.866 9 16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23Z' fill='white'/%3E%3C/svg%3E"); */
+  /* mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='21' height='33' viewBox='0 0 21 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.2593 32.7014C17.9537 23.7245 20.5185 14.4271 20.5185 10.5799C20.1979 3.52662 14.7477 0 10.2593 0L10.2593 5.77083C12.7382 5.77083 14.7477 7.78037 14.7477 10.2593C14.7477 12.7381 12.7382 14.7477 10.2593 14.7477L10.2593 32.7014Z' fill='%23A6A6A6'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.2592 32.7014C2.56481 23.7245 0 14.4271 0 10.5799C0.320602 3.52662 5.77083 0 10.2592 0L10.2593 5.77083C7.78037 5.77083 5.77083 7.78037 5.77083 10.2593C5.77083 12.7381 7.78037 14.7477 10.2593 14.7477L10.2592 32.7014Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.2593 20.5185C15.9253 20.5185 20.5185 15.9253 20.5185 10.2593C20.5185 4.59323 15.9253 0 10.2593 0C4.59323 0 0 4.59323 0 10.2593C0 15.9253 4.59323 20.5185 10.2593 20.5185ZM10.2593 14.7477C12.7381 14.7477 14.7477 12.7381 14.7477 10.2593C14.7477 7.78037 12.7381 5.77083 10.2593 5.77083C7.78037 5.77083 5.77083 7.78037 5.77083 10.2593C5.77083 12.7381 7.78037 14.7477 10.2593 14.7477Z' fill='black'/%3E%3C/svg%3E"); */
+
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
   mask-position: center;
