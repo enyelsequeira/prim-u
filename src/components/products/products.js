@@ -11,10 +11,11 @@ import {
   TitleWrapper,
   ImageWrapper,
   InfoWrapper,
+  PriceContainer,
   Price
 } from "./products.styles";
 
-const Products = () => {
+const Products = ({ data }) => {
   const carouselRef = React.useRef();
   const [percent, setPercent] = React.useState(0)
 
@@ -70,150 +71,40 @@ const Products = () => {
       </GlobalTitle>
 
       <CarrouselCards ref={carouselRef}>
-        <CarrouselCard mb={[60, 40]}>
-          <ImageWrapper>
-            <Image
-              src="/product.png"
-              width={400}
-              height={220}
-              layout="fixed"
-              quality={100} />
-          </ImageWrapper>
+        {data.map((products, index) => {
+          return (
+            <CarrouselCard mb={[60, 40]} key={index}>
+              <ImageWrapper>
+                <Image
+                  src={`http:${products.fields.beautyProductImage.fields.file.url}`} 
+                  width={400}
+                  height={220}
+                  layout="intrinsic"
+                  quality={100} />
+              </ImageWrapper>
 
-          <InfoWrapper>
-            <TitleWrapper pt={[20]} pl={[20]} >
-              <GlobalSubtitle fontSize={[18, 20, 16, 18]} lineHeight={["sub"]}>
-                Scrub - Self heat Manda
-              </GlobalSubtitle>
-            </TitleWrapper>
+              <InfoWrapper>
+                <TitleWrapper>
+                  <GlobalSubtitle fontSize={[22]} lineHeight={["sub"]}>
+                    {products.fields.beautyProducts}
+                  </GlobalSubtitle>
+                </TitleWrapper>
 
-            <ProductText px={[2]} py={[24]} fontSize={[18, 20, 18]} lineHeight={["sub", "xs"]}>
-              Scrub for your body, description of the item, something else, some selling text, unique qualities and outstanding properties.
-            </ProductText>
+                <ProductText fontSize={[18]} lineHeight={["sub"]}>
+                  {products.fields.description}
+                </ProductText>
 
-            <Price fontSize={[18]} lineHeight={["sub"]}>₽ 277</Price>
-          </InfoWrapper>
-        </CarrouselCard>
-        <CarrouselCard mb={[60, 40]}>
-          <ImageWrapper>
-            <Image
-              src="/product.png"
-              width={400}
-              height={220}
-              layout="fixed"
-              quality={100} />
-          </ImageWrapper>
+                <PriceContainer>
+                  <Price fontSize={[18]} lineHeight={["sub"]}
+                  >₽ {products.fields.price}
+                  </Price>  
+                  </PriceContainer>
+              </InfoWrapper>
+            </CarrouselCard>
+          );
+        })}
 
-          <InfoWrapper>
-            <TitleWrapper pt={[20]} pl={[20]} >
-              <GlobalSubtitle fontSize={[18, 20, 16, 18]} lineHeight={["sub"]}>
-                Scrub - Self heat Manda
-              </GlobalSubtitle>
-            </TitleWrapper>
 
-            <ProductText px={[2]} py={[24]} fontSize={[18, 20, 18]} lineHeight={["sub", "xs"]}>
-              Scrub for your body, description of the item, something else, some selling text, unique qualities and outstanding properties.
-            </ProductText>
-
-            <Price fontSize={[18]} lineHeight={["sub"]}>₽ 277</Price>
-          </InfoWrapper>
-        </CarrouselCard>
-        <CarrouselCard mb={[60, 40]}>
-          <ImageWrapper>
-            <Image
-              src="/product.png"
-              width={400}
-              height={220}
-              layout="fixed"
-              quality={100} />
-          </ImageWrapper>
-
-          <InfoWrapper>
-            <TitleWrapper pt={[20]} pl={[20]} >
-              <GlobalSubtitle fontSize={[18, 20, 16, 18]} lineHeight={["sub"]}>
-                Scrub - Self heat Manda
-              </GlobalSubtitle>
-            </TitleWrapper>
-
-            <ProductText px={[2]} py={[24]} fontSize={[18, 20, 18]} lineHeight={["sub", "xs"]}>
-              Scrub for your body, description of the item, something else, some selling text, unique qualities and outstanding properties.
-            </ProductText>
-
-            <Price fontSize={[18]} lineHeight={["sub"]}>₽ 277</Price>
-          </InfoWrapper>
-        </CarrouselCard>
-        <CarrouselCard mb={[60, 40]}>
-          <ImageWrapper>
-            <Image
-              src="/product.png"
-              width={400}
-              height={220}
-              layout="fixed"
-              quality={100} />
-          </ImageWrapper>
-
-          <InfoWrapper>
-            <TitleWrapper pt={[20]} pl={[20]} >
-              <GlobalSubtitle fontSize={[18, 20, 16, 18]} lineHeight={["sub"]}>
-                Scrub - Self heat Manda
-              </GlobalSubtitle>
-            </TitleWrapper>
-
-            <ProductText px={[2]} py={[24]} fontSize={[18, 20, 18]} lineHeight={["sub", "xs"]}>
-              Scrub for your body, description of the item, something else, some selling text, unique qualities and outstanding properties.
-            </ProductText>
-
-            <Price fontSize={[18]} lineHeight={["sub"]}>₽ 277</Price>
-          </InfoWrapper>
-        </CarrouselCard>
-        <CarrouselCard mb={[60, 40]}>
-          <ImageWrapper>
-            <Image
-              src="/product.png"
-              width={400}
-              height={220}
-              layout="fixed"
-              quality={100} />
-          </ImageWrapper>
-
-          <InfoWrapper>
-            <TitleWrapper pt={[20]} pl={[20]} >
-              <GlobalSubtitle fontSize={[18, 20, 16, 18]} lineHeight={["sub"]}>
-                Scrub - Self heat Manda
-              </GlobalSubtitle>
-            </TitleWrapper>
-
-            <ProductText px={[2]} py={[24]} fontSize={[18, 20, 18]} lineHeight={["sub", "xs"]}>
-              Scrub for your body, description of the item, something else, some selling text, unique qualities and outstanding properties.
-            </ProductText>
-
-            <Price fontSize={[18]} lineHeight={["sub"]}>₽ 277</Price>
-          </InfoWrapper>
-        </CarrouselCard>
-        <CarrouselCard mb={[60, 40]}>
-          <ImageWrapper>
-            <Image
-              src="/products.png"
-              width={400}
-              height={220}
-              layout="fixed"
-              quality={100} />
-          </ImageWrapper>
-
-          <InfoWrapper>
-            <TitleWrapper pt={[20]} pl={[20]} >
-              <GlobalSubtitle fontSize={[18, 20, 16, 18]} lineHeight={["sub"]}>
-                Scrub - Self heat Manda
-              </GlobalSubtitle>
-            </TitleWrapper>
-
-            <ProductText px={[2]} py={[24]} fontSize={[18, 20, 18]} lineHeight={["sub", "xs"]}>
-              Scrub for your body, description of the item, something else, some selling text, unique qualities and outstanding properties.
-            </ProductText>
-
-            <Price fontSize={[18]} lineHeight={["sub"]}>₽ 277</Price>
-          </InfoWrapper>
-        </CarrouselCard>
       </CarrouselCards>
 
       <AngleContainer>

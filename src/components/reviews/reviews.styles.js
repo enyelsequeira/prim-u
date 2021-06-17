@@ -12,7 +12,7 @@ export const CarrouselCards = styled.div`
   margin: 60px auto 30px auto;
   cursor: pointer;
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 
   scroll-snap-type: both mandatory;
 

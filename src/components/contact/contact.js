@@ -18,9 +18,9 @@ const Contact = ({ data }) => {
       </GlobalTitle>
 
       <Container>
-        {data.map((card) => {
+        {data.map((card, index) => {
           return (
-            <CardContainer key={card.fields.bigCardsTitle}>
+            <CardContainer key={index}>
               <Card>
                 <ImageContainer>
                   <Image
