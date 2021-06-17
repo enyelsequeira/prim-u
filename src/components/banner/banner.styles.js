@@ -20,7 +20,9 @@ export const Card = styled.div`
   margin: auto;
   border-radius: 20px;
   padding: 60px;
-  background-image: url("./images/Mask1.jpg");
+  background-image: url(${(props) => props.desktop});
+  opacity: 0.8;
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -28,7 +30,8 @@ export const Card = styled.div`
     flex-direction: column;
   }
   @media screen and (max-width: 768px) {
-    background-image: url("./images/Mask.jpg");
+    background-image: url(${(props) => props.mobile});
+
     row-gap: 40px;
     padding: 32px;
   }
@@ -82,8 +85,18 @@ export const Text = styled(SubTitle)`
   margin: 0;
   align-self: end;
   display: inline-block;
+  &:nth-child(2) {
+    margin-bottom: 32px;
+  }
   @media screen and (max-width: 640px) {
     display: contents;
+    &:nth-child(2) {
+      display: flex;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 20px;
+      color: red;
+    }
   }
 `;
 

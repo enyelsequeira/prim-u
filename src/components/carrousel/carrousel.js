@@ -55,7 +55,7 @@ const Carrousel = ({ data }) => {
       });
     }
 
-    slider.current.addEventListener("mousedown", (e) => {});
+    slider.current.addEventListener("mousedown", () => {});
   }, []);
 
   return (

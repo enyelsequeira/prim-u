@@ -11,13 +11,14 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 1024px) {
     gap: 40px;
+    margin: 60px 0 0 0;
   }
 
   @media only screen and (max-width: 774px) {
     grid-gap: 10.5px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    margin: 60px auto 100px auto;
+    margin: 60px auto 0px auto;
   }
 `;
 
