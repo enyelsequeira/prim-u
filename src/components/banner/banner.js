@@ -1,12 +1,11 @@
 /* eslint-disable react/no-array-index-key */
-import { Banner, Body, Button, Card, Text, Title } from "./banner.styles";
+import { Main, Img, Body, Button, Card, Text, Title } from "./banner.styles";
 
-function BannerComponent({ data }) {
+function Banner({ data }) {
   return (
-    <Banner>
-      <Card
-        mobile={`http:${data[0].fields.images[1].fields.file.url}`}
-        desktop={`http:${data[0].fields.images[0].fields.file.url}`}>
+    <Main>
+      <Card>
+        <Img src='/images/For-customers.png' layout='fill' quality='100' />
         <Body>
           <Title>{data[0].fields.title}</Title>
           {data[0].fields.description.content.map((p, i) => {
@@ -15,8 +14,8 @@ function BannerComponent({ data }) {
         </Body>
         <Button>Make a Booking</Button>
       </Card>
-    </Banner>
+    </Main>
   );
 }
 
-export default BannerComponent;
+export default Banner;

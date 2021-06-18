@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { GlobalTitle } from "../global-components";
+import Image from 'next/image'
 
-export const Banner = styled.div`
+export const Main = styled.main`
   padding: 60px 4vw 20px;
   @media screen and (max-width: 768px) {
     padding: 20px 10px;
   }
 `;
 export const Card = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   max-width: 1320px;
@@ -15,17 +17,11 @@ export const Card = styled.div`
   margin: auto;
   border-radius: 20px;
   padding: 60px;
-  background-image: url(${(props) => props.desktop});
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: rgba(0, 0, 0, .4);
   @media screen and (max-width: 1124px) {
     flex-direction: column;
   }
   @media screen and (max-width: 768px) {
-    background-image: url(${(props) => props.mobile});
-
     row-gap: 40px;
     padding: 32px;
   }
@@ -36,7 +32,16 @@ export const Card = styled.div`
   }
 `;
 
+export const Img = styled(Image)`
+  position: absolute;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+`
+
 export const Body = styled.div`
+  position: relative;
   display: grid;
   max-width: 584px;
   flex: 1;
@@ -95,6 +100,7 @@ export const Text = styled(SubTitle)`
 
 export const Button = styled.button`
   all: unset;
+  position: relative;
   display: inline-block;
   width: 235px;
   height: 60px;
