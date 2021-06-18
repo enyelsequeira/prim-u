@@ -12,7 +12,7 @@ function Video() {
                 <iframe src="https://www.youtube.com/embed/SRIv2ziiO2Q?mute=1" allowFullScreen/>
                 <p>Prim-u make up</p>
             </VideoElement>
-            <Button>book a make up</Button>
+            <Button as="a" href="https://www.prim-u.app/en/list" target="_blank" rel="noreferrer">book a make up</Button>
           </Container>
         </Main>
     )

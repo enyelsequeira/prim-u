@@ -78,6 +78,8 @@ export const VideoElement = styled.div`
 
 export const Button = styled.button`
     all: unset;
+    display: grid;
+    place-items: center;
     width: 232px;
     height: 60px;
     background-color: ${props => props.theme.colors.purple};
