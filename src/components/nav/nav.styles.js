@@ -173,11 +173,6 @@ export const NavLink = styled.li`
   &:hover {
     color: ${(props) => props.theme.colors.purple};
   }
-
-  & a {
-    all: unset;
-    display: contents;
-  }
   @media screen and (max-width: 767.9px) {
     color: var(--color);
     transition: all 0.3s 0s;

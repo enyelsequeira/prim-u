@@ -31,9 +31,6 @@ export default function Home({
   freelancersSalons,
   beautyProducts,
 }) {
-
-  const faq = useRef();
-
   return (
     <BaseLayout>
       <Head>
