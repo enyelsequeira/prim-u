@@ -60,6 +60,7 @@ export const VideoElement = styled.div`
         letter-spacing: -0.01em;
         text-transform: uppercase;
         color: ${props => props.theme.colors.white};
+        user-select: none;
     }
     @media screen and (max-width: 640px) {
         height: 209px;
