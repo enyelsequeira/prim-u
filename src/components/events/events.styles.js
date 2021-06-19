@@ -33,8 +33,6 @@ export const Card = styled.div`
     right: 0;
     background: rgba(0, 0, 0, 0.5);
   }
-  @media screen and (max-width: 500px) {
-  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -55,7 +53,9 @@ export const Title = styled(GlobalSubtitle)`
     margin: auto 0 auto 60px;
   }
   @media only screen and (max-width: 515px) {
-    margin: auto;
+    margin: 30px auto 0 auto;
+    width: 313px;
+    height: 40px;
   }
 `;
 
@@ -80,9 +80,9 @@ export const Text = styled.p`
     width: 400px;
     margin: auto 0 auto 60px;
   }
-  @media only screen and (max-width: 510px) {
-    margin: auto;
-    max-width: 245px;
+  @media only screen and (max-width: 515px) {
+    margin: 130px auto 16px auto;
+    max-width: 313px;
     text-align: justify;
   }
 `;
@@ -123,6 +123,9 @@ export const Button = styled.button`
     margin-bottom: 30px;
   }
   @media only screen and (max-width: 515px) {
-    margin: auto;
+    position: static;
+    justify-self: flex-end;
+    margin: 0 auto auto auto;
+    width: 313px;
   }
 `;
