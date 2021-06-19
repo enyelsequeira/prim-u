@@ -4,13 +4,13 @@ import { fontSize, lineHeight, space, width } from "styled-system";
 export const CarrouselCards = styled.div`
   display: grid;
   overflow-x: scroll;
-  
+
   scroll-behavior: smooth;
   grid-auto-flow: column;
   width: 80vw;
   gap: 40px;
   margin: 60px auto 30px auto;
-  cursor: pointer;
+  /* cursor: pointer; */
   position: relative;
   padding-bottom: 38px;
 
@@ -20,23 +20,20 @@ export const CarrouselCards = styled.div`
     height: 2px;
   }
 
+  /* Track */
 
-/* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 2px;
+    margin: 94px;
+    background: #c4c4c4;
+  }
 
-&::-webkit-scrollbar-track {
-  border-radius: 2px;
-  margin: 94px;
-  background: #C4C4C4;
-  
-}
+  /* Handle */
 
-/* Handle */
-
-&::-webkit-scrollbar-thumb {
-  background: black; 
-  border-radius: 2px;
-  
-}
+  &::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 2px;
+  }
   @media only screen and (max-width: 1024px) {
     margin: 40px auto 30px auto;
   }
@@ -45,7 +42,6 @@ export const CarrouselCards = styled.div`
     width: 95vw;
     margin: 40px 0 30px 0;
   }
-
 `;
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
@@ -55,6 +51,7 @@ export const CarrouselCard = styled.div`
   overflow: hidden;
   display: inline-block;
   position: relative;
+  scroll-snap-align: center;
   ${lineHeight};
   ${space};
   ${fontSize};
@@ -69,7 +66,7 @@ export const CarrouselCard = styled.div`
 
   @media only screen and (max-width: 500px) {
     width: 355px;
-    height: 288px;  
+    height: 288px;
   }
 `;
 
@@ -93,11 +90,11 @@ export const ReviewText = styled.p`
 `;
 
 export const Stars = styled.div`
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 20px;
-    right: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 20px;
+  right: 30px;
 `;
 
 export const AngleContainer = styled.div`
@@ -113,7 +110,6 @@ export const AngleContainer = styled.div`
   text-align: center;
 `;
 
-
 export const Angle = styled.a`
   align-self: center;
   cursor: pointer;
@@ -121,7 +117,7 @@ export const Angle = styled.a`
   bottom: 28px;
 
   &:first-child {
-    left: 50px
+    left: 50px;
   }
 
   &:nth-child(2) {
@@ -129,5 +125,4 @@ export const Angle = styled.a`
     right: 50px;
     top: -17px;
   }
-
 `;

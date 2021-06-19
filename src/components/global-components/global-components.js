@@ -5,7 +5,6 @@ import { fontSize, lineHeight, space, textAlign, width } from "styled-system";
 export const GlobalWrapper = styled.main`
   max-width: 1440px;
   width: 100%;
-  /* border: 4px solid red; */
   margin: auto; ;
 `;
 

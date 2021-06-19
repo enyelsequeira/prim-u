@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import Image from "next/image";
 import { GlobalSection, GlobalTitle, SpanTitle } from "../global-components";
 import {
@@ -18,9 +19,9 @@ const Contact = ({ data }) => {
       </GlobalTitle>
 
       <Container>
-        {data.map((card, index) => {
+        {data.map((card, i) => {
           return (
-            <CardContainer key={index}>
+            <CardContainer key={i}>
               <Card>
                 <ImageContainer>
                   <Image

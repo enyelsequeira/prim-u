@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { Banner, Body, Button, Card, Text, Title } from "./banner.styles";
 
 function BannerComponent({ data }) {
@@ -8,8 +9,8 @@ function BannerComponent({ data }) {
         desktop={`http:${data[0].fields.images[0].fields.file.url}`}>
         <Body>
           <Title>{data[0].fields.title}</Title>
-          {data[0].fields.description.content.map((p) => {
-            return <Text>{p.content[0].value}</Text>;
+          {data[0].fields.description.content.map((p, i) => {
+            return <Text key={i}>{p.content[0].value}</Text>;
           })}
         </Body>
         <Button>Make a Booking</Button>
