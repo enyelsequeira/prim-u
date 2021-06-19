@@ -12,7 +12,7 @@ function Banner({ data }) {
             return <Text key={i}>{p.content[0].value}</Text>;
           })}
         </Body>
-        <Button>Make a Booking</Button>
+        <Button as="a" href="https://www.prim-u.app/en/list" target="_blank" rel="noreferrer">Make a Booking</Button>
       </Card>
     </Main>
   );

@@ -101,7 +101,8 @@ export const Text = styled(SubTitle)`
 export const Button = styled.button`
   all: unset;
   position: relative;
-  display: inline-block;
+  display: grid;
+  place-items: center;
   width: 235px;
   height: 60px;
   background: ${(props) => props.theme.colors.white};
