@@ -5,8 +5,6 @@ import { useRef } from "react";
 import {
   Accordion,
   Banner,
-  Reviews,
-  Products,
   Contact,
   Events,
   Footer,
@@ -14,6 +12,8 @@ import {
   Hero,
   NavBar,
   Platform,
+  Products,
+  Reviews,
   Services,
 } from "../components";
 import { Divider } from "../components/global-components";
@@ -62,18 +62,16 @@ export default function Home({
       <Accordion data={partnersQuestions} subtitle="For Partners" />
       <Divider mt={[60, 100, 80]} />
 
-      <Reviews data={reviews}/>
+      <Reviews data={reviews} />
 
       <Divider mt={[60, 100, 80]} mb={[60, 80, 80]} />
 
-      <Products data={beautyProducts}/>
+      <Products data={beautyProducts} />
 
       <Divider mt={[60, 100, 80]} mb={[60, 80, 80]} />
 
       <FooterBanner data={footerData} />
       <Footer />
-
-      
     </BaseLayout>
   );
 }
