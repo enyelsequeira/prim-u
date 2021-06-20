@@ -1,12 +1,12 @@
 /* eslint-disable react/no-array-index-key */
 // import { Main, Img, Body, Button, Card, Text, Title, SubTitle } from "./banner.styles";
-import GlobalCard from "../global-components/global-card/globalcard";
-import { Main } from "./banner.styles";
+// import GlobalCard from "../global-components/global-card/globalcard";
+import { Main, BannerCard } from "./banner.styles";
 
 function Banner() {
   return (
     <Main>
-      <GlobalCard
+      <BannerCard
         src="/images/For-customers.png"
         title="For Customers"
         subtitle="Enjoy beauty treatments wherever U are"

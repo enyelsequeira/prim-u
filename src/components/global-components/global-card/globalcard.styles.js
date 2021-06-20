@@ -14,12 +14,11 @@ export const Card = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  max-width: 1320px;
-  min-height: 643px;
+  /* max-width: 1320px;
+  min-height: 643px; */
   margin: auto;
   border-radius: 20px;
   padding: 60px 4vw;
-  /* padding: 60px; */
   background-color: rgba(0, 0, 0, 0.4);
   @media screen and (max-width: 1124px) {
     flex-direction: column;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 // import { GlobalTitle, GlobalButton } from "../global-components";
 // import Image from 'next/image'
+import GlobalCard from "../global-components/global-card/globalcard";
 
 export const Main = styled.main`
   padding: 60px 4vw 20px;
@@ -8,6 +9,11 @@ export const Main = styled.main`
     padding: 20px 10px;
   }
 `;
+
+export const BannerCard = styled(GlobalCard)`
+  max-width: 1320px;
+  min-height: 643px;
+`
 // export const Card = styled.div`
 //   position: relative;
 //   display: flex;

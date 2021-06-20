@@ -18,10 +18,10 @@ export const Container = styled.main`
 `;
 
 export const EventCard = styled(GlobalCard)`
-  && {
+  /* && { */
     min-height: 460px;
     padding: 40px 4vw;
-  }
+  /* } */
   & .title {
     margin-bottom: 209px;
   }
@@ -31,10 +31,10 @@ export const EventCard = styled(GlobalCard)`
     }
   }
   @media screen and (max-width: 640px) {
-    && {
+    /* && { */
       padding: 30px 20px 20px;
       row-gap: 16px;
-    }
+    /* } */
     & .body {
       max-width: 350px;
     }
@@ -45,13 +45,6 @@ export const EventCard = styled(GlobalCard)`
       font-size: 16px;
       line-height: 20px;
     }
-  }
-
-  @media only screen and (max-width: 375px) {
-    position: static;
-    justify-self: flex-end;
-    margin: 0 20px;
-    width: 313px;
   }
 `;
 
