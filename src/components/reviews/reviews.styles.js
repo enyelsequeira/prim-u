@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { fontSize, lineHeight, space, width } from "styled-system";
 
+<<<<<<< HEAD
 export const CarrouselCards = styled.div`
   display: grid;
   overflow-x: scroll;
@@ -35,6 +36,8 @@ export const CarrouselCards = styled.div`
     margin: 40px 0 30px 0;
   }
 `;
+=======
+>>>>>>> 3cdcd7c75ba6945108ad9a750c297ab9f24f32ba
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
   width: 520px;
@@ -43,7 +46,6 @@ export const CarrouselCard = styled.div`
   overflow: hidden;
   display: inline-block;
   position: relative;
-  scroll-snap-align: center;
   ${lineHeight};
   ${space};
   ${fontSize};

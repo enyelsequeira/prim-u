@@ -5,6 +5,7 @@ function theme() {
   return {
     breakpoints: ["640px", "768px", "1024px", "1280px"],
     space: [
+      "0",
       "10px",
       "20px",
       "16px",
@@ -48,6 +49,7 @@ function theme() {
       mediumTwo: "48px",
       large: "59px",
       sub: "28px",
+      subx: "20px",
       title: 1.25,
       copy: 1.5,
     },

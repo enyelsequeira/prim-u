@@ -3,55 +3,15 @@ import Image from "next/image";
 import React from "react";
 import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
-  Angle,
-  AngleContainer,
   CarrouselCard,
-  CarrouselCards,
   ReviewText,
   Stars,
   TitleReviewWrapper,
 } from "./reviews.styles";
 
+import Carousel from "../carousel/carousel";
+
 const Reviews = ({ data }) => {
-  const carouselRef = React.useRef();
-  const [percent, setPercent] = React.useState(0);
-
-  React.useEffect(() => {
-    carouselRef.current.addEventListener("scroll", (e) => {
-      setPercent(e.target.scrollLeft / (e.target.scrollWidth - e.target.offsetWidth));
-    });
-  }, []);
-
-  React.useEffect(() => {
-    if (carouselRef) {
-      let isDown = false;
-      let startX;
-      let scrollLeft;
-
-      carouselRef.current.addEventListener("mousedown", (e) => {
-        isDown = true;
-        startX = e.pageX - carouselRef.current.offsetLeft;
-        scrollLeft = carouselRef.current.scrollLeft;
-      });
-
-      carouselRef.current.addEventListener("mouseleave", () => {
-        isDown = false;
-      });
-
-      carouselRef.current.addEventListener("mouseup", () => {
-        isDown = false;
-      });
-
-      carouselRef.current.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - carouselRef.current.offsetLeft;
-        const scrollX = (x - startX) * 1;
-
-        carouselRef.current.scrollLeft = scrollLeft - scrollX;
-      });
-    }
-  }, []);
 
   return (
     <GlobalSection px={[0, 40, 40, 0]} pt={[20, 60, 80]}>
@@ -63,7 +23,8 @@ const Reviews = ({ data }) => {
         mb={[40, 50, 54, 54, 80]}>
         What Our <SpanTitle> Customers</SpanTitle> say{" "}
       </GlobalTitle>
-      <CarrouselCards ref={carouselRef}>
+
+      <Carousel>
         {data.map((r) => {
           const {
             fields: { name, rating, review },
@@ -94,6 +55,7 @@ const Reviews = ({ data }) => {
             </CarrouselCard>
           );
         })}
+<<<<<<< HEAD
       </CarrouselCards>
       <AngleContainer>
         <Angle
@@ -119,6 +81,9 @@ const Reviews = ({ data }) => {
           <Image src="/RightAngle.svg" width="20" height="20" intrinsic="true" />
         </Angle>
       </AngleContainer>
+=======
+      </Carousel>
+>>>>>>> 3cdcd7c75ba6945108ad9a750c297ab9f24f32ba
     </GlobalSection>
   );
 };

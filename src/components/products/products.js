@@ -3,10 +3,16 @@ import Image from "next/image";
 import React from "react";
 import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
+<<<<<<< HEAD
   Angle,
   AngleContainer,
   CarrouselCard,
   CarrouselCards,
+=======
+  CarrouselCard,
+  ProductText,
+  TitleWrapper,
+>>>>>>> 3cdcd7c75ba6945108ad9a750c297ab9f24f32ba
   ImageWrapper,
   InfoWrapper,
   Price,
@@ -15,6 +21,7 @@ import {
   TitleWrapper,
 } from "./products.styles";
 
+<<<<<<< HEAD
 const Products = ({ data }) => {
   const carouselRef = React.useRef();
   const [percent, setPercent] = React.useState(0);
@@ -55,8 +62,13 @@ const Products = ({ data }) => {
       });
     }
   }, []);
+=======
+import Carousel from "../carousel/carousel";
+>>>>>>> 3cdcd7c75ba6945108ad9a750c297ab9f24f32ba
 
+const Products = ({ data }) => {
   return (
+
     <GlobalSection px={[0, 40, 40, 0]} pt={[20, 60, 80]}>
       <GlobalTitle
         fontSize={[34, 40, 54, 50]}
@@ -67,7 +79,7 @@ const Products = ({ data }) => {
         <SpanTitle>beauty products</SpanTitle> for u{" "}
       </GlobalTitle>
 
-      <CarrouselCards ref={carouselRef}>
+      <Carousel>
         {data.map((products, index) => {
           return (
             <CarrouselCard mb={[60, 40]} key={index}>
@@ -101,6 +113,7 @@ const Products = ({ data }) => {
             </CarrouselCard>
           );
         })}
+<<<<<<< HEAD
       </CarrouselCards>
 
       <AngleContainer>
@@ -127,6 +140,12 @@ const Products = ({ data }) => {
           <Image src="/RightAngle.svg" width="20" height="20" intrinsic="true" />
         </Angle>
       </AngleContainer>
+=======
+
+
+      
+      </Carousel>
+>>>>>>> 3cdcd7c75ba6945108ad9a750c297ab9f24f32ba
     </GlobalSection>
   );
 };
