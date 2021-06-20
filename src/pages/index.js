@@ -11,9 +11,8 @@ import {
   Hero,
   NavBar,
   Platform,
-  Video,
   Services,
-  Carrousel
+  Video,
 } from "../components";
 import { Divider } from "../components/global-components";
 import { dataTransformer } from "../helpers/data-transformer";
@@ -63,7 +62,7 @@ export default function Home({
       <FooterBanner data={footerData} />
       <Footer />
 
-      <Carrousel data={reviews} />
+      {/* <Carrousel data={reviews} /> */}
     </BaseLayout>
   );
 }

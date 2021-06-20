@@ -4,7 +4,6 @@ import { fontSize, lineHeight, space, width } from "styled-system";
 export const CarrouselCards = styled.div`
   display: grid;
   overflow-x: scroll;
-
   scroll-behavior: smooth;
   grid-auto-flow: column;
   width: 80vw;
@@ -13,23 +12,17 @@ export const CarrouselCards = styled.div`
   /* cursor: pointer; */
   position: relative;
   padding-bottom: 38px;
-
   scroll-snap-type: both mandatory;
-
   &::-webkit-scrollbar {
     height: 2px;
   }
-
   /* Track */
-
   &::-webkit-scrollbar-track {
     border-radius: 2px;
     margin: 94px;
     background: #c4c4c4;
   }
-
   /* Handle */
-
   &::-webkit-scrollbar-thumb {
     background: black;
     border-radius: 2px;
@@ -37,7 +30,6 @@ export const CarrouselCards = styled.div`
   @media only screen and (max-width: 1024px) {
     margin: 40px auto 30px auto;
   }
-
   @media only screen and (max-width: 500px) {
     width: 95vw;
     margin: 40px 0 30px 0;
@@ -56,14 +48,12 @@ export const CarrouselCard = styled.div`
   ${space};
   ${fontSize};
   ${width};
-
   @media only screen and (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     width: 434px;
     height: 268px;
   }
-
   @media only screen and (max-width: 500px) {
     width: 355px;
     height: 288px;
@@ -81,7 +71,6 @@ export const TitleReviewWrapper = styled.div`
 
 export const ReviewText = styled.p`
   font-family: ${({ theme }) => theme.fonts.roboto};
-
   text-align: left;
   ${lineHeight};
   ${space};
@@ -101,9 +90,7 @@ export const AngleContainer = styled.div`
   width: 80vw;
   height: 1px;
   margin: 0 auto;
-
   position: relative;
-
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -115,11 +102,9 @@ export const Angle = styled.a`
   cursor: pointer;
   position: relative;
   bottom: 28px;
-
   &:first-child {
     left: 50px;
   }
-
   &:nth-child(2) {
     align-self: flex-end;
     right: 50px;

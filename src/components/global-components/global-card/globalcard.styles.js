@@ -1,6 +1,6 @@
+import Image from "next/image";
 import styled from "styled-components";
-import { GlobalTitle, GlobalButton } from "../global-components";
-import Image from 'next/image'
+import { GlobalButton, GlobalTitle } from "../global-components";
 
 // export const Main = styled.main`
 //   padding: 60px 4vw 20px;
@@ -20,7 +20,7 @@ export const Card = styled.div`
   border-radius: 20px;
   padding: 60px 4vw;
   /* padding: 60px; */
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   @media screen and (max-width: 1124px) {
     flex-direction: column;
   }
@@ -41,9 +41,9 @@ export const Img = styled(Image)`
   object-fit: cover;
   object-position: center;
   z-index: -1;
-`
+`;
 
-export const Body = styled.div.attrs({className: 'body'})`
+export const Body = styled.div.attrs({ className: "body" })`
   position: relative;
   display: grid;
   max-width: 584px;
@@ -53,7 +53,7 @@ export const Body = styled.div.attrs({className: 'body'})`
   }
 `;
 
-export const Title = styled(GlobalTitle).attrs({className: 'title'})`
+export const Title = styled(GlobalTitle).attrs({ className: "title" })`
   font-size: 50px;
   line-height: 59px;
   color: ${(props) => props.theme.colors.white};
@@ -83,7 +83,7 @@ export const SubTitle = styled.p`
   }
 `;
 
-export const Text = styled(SubTitle).attrs({className: 'text'})`
+export const Text = styled(SubTitle).attrs({ className: "text" })`
   margin: 0;
   align-self: end;
   display: inline-block;

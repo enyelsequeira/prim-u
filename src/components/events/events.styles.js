@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // import { fontSize, lineHeight, space } from "styled-system";
 // import { GlobalSubtitle } from "../global-components";
-import GlobalCard from '../global-components/global-card/globalcard'
+import GlobalCard from "../global-components/global-card/globalcard";
 
 export const Container = styled.main`
   display: grid;
@@ -46,7 +46,7 @@ export const EventCard = styled(GlobalCard)`
       line-height: 20px;
     }
   }
-`
+`;
 
 // export const Container = styled.div`
 //   width: 100%;
