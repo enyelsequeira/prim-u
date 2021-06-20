@@ -11,39 +11,9 @@ export const Container = styled.main`
   @media screen and (max-width: 1124px) {
     row-gap: 40px;
   }
-<<<<<<< HEAD
   @media screen and (max-width: 768px) {
     padding: 20px 10px;
     row-gap: 20px;
-=======
-  @media only screen and (max-width: 375px) {
-    width: 352px;
-  }
-`;
-
-export const ImageWrapper = styled.div`
-  width: 100%;
-`;
-
-export const Title = styled(GlobalSubtitle)`
-  text-transform: uppercase;
-  margin-left: 60px;
-  margin-top: 40px;
-  align-self: flex-start;
-  z-index: 10;
-
-  ${lineHeight};
-  ${space};
-  ${fontSize};
-  @media only screen and (max-width: 682px) {
-    margin: 30px 0 auto 20px;
-    line-height: 39.84px;
-  }
-  @media only screen and (max-width: 375px) {
-    margin: 30px 0 0 20px;
-    width: 313px;
-    height: 40px;
->>>>>>> 3cdcd7c75ba6945108ad9a750c297ab9f24f32ba
   }
 `;
 
@@ -55,21 +25,10 @@ export const EventCard = styled(GlobalCard)`
   & .title {
     margin-bottom: 209px;
   }
-<<<<<<< HEAD
   @media screen and (max-width: 1124px) {
     & .title {
       margin-bottom: 119px;
     }
-=======
-  @media only screen and (max-width: 515px) {
-    margin: 130px auto 16px auto;
-    max-width: 313px;
-  }
-  @media only screen and (max-width: 375px) {
-    margin: 173px 20px 16px 20px;
-    max-width: 313px;
-    line-height: 20px;
->>>>>>> 3cdcd7c75ba6945108ad9a750c297ab9f24f32ba
   }
   @media screen and (max-width: 640px) {
     && {

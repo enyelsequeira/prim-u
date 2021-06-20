@@ -1,43 +1,6 @@
 import styled from "styled-components";
 import { fontSize, lineHeight, space, width } from "styled-system";
 
-<<<<<<< HEAD
-export const CarrouselCards = styled.div`
-  display: grid;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  grid-auto-flow: column;
-  width: 80vw;
-  gap: 40px;
-  margin: 60px auto 30px auto;
-  /* cursor: pointer; */
-  position: relative;
-  padding-bottom: 38px;
-  scroll-snap-type: both mandatory;
-  &::-webkit-scrollbar {
-    height: 2px;
-  }
-  /* Track */
-  &::-webkit-scrollbar-track {
-    border-radius: 2px;
-    margin: 94px;
-    background: #c4c4c4;
-  }
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 2px;
-  }
-  @media only screen and (max-width: 1024px) {
-    margin: 40px auto 30px auto;
-  }
-  @media only screen and (max-width: 500px) {
-    width: 95vw;
-    margin: 40px 0 30px 0;
-  }
-`;
-=======
->>>>>>> 3cdcd7c75ba6945108ad9a750c297ab9f24f32ba
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
   width: 520px;
