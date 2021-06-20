@@ -10,7 +10,7 @@ export const CarrouselCards = styled.div`
   width: 80vw;
   gap: 40px;
   margin: 60px auto 30px auto;
-  /* cursor: pointer; */
+  cursor: pointer;
   position: relative;
   padding-bottom: 38px;
 
