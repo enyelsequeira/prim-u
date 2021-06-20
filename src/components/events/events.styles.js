@@ -33,6 +33,9 @@ export const Card = styled.div`
     right: 0;
     background: rgba(0, 0, 0, 0.5);
   }
+  @media only screen and (max-width: 375px) {
+    width: 352px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -50,10 +53,11 @@ export const Title = styled(GlobalSubtitle)`
   ${space};
   ${fontSize};
   @media only screen and (max-width: 682px) {
-    margin: auto 0 auto 60px;
+    margin: 30px 0 auto 20px;
+    line-height: 39.84px;
   }
-  @media only screen and (max-width: 515px) {
-    margin: 30px auto 0 auto;
+  @media only screen and (max-width: 375px) {
+    margin: 30px 0 0 20px;
     width: 313px;
     height: 40px;
   }
@@ -83,7 +87,11 @@ export const Text = styled.p`
   @media only screen and (max-width: 515px) {
     margin: 130px auto 16px auto;
     max-width: 313px;
-    text-align: justify;
+  }
+  @media only screen and (max-width: 375px) {
+    margin: 173px 20px 16px 20px;
+    max-width: 313px;
+    line-height: 20px;
   }
 `;
 
@@ -126,6 +134,13 @@ export const Button = styled.button`
     position: static;
     justify-self: flex-end;
     margin: 0 auto auto auto;
+    width: 313px;
+  }
+
+  @media only screen and (max-width: 375px) {
+    position: static;
+    justify-self: flex-end;
+    margin: 0 20px;
     width: 313px;
   }
 `;
