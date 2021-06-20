@@ -10,7 +10,7 @@ import {
   NavLinks,
 } from "./nav.styles";
 
-function NavBar(props) {
+function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [lightNav, setLightNav] = useState(false);
   function handleScroll() {
@@ -32,17 +32,9 @@ function NavBar(props) {
         </LogoContainer>
         <NavIcon onClick={() => setIsOpen(!isOpen)} />
         <NavLinks>
-          <NavLink>
-            <a href="https://www.prim-u.app/en/list" target="_blank" rel="noreferrer">
-              MAKE A BOOKING
-            </a>
-          </NavLink>
+          <NavLink as="a" href="https://www.prim-u.app/en/list" target="_blank" rel="noreferrer">MAKE A BOOKING</NavLink>
           <NavLink>WORK WITH US</NavLink>
-          <NavLink>
-            <a href="#faq">
-              FAQ
-            </a>
-          </NavLink>
+          <NavLink as="a" href="#faq">FAQ</NavLink>
         </NavLinks>
       </NavContainer>
     </Nav>

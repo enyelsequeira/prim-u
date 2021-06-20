@@ -133,3 +133,28 @@ export const Divider = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.black};
   ${space};
 `;
+
+export const GlobalButton = styled.button`
+  all: unset;
+  position: relative;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 10px;
+  background: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.purple};
+  font-family: ${(props) => props.theme.fonts.condensed};
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  width: 235px;
+  height: 60px;
+  &:hover {
+    background: ${(props) => props.theme.colors.purple};
+    color: ${(props) => props.theme.colors.white};
+  }
+`

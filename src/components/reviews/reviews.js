@@ -98,7 +98,7 @@ const Reviews = ({ data }) => {
       <AngleContainer>
         <Angle
           classname="prev"
-          onClick={(e) =>
+          onClick={() =>
             carouselRef.current.scrollBy({
               left: -100,
               behavior: "smooth",
