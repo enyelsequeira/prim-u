@@ -15,7 +15,7 @@ import {
   Products,
   Reviews,
   Services,
-  Video,
+  Video
 } from "../components";
 import { Divider } from "../components/global-components";
 import { dataTransformer } from "../helpers/data-transformer";

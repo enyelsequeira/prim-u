@@ -169,5 +169,4 @@ export const Angle = styled.a`
     right: 50px;
     top: -17px;
   }
-
 `;
