@@ -22,10 +22,10 @@ export const CarrouselCards = styled.div`
     background: #c4c4c4;
     @media only screen and (max-width: 1024px) {
       margin: 150px;
-  }
+    }
   @media only screen and (max-width: 375px) {
       margin: 50px;
-  }
+    }
   }
   /* Handle */
   &::-webkit-scrollbar-thumb {

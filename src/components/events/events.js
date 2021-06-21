@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { zIndex } from "styled-system";
 import { Divider, GlobalSection, GlobalTitle, SpanTitle } from "../global-components";
 import { Button, Card, Container, ImageWrapper, Text, Title } from "./events.styles";
 
@@ -8,15 +9,16 @@ const Events = ({ data }) => {
   return (
     <>
       <Divider mt={[60, 100, 100]} mb={[20, 20, , 20]} />
+
       <GlobalSection px={[ 1, 20, 40, 0]} pt={[20, 60, 80]}>
         <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "large"]}>
           for <SpanTitle>more </SpanTitle> than just u
         </GlobalTitle>
 
         <Container>
-          {bigCards.map((card) => {
+          {bigCards.map((card, index) => {
             return (
-              <Card key={card.fields.bigCardsTitle}>
+              <Card key={index}>
                 <ImageWrapper>
                   <Image
                     src={`http:${card.fields.servicesImages.fields.file.url}`}

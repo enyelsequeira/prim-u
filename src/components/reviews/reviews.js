@@ -14,7 +14,7 @@ import Carousel from "../carousel/carousel";
 const Reviews = ({ data }) => {
 
   return (
-    <GlobalSection px={[0, 40, 40, 0]} pt={[20, 60, 80]}>
+    <GlobalSection px={[10, 40, 40, 0]} pt={[20, 60, 80]}>
       <GlobalTitle
         fontSize={[34, 40, 54, 50]}
         lineHeight={["mediumTwo", "large"]}

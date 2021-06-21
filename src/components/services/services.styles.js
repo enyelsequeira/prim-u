@@ -45,9 +45,9 @@ export const Card = styled.div`
   }
 `;
 
-export const Image = styled.img`
-  src: ${(props) => props.src};
-`;
+// export const Image = styled.img`
+//   src: ${(props) => props.src};
+// `;
 
 export const CardTitle = styled(GlobalSubtitle)`
   align-self: center;
