@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // import { GlobalTitle, GlobalButton } from "../global-components";
 // import Image from 'next/image'
-import GlobalCard from "../global-components/global-card/globalcard";
+import { GlobalCard } from "../global-components";
 
 export const Main = styled.main`
   padding: 60px 4vw 20px;
