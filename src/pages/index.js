@@ -40,12 +40,13 @@ export default function Home({
       <NavBar />
       <Hero />
       <Banner data={banner} />
-
       <Services data={services} />
 
+
       <Divider />
-      
       <Events data={bigCards} />
+      <Divider />
+
       <Contact data={freelancersSalons} />
 
       <Platform />

@@ -2,17 +2,25 @@ import styled from "styled-components";
 // import { fontSize, lineHeight, space } from "styled-system";
 // import { GlobalSubtitle } from "../global-components";
 import { GlobalCard } from "../global-components";
+import { Main as Section } from '../services/services.styles'
 
-export const Container = styled.main`
+export const Main = styled(Section)`
+  @media screen and (max-width: 767.9px) {
+    padding-top: 40px;
+  }
+`
+
+export const Container = styled.div`
   display: grid;
   grid-auto-rows: 1fr;
   row-gap: 60px;
-  padding: 60px 4vw 20px;
+  margin-top: 60px;
+  /* padding: 60px 4vw 20px; */
   @media screen and (max-width: 1124px) {
     row-gap: 40px;
   }
-  @media screen and (max-width: 768px) {
-    padding: 20px 10px;
+  @media screen and (max-width: 767.9px) {
+    /* padding: 20px 10px; */
     row-gap: 20px;
   }
 `;

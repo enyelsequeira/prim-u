@@ -1,18 +1,19 @@
 /* eslint-disable react/no-array-index-key */
 // import Image from "next/image";
 import { Divider, GlobalTitle, SpanTitle } from "../global-components";
-import { Container, EventCard } from "./events.styles";
+import { Container, EventCard, Main } from "./events.styles";
+import { Title } from '../services/services.styles'
 
 const Events = ({ data }) => {
   // const bigCards = data.reverse();
 
   return (
-    <>
+    <Main>
       {/* <Divider mt={[60, 0, 0, 100]} mb={[20, 20, , 20]} /> */}
       {/* <GlobalSection px={[20, 20, 40, 40, 0]} pt={[20, 60, 80]}> */}
-      <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
+      <Title>
         for <SpanTitle>more </SpanTitle> than just u
-      </GlobalTitle>
+      </Title>
 
       <Container>
         {data.map((card, i) => (
@@ -50,8 +51,8 @@ const Events = ({ data }) => {
           })} */}
       </Container>
       {/* </GlobalSection> */}
-      <Divider mt={[60, , , 100]} mb={[40, , , 20]} />
-    </>
+      {/* <Divider mt={[60, , , 100]} mb={[40, , , 20]} /> */}
+    </Main>
   );
 };
 export default Events;

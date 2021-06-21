@@ -15,10 +15,9 @@ const Services = ({ data }) => {
 
       <Container>
         {data.reverse().map((card) => {
-          return (
-            <ServiceCard 
-                src={`http:${card.fields.image.fields.file.url}`}
-                title={card.fields.title} />
+          return (<ServiceCard  src={`http:${card.fields.image.fields.file.url}`} title={card.fields.title} />
+
+          
             // Make Up is written different than in the Figma file.
             // <Card key={card.fields.title}>
             //   <Image
