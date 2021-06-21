@@ -42,6 +42,9 @@ export default function Home({
       <Banner data={banner} />
 
       <Services data={services} />
+
+      <Divider />
+      
       <Events data={bigCards} />
       <Contact data={freelancersSalons} />
 

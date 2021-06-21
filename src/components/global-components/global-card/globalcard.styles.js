@@ -19,7 +19,9 @@ export const Card = styled.div`
   margin: auto;
   border-radius: 20px;
   padding: 60px 4vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: ${props => props.theme.colors.black};
+  z-index: 0;
+  /* background-color: rgba(0, 0, 0, 0.4); */
   @media screen and (max-width: 1124px) {
     flex-direction: column;
   }
@@ -34,12 +36,14 @@ export const Card = styled.div`
   }
 `;
 
-export const Img = styled(Image)`
+export const Img = styled(Image).attrs({ className: "img" })`
   position: absolute;
   border-radius: 20px;
   object-fit: cover;
   object-position: center;
   z-index: -1;
+  opacity: .5;
+  transition: all .2s;
 `;
 
 export const Body = styled.div.attrs({ className: "body" })`
@@ -91,7 +95,7 @@ export const Text = styled(SubTitle).attrs({ className: "text" })`
   }
 `;
 
-export const Button = styled(GlobalButton)`
+export const Button = styled(GlobalButton).attrs({ className: "button" })`
   & {
     align-self: flex-end;
   }

@@ -8,7 +8,7 @@ const Events = ({ data }) => {
 
   return (
     <>
-      <Divider mt={[60, 0, 0, 100]} mb={[20, 20, , 20]} />
+      {/* <Divider mt={[60, 0, 0, 100]} mb={[20, 20, , 20]} /> */}
       {/* <GlobalSection px={[20, 20, 40, 40, 0]} pt={[20, 60, 80]}> */}
       <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
         for <SpanTitle>more </SpanTitle> than just u
