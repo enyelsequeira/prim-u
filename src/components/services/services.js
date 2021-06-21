@@ -1,14 +1,17 @@
 import Image from "next/image";
 import { GlobalSection, GlobalTitle, SpanTitle } from "../global-components";
-import { Card, CardTitle, Container, ServiceCard, Main } from "./services.styles";
+import { Card, CardTitle, Container, ServiceCard, Main, Title } from "./services.styles";
 
 const Services = ({ data }) => {
   return (
     // <GlobalSection px={[20, 20, 40, 40, 0]} pt={[20, 60, 80]}>
     <Main>
-      <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
+      <Title >
         treat yourself with <SpanTitle>our services </SpanTitle>
-      </GlobalTitle>
+      </Title>
+      {/* <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
+        treat yourself with <SpanTitle>our services </SpanTitle>
+      </GlobalTitle> */}
 
       <Container>
         {data.reverse().map((card) => {
