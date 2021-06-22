@@ -11,10 +11,13 @@ import {
   Hero,
   NavBar,
   Platform,
+  Products,
+  Reviews,
   Services,
   Video,
 } from "../components";
 import { Divider } from "../components/global-components";
+import { CarrouselCard } from "../components/products/products.styles";
 import { dataTransformer } from "../helpers/data-transformer";
 import BaseLayout from "../layouts/base";
 
@@ -41,9 +44,8 @@ export default function Home({
       <Hero />
       <Banner data={banner} />
       <Services data={services} />
-
-
       <Divider />
+
       <Events data={bigCards} />
       <Divider />
 
@@ -53,7 +55,11 @@ export default function Home({
       <Video />
 
       <Divider />
-      {/* <Divider mt={[80]} mb={[, , , , 80]} /> */}
+      <Reviews data={reviews} />
+      <Divider mt={["80px"]} />
+      <Products data={beautyProducts} />
+      <Divider mt={["80px"]} mb={["40px"]} />
+
       <Accordion
         data={faqQuestions}
         subtitle="For Customers"
@@ -65,8 +71,6 @@ export default function Home({
 
       <FooterBanner data={footerData} />
       <Footer />
-
-      {/* <Carrousel data={reviews} /> */}
     </BaseLayout>
   );
 }

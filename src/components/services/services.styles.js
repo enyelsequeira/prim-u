@@ -31,7 +31,6 @@ export const Container = styled.div`
   @media only screen and (max-width: 1024px) {
     gap: 3vw;
   }
-
   @media only screen and (max-width: 767.9px) {
     grid-gap: 10.5px;
     grid-template-columns: repeat(2, 1fr);
@@ -55,24 +54,12 @@ export const ServiceCard = styled(GlobalCard)`
     line-height: 45px;
     text-align: center;
   }
-`;
-
-
-
-export const CardTitle = styled(GlobalSubtitle)`
-  align-self: center;
-  text-align: center;
-  text-transform: uppercase;
-  display: flex;
-  position: absolute;
-  z-index: 2;
   & .button {
     display: none;
   }
-  &:hover .img{
-    opacity: .75;
-  } 
-
+  &:hover .img {
+    opacity: 0.75;
+  }
   @media screen and (max-width: 767.9px) {
     padding: 0 15px;
     & .title {

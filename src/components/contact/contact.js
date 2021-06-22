@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import { SpanTitle } from "../global-components";
 import { Container, Main, ContactCard } from "./contact.styles";
-import { Title } from '../services/services.styles'
+import { Title } from "../services/services.styles";
 
 const Contact = ({ data }) => {
   return (
@@ -12,15 +12,15 @@ const Contact = ({ data }) => {
 
       <Container>
         {data.map((card, i) => (
-            <ContactCard 
-              key={i} 
-              src={`http:${card.fields.image.fields.file.url}`}
-              title={card.fields.freelancersSalonsTitle}
-              text={[card.fields.description.content[0].content[0].value]}
-              buttonText='Sign Up'
-              href='https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer' />
-          )
-        )}
+          <ContactCard
+            key={i}
+            src={`http:${card.fields.image.fields.file.url}`}
+            title={card.fields.freelancersSalonsTitle}
+            text={[card.fields.description.content[0].content[0].value]}
+            buttonText="Sign Up"
+            href="https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer"
+          />
+        ))}
       </Container>
     </Main>
   );

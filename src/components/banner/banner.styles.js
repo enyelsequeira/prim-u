@@ -11,4 +11,4 @@ export const Main = styled.main`
 export const BannerCard = styled(GlobalCard)`
   max-width: 1320px;
   min-height: 643px;
-`
+`;

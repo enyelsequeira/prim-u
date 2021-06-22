@@ -1,6 +1,6 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { GlobalTitle } from "../global-components";
-import Image from 'next/image'
 
 export const Main = styled.main`
   position: relative;
@@ -16,7 +16,7 @@ export const Main = styled.main`
 
 export const Img = styled(Image)`
   position: absolute;
-  transform: scale(.65, 1.35);
+  transform: scale(0.65, 1.35);
   min-width: 1440px !important;
   left: 13vw !important;
   top: -165px !important;
@@ -30,7 +30,7 @@ export const Img = styled(Image)`
     transform: translate(-50%, 180px);
     min-width: 700px !important;
   }
-`
+`;
 
 export const Container = styled.div`
   display: flex;

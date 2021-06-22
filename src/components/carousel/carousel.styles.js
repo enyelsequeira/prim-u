@@ -23,9 +23,7 @@ export const CarrouselCards = styled.div`
     @media only screen and (max-width: 1024px) {
       margin: 150px;
     }
-
     @media only screen and (max-width: 375px) {
-
       margin: 50px;
     }
   }
@@ -34,7 +32,6 @@ export const CarrouselCards = styled.div`
     background: black;
     border-radius: 2px;
   }
-
   @media only screen and (max-width: 1024px) {
     margin: 40px 40px 30px 40px;
     gap: 24px;
@@ -45,7 +42,6 @@ export const CarrouselCards = styled.div`
     gap: 16px;
   }
 `;
-
 export const AngleContainer = styled.div`
   max-width: 1440px;
   height: 1px;
@@ -56,7 +52,6 @@ export const AngleContainer = styled.div`
   align-content: center;
   text-align: center;
 `;
-
 export const Angle = styled.a`
   align-self: center;
   cursor: pointer;
@@ -72,7 +67,6 @@ export const Angle = styled.a`
     align-self: flex-end;
     right: 100px;
     top: -18px;
-
     @media only screen and (max-width: 375px) {
       right: 20px;
     }

@@ -27,22 +27,22 @@ export const Card = styled.div`
 `;
 
 export const Wrapper = styled.div.attrs({ className: "image-wrapper" })`
-    position: absolute;
-    background-color: ${props => props.theme.colors.black};
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-`
+  position: absolute;
+  background-color: ${(props) => props.theme.colors.black};
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+`;
 
 export const Img = styled(Image).attrs({ className: "img" })`
   object-fit: cover;
   object-position: center;
-  opacity: .5;
-  transition: all .2s;
+  opacity: 0.5;
+  transition: all 0.2s;
 `;
 
 export const Body = styled.div.attrs({ className: "body" })`

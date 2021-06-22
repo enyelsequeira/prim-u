@@ -30,8 +30,16 @@ function Platform() {
             customer the ultimate experience and 100% satisfaction. This is our promise.
           </Text>
           <ButtonContainer>
-            <AppleButton href="https://apps.apple.com/za/app/prim-u/id1377092370" target="_blank" rel="noreferrer" />
-            <GoogleButton href="https://play.google.com/store/apps/details?id=com.yelo.primu" target="_blank" rel="noreferrer" />
+            <AppleButton
+              href="https://apps.apple.com/za/app/prim-u/id1377092370"
+              target="_blank"
+              rel="noreferrer"
+            />
+            <GoogleButton
+              href="https://play.google.com/store/apps/details?id=com.yelo.primu"
+              target="_blank"
+              rel="noreferrer"
+            />
           </ButtonContainer>
         </Body>
         <Img />

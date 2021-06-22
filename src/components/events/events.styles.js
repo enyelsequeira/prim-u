@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { GlobalCard } from "../global-components";
-import { Main as Section } from '../services/services.styles'
+import { Main as Section } from "../services/services.styles";
 
 export const Main = styled(Section)`
   @media screen and (max-width: 767.9px) {
     padding-top: 40px;
   }
-`
+`;
 
 export const Container = styled.div`
   display: grid;

@@ -157,4 +157,4 @@ export const GlobalButton = styled.button`
     background: ${(props) => props.theme.colors.purple};
     color: ${(props) => props.theme.colors.white};
   }
-`
+`;

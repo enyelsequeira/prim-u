@@ -68,8 +68,6 @@ function theme() {
   };
 }
 
-// check how we use these styles in the global.styles folder
-
 const Theme = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
