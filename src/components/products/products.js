@@ -10,6 +10,7 @@ import {
   InfoWrapper,
   PriceContainer,
   Price,
+  BeautyButton
 } from "./products.styles";
 import Carousel from "../carousel/carousel";
 
@@ -56,7 +57,12 @@ const Products = ({ data }) => {
           );
         })}
       </Carousel>
+      <BeautyButton>
+      check out beauty products
+      </BeautyButton>
     </GlobalSection>
+
+
   );
 };
 export default Products;

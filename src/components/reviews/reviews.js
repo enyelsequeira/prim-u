@@ -1,4 +1,4 @@
-/* eslint-disable react/no-array-index-key */
+400/* eslint-disable react/no-array-index-key */
 import Image from "next/image";
 import React from "react";
 import Carousel from "../carousel/carousel";

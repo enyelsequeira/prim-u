@@ -84,3 +84,49 @@ export const Price = styled.p`
   ${space};
   ${fontSize};
 `;
+
+
+export const BeautyButton = styled.button`
+  display: flex;
+  align-self: center;
+  width: 400px;
+  height: 60px;
+  background: ${({ theme }) => theme.colors.purple};
+  border: 1px solid ${({ theme }) => theme.colors.purple};
+  border-radius: 10px;
+  font-family: ${({ theme }) => theme.fonts.condensed};
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: ${({ theme }) => theme.colors.white};
+  text-transform: uppercase;
+  transition: 0.9s;
+  ${lineHeight};
+  ${space};
+  ${fontSize};
+  padding: 11px 118px;
+  margin-top: 100px;
+  &:hover {
+    cursor: pointer;
+    background-color: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 16px 105px;
+    margin-top: 60px;
+  }
+  @media only screen and (max-width: 1024px) {
+    padding: 11px 57px;
+    margin-top: 80px;
+  }
+  @media only screen and (max-width: 640px) {
+    padding: 16px 105px;
+    margin-top: 60px;
+  }
+  /* @media only screen and (max-width: 1440px) {
+    padding: 11px 118px;
+    margin-top: 100px;
+  } */
+`;
