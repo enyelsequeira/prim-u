@@ -5,26 +5,24 @@ import { Title } from "../services/services.styles";
 
 const Events = ({ data }) => {
   return (
-    <>
-      <Main>
-        <Title>
-          for <SpanTitle>more </SpanTitle> than just u
-        </Title>
+    <Main>
+      <Title>
+        for <SpanTitle>more </SpanTitle> than just u
+      </Title>
 
-        <Container>
-          {data.map((card, i) => (
-            <EventCard
-              key={i}
-              src={`http:${card.fields.servicesImages.fields.file.url}`}
-              title={card.fields.bigCardsTitle}
-              text={[card.fields.description.content[0].content[0].value]}
-              buttonText="Make a Booking"
-              href="https://www.prim-u.app/en/list"
-            />
-          ))}
-        </Container>
-      </Main>
-    </>
+      <Container>
+        {data.map((card, i) => (
+          <EventCard
+            key={i}
+            src={`http:${card.fields.servicesImages.fields.file.url}`}
+            title={card.fields.bigCardsTitle}
+            text={[card.fields.description.content[0].content[0].value]}
+            buttonText="Make a Booking"
+            href="https://www.prim-u.app/en/list"
+          />
+        ))}
+      </Container>
+    </Main>
   );
 };
 
