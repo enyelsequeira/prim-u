@@ -23,7 +23,9 @@ export const CarrouselCards = styled.div`
     @media only screen and (max-width: 1024px) {
       margin: 150px;
     }
+
     @media only screen and (max-width: 375px) {
+
       margin: 50px;
     }
   }

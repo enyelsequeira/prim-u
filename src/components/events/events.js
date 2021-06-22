@@ -1,3 +1,7 @@
+import Image from "next/image";
+import { zIndex } from "styled-system";
+import { Divider, GlobalSection, GlobalTitle, SpanTitle } from "../global-components";
+import { Button, Card, Container, ImageWrapper, Text, Title } from "./events.styles";
 /* eslint-disable react/no-array-index-key */
 import { SpanTitle } from "../global-components";
 import { Container, EventCard, Main } from "./events.styles";
@@ -5,6 +9,9 @@ import { Title } from '../services/services.styles'
 
 const Events = ({ data }) => {
   return (
+    <>
+      <Divider mt={[60, 100, 100]} mb={[20, 20, , 20]} />
+
     <Main>
       <Title>
         for <SpanTitle>more </SpanTitle> than just u
@@ -23,6 +30,7 @@ const Events = ({ data }) => {
         ))}
       </Container>
     </Main>
+    </>
   );
 };
 

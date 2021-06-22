@@ -55,6 +55,17 @@ export const ServiceCard = styled(GlobalCard)`
     line-height: 45px;
     text-align: center;
   }
+`;
+
+
+
+export const CardTitle = styled(GlobalSubtitle)`
+  align-self: center;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  position: absolute;
+  z-index: 2;
   & .button {
     display: none;
   }
