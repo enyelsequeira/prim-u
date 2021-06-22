@@ -58,7 +58,7 @@ const Carousel = (props) => {
             })
           }
           disabled={percent === 0}>
-          <Image src="/LeftAngle.svg" width="20" height="20" intrinsic="true" />
+          <Image src="/LeftAngle.svg" width="20" height="20" intrinsic="true" alt="left-arrow" />
         </Angle>
         <Angle
           className="next"
@@ -69,7 +69,7 @@ const Carousel = (props) => {
             })
           }
           disabled={percent >= 1}>
-          <Image src="/RightAngle.svg" width="20" height="20" intrinsic="true" />
+          <Image src="/RightAngle.svg" width="20" height="20" intrinsic="true" alt="right-arrow" />
         </Angle>
       </AngleContainer>
     </>

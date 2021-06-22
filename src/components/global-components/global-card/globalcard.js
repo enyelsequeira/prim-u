@@ -14,11 +14,12 @@ function GlobalCard({
   banner,
   events,
   services,
+  altImageName,
 }) {
   return (
     <Card className={className}>
       <Wrapper>
-        <Img src={src} layout="fill" quality="100" />
+        <Img src={src} layout="fill" quality="100" alt={altImageName} />
       </Wrapper>
       <Body>
         <Title suppressHydrationWarning>{title}</Title>

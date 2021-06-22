@@ -35,6 +35,7 @@ const Products = ({ data }) => {
                   height={220}
                   layout="intrinsic"
                   quality={100}
+                  alt={products.fields.beautyProductImage.fields.file.title}
                 />
               </ImageWrapper>
               <InfoWrapper>
