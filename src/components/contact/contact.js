@@ -1,56 +1,28 @@
 /* eslint-disable react/no-array-index-key */
-import Image from "next/image";
-import { GlobalSection, GlobalTitle, SpanTitle } from "../global-components";
-import {
-  Button,
-  Card,
-  CardContainer,
-  Container,
-  ImageContainer,
-  Text,
-  Title,
-} from "./contact.styles";
+import { SpanTitle } from "../global-components";
+import { Container, Main, ContactCard } from "./contact.styles";
+import { Title } from '../services/services.styles'
 
 const Contact = ({ data }) => {
   return (
-    <GlobalSection px={[20, 20, 40, 40, 0]} pt={[20, 60, 80]}>
-      <GlobalTitle fontSize={[34, 40, 50]} lineHeight={["small", "medium", "large"]}>
+    <Main>
+      <Title>
         For those who provide <SpanTitle> beauty services </SpanTitle>
-      </GlobalTitle>
+      </Title>
 
       <Container>
-        {data.map((card, i) => {
-          return (
-            <CardContainer key={i}>
-              <Card>
-                <ImageContainer>
-                  <Image
-                    src={`http:${card.fields.image.fields.file.url}`}
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
-                  />
-                </ImageContainer>
-                <Title
-                  fontSize={[32, 34, 38]}
-                  condensed
-                  white
-                  lineHeight={["xs", "smaller", "medium"]}>
-                  {card.fields.freelancersSalonsTitle}
-                </Title>
-                <Button fontSize={[24]} lineHeight={["sub"]}>
-                  Sign Up
-                </Button>
-              </Card>
-
-              <Text fontSize={[20]} lineHeight={["sub"]}>
-                {card.fields.description.content[0].content[0].value}
-              </Text>
-            </CardContainer>
-          );
-        })}
+        {data.map((card, i) => (
+            <ContactCard 
+              key={i} 
+              src={`http:${card.fields.image.fields.file.url}`}
+              title={card.fields.freelancersSalonsTitle}
+              text={[card.fields.description.content[0].content[0].value]}
+              buttonText='Sign Up'
+              href='https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer' />
+          )
+        )}
       </Container>
-    </GlobalSection>
+    </Main>
   );
 };
 

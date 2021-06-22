@@ -65,6 +65,8 @@ export const LogoContainer = styled.a`
   column-gap: 12px;
   align-items: center;
   cursor: pointer;
+  position: relative;
+  left: min(-1vw, -12px);
 
   &:hover {
     p {
@@ -75,6 +77,7 @@ export const LogoContainer = styled.a`
     }
   }
   @media screen and (max-width: 767.9px) {
+    left: 0;
     :hover {
       p {
         color: var(--color);
