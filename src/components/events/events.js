@@ -17,7 +17,7 @@ const Events = ({ data }) => {
               key={i}
               src={`http:${card.fields.servicesImages.fields.file.url}`}
               title={card.fields.bigCardsTitle}
-              text={[card.fields.description.content[0].content[0].value]}
+              events={card.fields.description}
               buttonText="Make a Booking"
               href="https://www.prim-u.app/en/list"
             />

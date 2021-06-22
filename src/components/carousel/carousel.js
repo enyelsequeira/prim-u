@@ -50,7 +50,7 @@ const Carousel = (props) => {
       <CarrouselCards ref={carouselRef}>{props.children}</CarrouselCards>
       <AngleContainer>
         <Angle
-          classname="prev"
+          className="prev"
           onClick={() =>
             carouselRef.current.scrollBy({
               left: -100,

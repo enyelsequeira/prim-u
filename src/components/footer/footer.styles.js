@@ -57,6 +57,10 @@ export const FooterList = styled.p`
   font-size: 18px;
   line-height: 28px;
   padding-bottom: 10px;
+  > a {
+    font-size: inherit;
+    line-height: inherit;
+  }
   @media only screen and (max-width: 768px) {
     font-size: 18px;
     line-height: 16px;

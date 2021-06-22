@@ -9,9 +9,9 @@ import {
 } from "./footer-banner.styles";
 
 const FooterBanner = ({ data }) => {
+  //* uncessary logic, might remove if need be
   let filteredTitle = "";
   let spanText = "";
-  // console.log(data[0].fields.footerTittle.split(" "));
 
   const gettingData = (fields, word) => {
     const array = fields.split(" ");
@@ -23,7 +23,6 @@ const FooterBanner = ({ data }) => {
     }
     return spanText;
   };
-  // console.log(gettingData(data[0].fields.footerTittle, "instagram"));
   gettingData(data[0].fields.footerTittle, "instagram");
 
   return (
