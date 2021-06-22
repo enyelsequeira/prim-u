@@ -1,10 +1,12 @@
 /* eslint-disable react/no-array-index-key */
-import { Body, Button, Card, Img, SubTitle, Text, Title } from "./globalcard.styles";
+import { Body, Button, Card, Wrapper, Img, SubTitle, Text, Title } from "./globalcard.styles";
 
 function GlobalCard({ title, subtitle, text, href, buttonText, src, className }) {
   return (
     <Card className={className}>
-      <Img src={src} layout="fill" quality="100" />
+      <Wrapper>
+        <Img src={src} layout="fill" quality="100" />
+      </Wrapper>
       <Body>
         <Title>{title}</Title>
         {subtitle && <SubTitle>{subtitle}</SubTitle>}

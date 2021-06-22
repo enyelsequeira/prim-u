@@ -2,26 +2,16 @@ import Image from "next/image";
 import styled from "styled-components";
 import { GlobalButton, GlobalTitle } from "../global-components";
 
-// export const Main = styled.main`
-//   padding: 60px 4vw 20px;
-//   @media screen and (max-width: 768px) {
-//     padding: 20px 10px;
-//   }
-// `;
 export const Card = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  /* max-width: 1320px;
-  min-height: 643px; */
   margin: auto;
   border-radius: 20px;
   padding: 60px 4vw;
-  background-color: ${props => props.theme.colors.black};
   z-index: 0;
-  /* background-color: rgba(0, 0, 0, 0.4); */
   @media screen and (max-width: 1124px) {
     flex-direction: column;
   }
@@ -36,12 +26,21 @@ export const Card = styled.div`
   }
 `;
 
+export const Wrapper = styled.div.attrs({ className: "image-wrapper" })`
+    position: absolute;
+    background-color: ${props => props.theme.colors.black};
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+`
+
 export const Img = styled(Image).attrs({ className: "img" })`
-  position: absolute;
-  border-radius: 20px;
   object-fit: cover;
   object-position: center;
-  z-index: -1;
   opacity: .5;
   transition: all .2s;
 `;
