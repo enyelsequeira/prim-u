@@ -2,12 +2,12 @@
 import Image from "next/image";
 import React from "react";
 import Carousel from "../carousel/carousel";
-import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
-import { CarrouselCard, ReviewText, Stars, TitleReviewWrapper } from "./reviews.styles";
+import { GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
+import { CarrouselCard, ReviewText, Stars, TitleReviewWrapper, GlobalSectionStyled } from "./reviews.styles";
 
 const Reviews = ({ data }) => {
   return (
-    <GlobalSection px={[0, 40, 40, 0]} pt={[20, 60, 80]}>
+    <GlobalSectionStyled>
       <GlobalTitle
         fontSize={[34, 40, 54, 50]}
         lineHeight={["mediumTwo", "large"]}
@@ -23,7 +23,7 @@ const Reviews = ({ data }) => {
             fields: { name, rating, review },
           } = r;
           return (
-            <CarrouselCard key={name} mb={[60, 40]}>
+            <CarrouselCard key={name} mb={[80]}>
               <TitleReviewWrapper pt={[20]} pl={[20]}>
                 <GlobalSubtitle fontSize={[18, 20, 16, 18]} lineHeight={["sub"]}>
                   {name}
@@ -32,7 +32,7 @@ const Reviews = ({ data }) => {
                   {[...Array(rating)].map((element, index) => (
                     <Image
                       key={index}
-                      src="/Star.svg"
+                      src="/images/Star.svg"
                       width={20}
                       height={20}
                       layout="fixed"
@@ -49,7 +49,7 @@ const Reviews = ({ data }) => {
           );
         })}
       </Carousel>
-    </GlobalSection>
+    </GlobalSectionStyled>
   );
 };
 

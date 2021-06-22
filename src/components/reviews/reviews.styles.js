@@ -1,5 +1,26 @@
 import styled from "styled-components";
+import { GlobalSection } from "../global-components";
 import { fontSize, lineHeight, space, width } from "styled-system";
+
+export const GlobalSectionStyled = styled(GlobalSection)`
+  max-width: 100%;
+  margin: 0;
+  padding-left: 60px;
+  padding-bottom: 80px;
+
+  @media only screen and (max-width: 1024px) {
+    padding-left: 40px;
+  }
+  @media only screen and (max-width: 1024px) {
+    padding-left: 40px;
+    padding-top: 60px;
+  }
+  @media only screen and (max-width: 375px) {
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+`;
+
 
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};

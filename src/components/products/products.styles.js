@@ -1,5 +1,23 @@
 import styled from "styled-components";
+import { GlobalSection } from "../global-components";
 import { fontSize, lineHeight, space } from "styled-system";
+
+export const GlobalSectionStyled = styled(GlobalSection)`
+  max-width: 100%;
+  margin: 0;
+  padding-left: 60px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+
+  @media only screen and (max-width: 1024px) {
+    padding-left: 40px;
+    padding-top: 60px;
+  }
+  @media only screen and (max-width: 375px) {
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+`;
 
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
@@ -89,6 +107,8 @@ export const Price = styled.p`
 export const BeautyButton = styled.button`
   display: flex;
   align-self: center;
+  align-content: center;
+  justify-content: center;
   width: 400px;
   height: 60px;
   background: ${({ theme }) => theme.colors.purple};
@@ -98,35 +118,17 @@ export const BeautyButton = styled.button`
   font-style: normal;
   font-weight: bold;
   text-align: center;
-  letter-spacing: -0.01em;
   color: ${({ theme }) => theme.colors.white};
   text-transform: uppercase;
-  transition: 0.9s;
   ${lineHeight};
   ${space};
   ${fontSize};
-  padding: 11px 118px;
-  margin-top: 100px;
+  padding: 16px 0;
+  margin: 0 auto;
   &:hover {
     cursor: pointer;
-    background-color: ${({ theme }) => theme.colors.purple};
-    color: ${({ theme }) => theme.colors.white};
   }
-
-  @media only screen and (max-width: 768px) {
-    padding: 16px 105px;
-    margin-top: 60px;
-  }
-  @media only screen and (max-width: 1024px) {
-    padding: 11px 57px;
-    margin-top: 80px;
-  }
-  @media only screen and (max-width: 640px) {
-    padding: 16px 105px;
-    margin-top: 60px;
-  }
-  /* @media only screen and (max-width: 1440px) {
-    padding: 11px 118px;
-    margin-top: 100px;
-  } */
+  @media only screen and (max-width: 405px) {
+    display: none;
+  } 
 `;

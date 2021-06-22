@@ -2,7 +2,7 @@
 /* eslint-disable react/no-array-index-key */
 import Image from "next/image";
 import React from "react";
-import { Angle, AngleContainer, CarrouselCards } from "./carousel.styles";
+import { AngleLeft, AngleRight, CarrouselCards } from "./carousel.styles";
 
 const Carousel = (props) => {
   const carouselRef = React.useRef();
@@ -46,33 +46,33 @@ const Carousel = (props) => {
   }, []);
 
   return (
-    <>
-      <CarrouselCards ref={carouselRef}>{props.children}</CarrouselCards>
-      <AngleContainer>
-        <Angle
-          classname="prev"
-          onClick={() =>
-            carouselRef.current.scrollBy({
-              left: -100,
-              behavior: "smooth",
-            })
-          }
-          disabled={percent === 0}>
-          <Image src="/LeftAngle.svg" width="20" height="20" intrinsic="true" />
-        </Angle>
-        <Angle
-          className="next"
-          onClick={() =>
-            carouselRef.current.scrollBy({
-              left: 100,
-              behavior: "smooth",
-            })
-          }
-          disabled={percent >= 1}>
-          <Image src="/RightAngle.svg" width="20" height="20" intrinsic="true" />
-        </Angle>
-      </AngleContainer>
-    </>
+    
+    <CarrouselCards ref={carouselRef}>{props.children}
+      <AngleLeft
+        classname="prev"
+        onClick={() =>
+          carouselRef.current.scrollBy({
+            left: -100,
+            behavior: "smooth",
+          })
+        }
+        disabled={percent === 0}>
+
+      </AngleLeft>
+      <AngleRight
+        className="next"
+        onClick={() =>
+          carouselRef.current.scrollBy({
+            left: 100,
+            behavior: "smooth",
+          })
+        }
+        disabled={percent >= 1}>
+
+      </AngleRight>
+    </CarrouselCards>
+
+
   );
 };
 

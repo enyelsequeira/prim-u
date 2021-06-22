@@ -10,13 +10,14 @@ import {
   InfoWrapper,
   PriceContainer,
   Price,
-  BeautyButton
+  BeautyButton,
+  GlobalSectionStyled
 } from "./products.styles";
 import Carousel from "../carousel/carousel";
 
 const Products = ({ data }) => {
   return (
-    <GlobalSection px={[0, 40, 40, 0]} pt={[20, 60, 80]}>
+    <GlobalSectionStyled>
       <GlobalTitle
         fontSize={[34, 40, 54, 50]}
         lineHeight={["mediumTwo", "large"]}
@@ -28,7 +29,7 @@ const Products = ({ data }) => {
       <Carousel>
         {data.map((products, index) => {
           return (
-            <CarrouselCard mb={[60, 40]} key={index}>
+            <CarrouselCard key={index} mb={[80]}>
               <ImageWrapper>
                 <Image
                   src={`http:${products.fields.beautyProductImage.fields.file.url}`}
@@ -57,10 +58,15 @@ const Products = ({ data }) => {
           );
         })}
       </Carousel>
-      <BeautyButton>
-      check out beauty products
+      <BeautyButton
+        fontSize={[24]}
+        lineHeight={["sub"]}
+        mx={"auto"}
+        type="button"
+        href="https://www.prim-u.app/en/list">
+        check out beauty products
       </BeautyButton>
-    </GlobalSection>
+    </GlobalSectionStyled>
 
 
   );
