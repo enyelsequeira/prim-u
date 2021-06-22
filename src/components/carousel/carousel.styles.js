@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CarrouselCards = styled.div`
   display: grid;
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-behavior: smooth;
   grid-auto-flow: column;
   max-width: 1440px;
@@ -18,7 +18,9 @@ export const CarrouselCards = styled.div`
   /* Track */
   &::-webkit-scrollbar-track {
     border-radius: 2px;
-    margin: 200px;
+    margin-right: calc(200px + 4vw);
+    /* margin-right: 200px; */
+    margin-left: 200px;
     background: #c4c4c4;
     @media only screen and (max-width: 1024px) {
       margin: 150px;

@@ -3,19 +3,22 @@ import Image from "next/image";
 import React from "react";
 import Carousel from "../carousel/carousel";
 import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
-import { CarrouselCard, ReviewText, Stars, TitleReviewWrapper } from "./reviews.styles";
+import { CarrouselCard, ReviewText, Stars, TitleReviewWrapper, Main, Title } from "./reviews.styles";
 
 const Reviews = ({ data }) => {
   return (
-    <GlobalSection px={[0, 40, 40, 0]} pt={[20, 60, 80]}>
-      <GlobalTitle
+    <Main>
+      <Title>
+        What Our <SpanTitle> Customers</SpanTitle> say{" "}
+      </Title>
+      {/* <GlobalTitle
         fontSize={[34, 40, 54, 50]}
         lineHeight={["mediumTwo", "large"]}
         textAlign="center"
         px={[1]}
         mb={[40, 50, 54, 54, 80]}>
         What Our <SpanTitle> Customers</SpanTitle> say{" "}
-      </GlobalTitle>
+      </GlobalTitle> */}
 
       <Carousel>
         {data.map((r) => {
@@ -49,7 +52,7 @@ const Reviews = ({ data }) => {
           );
         })}
       </Carousel>
-    </GlobalSection>
+    </Main>
   );
 };
 

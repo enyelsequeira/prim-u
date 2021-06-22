@@ -48,7 +48,7 @@ const Carousel = (props) => {
   return (
     <>
       <CarrouselCards ref={carouselRef}>{props.children}</CarrouselCards>
-      <AngleContainer>
+      {/* <AngleContainer>
         <Angle
           classname="prev"
           onClick={() =>
@@ -71,7 +71,7 @@ const Carousel = (props) => {
           disabled={percent >= 1}>
           <Image src="/RightAngle.svg" width="20" height="20" intrinsic="true" />
         </Angle>
-      </AngleContainer>
+      </AngleContainer> */}
     </>
   );
 };
