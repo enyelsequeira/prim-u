@@ -84,5 +84,6 @@ export const Subscribe = styled(ShowMore)`
     padding: 16px 105px;
     margin: auto;
     margin-top: 30px;
+    margin-bottom: 80px;
   }
 `;

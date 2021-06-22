@@ -32,7 +32,7 @@ export const Nav = styled.nav`
   width: 100%;
   max-width: 1440px;
   max-height: 80px;
-  padding: 20px 4vw;
+  padding: ${props => props.lightNav ? "15px 4vw 20px" : "20px 4vw"};
   background-color: ${(props) => (props.lightNav ? props.theme.colors.white : "transparent")};
   transition: all 0.2s, background 0.3s 0.05s, padding-bottom 0.3s;
   @media screen and (max-width: 767.9px) {
@@ -65,6 +65,8 @@ export const LogoContainer = styled.a`
   column-gap: 12px;
   align-items: center;
   cursor: pointer;
+  position: relative;
+  left: min(-1vw, -12px);
 
   &:hover {
     p {
@@ -75,6 +77,7 @@ export const LogoContainer = styled.a`
     }
   }
   @media screen and (max-width: 767.9px) {
+    left: 0;
     :hover {
       p {
         color: var(--color);
@@ -172,11 +175,6 @@ export const NavLink = styled.li`
 
   &:hover {
     color: ${(props) => props.theme.colors.purple};
-  }
-
-  & a {
-    all: unset;
-    display: contents;
   }
   @media screen and (max-width: 767.9px) {
     color: var(--color);

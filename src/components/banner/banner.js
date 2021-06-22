@@ -1,22 +1,24 @@
 /* eslint-disable react/no-array-index-key */
-import { Banner, Body, Button, Card, Text, Title } from "./banner.styles";
+import { Main, BannerCard } from "./banner.styles";
 
-function BannerComponent({ data }) {
+function Banner() {
   return (
-    <Banner>
-      <Card
-        mobile={`http:${data[0].fields.images[1].fields.file.url}`}
-        desktop={`http:${data[0].fields.images[0].fields.file.url}`}>
-        <Body>
-          <Title>{data[0].fields.title}</Title>
-          {data[0].fields.description.content.map((p, i) => {
-            return <Text key={i}>{p.content[0].value}</Text>;
-          })}
-        </Body>
-        <Button>Make a Booking</Button>
-      </Card>
-    </Banner>
+    <Main>
+      <BannerCard
+        src="/images/For-customers.png"
+        title="For Customers"
+        subtitle="Enjoy beauty treatments wherever U are"
+        text={[
+          "Struggling to find the time to pamper yourself?",
+          "With just one click, Prim-U will connect U to the right primlancer, at the right time, right in the comfort of your home.",
+          "On holiday? Book an expert primlancer closest to U.",
+          "Simply click, pick a treatment and we’ll come to U.",
+        ]}
+        href="https://www.prim-u.app/en/list"
+        buttonText="Make a Booking"
+      />
+    </Main>
   );
 }
 
-export default BannerComponent;
+export default Banner;

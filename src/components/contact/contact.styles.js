@@ -1,134 +1,87 @@
 import styled from "styled-components";
-import { fontSize, lineHeight, space } from "styled-system";
-import { GlobalSubtitle } from "../global-components";
+import { GlobalCard } from "../global-components";
+import { Main as Section } from '../services/services.styles'
+
+export const Main = styled(Section)`
+  @media screen and (max-width: 767.9px) {
+    padding-bottom: 80px;
+  }
+`
 
 export const Container = styled.div`
-  width: auto;
-  margin: 60px 0 100px 0;
   display: grid;
-  grid-gap: 60px;
+  grid-gap: 4vw;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  @media only screen and (max-width: 670px) {
-    gap: 0;
+  margin-top: 60px;
+
+  @media only screen and (max-width: 767.9px) {
+    margin-top: 40px;
+  }
+
+  @media only screen and (max-width: 640px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    row-gap: 60px;
   }
 `;
 
-export const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-`;
-
-export const Card = styled.div`
-  max-width: 630px;
-  height: 430px;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
-  overflow: hidden;
-
-  &:after {
-    content: "";
+export const ContactCard = styled(GlobalCard)`
+  display: grid;
+  padding: 0;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+  
+  & .image-wrapper {
+    height: 460px;
+    height: max(326px, calc(25vw + 100px));
+  }
+  & .body {
+    display: contents;
+  }
+  & .title {
+    width: 100%;
+    text-align: center;
+    font-size: 38px;
+    line-height: 45px;
+    margin: 0;
     position: absolute;
-    z-index: 11;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
+    top: max(163px, calc((25vw + 100px)/2));;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  @media screen and (max-width: 1024px) {
-    max-width: 446px;
-    height: 326px;
+  & .button {
+    position: absolute;
+    width: 182px;
+    height: 60px;
+    top: max(163px, calc((25vw + 100px)/2));
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 63px;
   }
-  @media screen and (max-width: 670px) {
-    max-width: 630px;
-    height: 430px;
+  & .text {
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    order: 1;
+    color: ${props => props.theme.colors.black};
+    margin-top: max(366px, calc(25vw + 140px));
   }
-  @media screen and (max-width: 400px) {
-    min-width: 330px;
-    height: 326px;
+  @media screen and (max-width: 767.9px) {
+    & .title {
+      font-size: 34px;
+      line-height: 40px;
+      top: 116px;
+      transform: translateX(-50%);
+    }
+    & .button {
+      margin-top: 23px;
+    }
+    & .text {
+      margin-top: 356px;
+    }
   }
-`;
-
-export const ImageContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-`;
-
-export const Title = styled(GlobalSubtitle)`
-  align-self: center;
-  text-transform: uppercase;
-  z-index: 13;
-
-  ${lineHeight};
-  ${space};
-  ${fontSize};
-`;
-
-export const Button = styled.button`
-  align-self: center;
-  margin: 40px auto 107px auto;
-  z-index: 20;
-  width: 182px;
-  height: 60px;
-  background: ${({ theme }) => theme.colors.white};
-  border: none;
-  box-sizing: border-box;
-  border-radius: 10px;
-  font-family: ${({ theme }) => theme.fonts.condensed};
-  font-style: normal;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: -0.01em;
-  color: ${({ theme }) => theme.colors.purple};
-  text-transform: uppercase;
-  background: #ffffff;
-  ${lineHeight};
-  ${space};
-  ${fontSize};
-  &:hover {
-    cursor: pointer;
-    background: ${({ theme }) => theme.colors.purple};
-    color: ${({ theme }) => theme.colors.white};
+  @media screen and (max-width: 640px) {
+    & .text {
+      padding: 0 10px;
+    }
   }
-  @media only screen and (max-width: 1024px) {
-    margin: 40px auto 40px auto;
-  }
-  @media only screen and (max-width: 670px) {
-    margin: 40px auto 107px auto;
-  }
-  @media only screen and (max-width: 400px) {
-    margin: 30px auto 80px auto;
-  }
-`;
-
-export const Text = styled.p`
-  color: ${({ theme }) => theme.colors.black};
-  font-family: ${({ theme }) => theme.fonts.roboto};
-  font-style: normal;
-  font-weight: normal;
-  max-width: 584px;
-  margin-top: 40px;
-  ${lineHeight};
-  ${space};
-  ${fontSize};
-  @media only screen and (max-width: 768px) {
-    margin: 30px 0 0 0;
-    max-width: 446px;
-
-    align-self: center;
-  }
-  @media only screen and (max-width: 500px) {
-    text-align: justify;
-  }
-`;
+`

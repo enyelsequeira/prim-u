@@ -1,18 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 import Image from "next/image";
 import React from "react";
-import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
-import {
-  CarrouselCard,
-  ReviewText,
-  Stars,
-  TitleReviewWrapper,
-} from "./reviews.styles";
-
 import Carousel from "../carousel/carousel";
+import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
+import { CarrouselCard, ReviewText, Stars, TitleReviewWrapper } from "./reviews.styles";
 
 const Reviews = ({ data }) => {
-
   return (
     <GlobalSection px={[10, 40, 40, 0]} pt={[20, 60, 80]}>
       <GlobalTitle

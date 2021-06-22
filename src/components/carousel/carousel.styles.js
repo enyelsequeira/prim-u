@@ -23,7 +23,9 @@ export const CarrouselCards = styled.div`
     @media only screen and (max-width: 1024px) {
       margin: 150px;
     }
-  @media only screen and (max-width: 375px) {
+
+    @media only screen and (max-width: 375px) {
+
       margin: 50px;
     }
   }
@@ -62,17 +64,17 @@ export const Angle = styled.a`
   bottom: 29px;
   &:first-child {
     left: 100px;
-  @media only screen and (max-width: 375px) {
-    left: 20px;
-  }
+    @media only screen and (max-width: 375px) {
+      left: 20px;
+    }
   }
   &:nth-child(2) {
     align-self: flex-end;
     right: 100px;
     top: -18px;
-  
-  @media only screen and (max-width: 375px) {
-    right: 20px;
-  }
+
+    @media only screen and (max-width: 375px) {
+      right: 20px;
+    }
   }
 `;
