@@ -9,23 +9,24 @@ const Reviews = ({ data }) => {
   return (
     <GlobalSectionStyled>
       <GlobalTitle
-        fontSize={[34, 40, 54, 50]}
-        lineHeight={["mediumTwo", "large"]}
+        fontSize={[34, 40, 50]}
+        lineHeight={["small", "large"]}
         textAlign="center"
-        px={[1]}
-        mb={[40, 50, 54, 54, 80]}>
+        px={[5]}
+        // mb={[40, 50, 54, 54, 80]}
+        >
         What Our <SpanTitle> Customers</SpanTitle> say{" "}
       </GlobalTitle>
 
       <Carousel>
-        {data.map((r) => {
+        {data.map((r, i) => {
           const {
             fields: { name, rating, review },
           } = r;
           return (
-            <CarrouselCard key={name} mb={[80]}>
+            <CarrouselCard key={i} mb={[80]}>
               <TitleReviewWrapper pt={[20]} pl={[20]}>
-                <GlobalSubtitle fontSize={[18, 20, 16, 18]} lineHeight={["sub"]}>
+                <GlobalSubtitle fontSize={[18, 20, 18, 18]} lineHeight={["sub"]}>
                   {name}
                 </GlobalSubtitle>
                 <Stars>

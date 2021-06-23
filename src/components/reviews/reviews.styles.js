@@ -5,19 +5,19 @@ import { fontSize, lineHeight, space, width } from "styled-system";
 export const GlobalSectionStyled = styled(GlobalSection)`
   max-width: 100%;
   margin: 0;
-  padding-left: 60px;
-  padding-bottom: 80px;
+  /* padding-left: 60px; */
+  /* padding-bottom: 80px;
+  padding-top: 60px; */
+  padding: 80px 0;
 
-  @media only screen and (max-width: 1024px) {
+  /* @media only screen and (max-width: 1024px) {
     padding-left: 40px;
   }
   @media only screen and (max-width: 1024px) {
     padding-left: 40px;
-    padding-top: 60px;
-  }
-  @media only screen and (max-width: 375px) {
-    padding-left: 10px;
-    padding-top: 20px;
+  } */
+  @media only screen and (max-width: 640px) {
+    padding: 60px 10px 80px;
   }
 `;
 
@@ -25,24 +25,31 @@ export const GlobalSectionStyled = styled(GlobalSection)`
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
   width: 520px;
-  height: 240px;
+  min-height: max-content;
   border-radius: 20px;
-  overflow: hidden;
-  display: inline-block;
+  /* overflow: hidden; */
+  /* display: inline-block; */
   position: relative;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: center;
   ${lineHeight};
   ${space};
   ${fontSize};
   ${width};
   @media only screen and (max-width: 1024px) {
-    display: flex;
-    flex-direction: column;
     width: 434px;
-    height: 268px;
+    /* min-height: min-content; */
+    /* min-height: 268px; */
   }
   @media only screen and (max-width: 500px) {
-    width: 355px;
-    height: 288px;
+    /* max-width: calc(100vw - 32px); */
+    max-width: 88vw;
+    /* min-height: 288px; */
+  }
+  @media only screen and (max-width: 360px) {
+    /* max-width: 300px; */
+    /* min-height: 288px; */
   }
 `;
 export const TitleReviewWrapper = styled.div`
@@ -67,4 +74,5 @@ export const Stars = styled.div`
   position: absolute;
   top: 20px;
   right: 30px;
+  gap: 10px;
 `;
