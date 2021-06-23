@@ -1,20 +1,21 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-array-index-key */
-import Image from "next/image";
-import React from "react";
-import { Angle, AngleContainer, CarrouselCards } from "./carousel.styles";
+import { useState, useRef, useEffect } from "react";
+import { AngleLeft, AngleRight, CarrouselCards, Wrapper } from "./carousel.styles";
 
 const Carousel = (props) => {
-  const carouselRef = React.useRef();
-  const [percent, setPercent] = React.useState(0);
+  const carouselRef = useRef();
+  const [percent, setPercent] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     carouselRef.current.addEventListener("scroll", (e) => {
-      setPercent(e.target.scrollLeft / (e.target.scrollWidth - e.target.offsetWidth));
+      setPercent(e.target.scrollLeft / (e.target.scrollWidth - e.target.getBoundingClientRect().width));
     });
   }, []);
 
-  React.useEffect(() => {
+  console.log(percent)
+
+  useEffect(() => {
     if (carouselRef) {
       let isDown = false;
       let startX;
@@ -46,33 +47,27 @@ const Carousel = (props) => {
   }, []);
 
   return (
-    <>
-      <CarrouselCards ref={carouselRef}>{props.children}</CarrouselCards>
-      {/* <AngleContainer>
-        <Angle
-          classname="prev"
+    <CarrouselCards>
+      <Wrapper ref={carouselRef}>
+        {props.children}
+        <AngleLeft
           onClick={() =>
             carouselRef.current.scrollBy({
               left: -100,
               behavior: "smooth",
             })
           }
-          disabled={percent === 0}>
-          <Image src="/LeftAngle.svg" width="20" height="20" intrinsic="true" />
-        </Angle>
-        <Angle
-          className="next"
+          disabled={percent === 0} />
+        <AngleRight
           onClick={() =>
             carouselRef.current.scrollBy({
               left: 100,
               behavior: "smooth",
             })
           }
-          disabled={percent >= 1}>
-          <Image src="/RightAngle.svg" width="20" height="20" intrinsic="true" />
-        </Angle>
-      </AngleContainer> */}
-    </>
+          disabled={percent >= .99} />
+      </Wrapper>
+    </CarrouselCards>
   );
 };
 

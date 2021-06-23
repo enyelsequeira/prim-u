@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { GlobalSection } from "../global-components";
 import { fontSize, lineHeight, space, width } from "styled-system";
 import { Title as title } from "../services/services.styles";
 
@@ -13,28 +14,37 @@ export const Title = styled(title)`
   text-align: center;
 `
 
+export const GlobalSectionStyled = styled(GlobalSection)`
+  max-width: 100%;
+  margin: 0;
+  padding: 80px 0;
+  @media only screen and (max-width: 640px) {
+    padding: 60px 10px 80px;
+  }
+`;
+
+
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
   width: 520px;
-  height: 240px;
+  min-height: max-content;
   border-radius: 20px;
-  overflow: hidden;
-  display: inline-block;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: center;
   ${lineHeight};
   ${space};
   ${fontSize};
   ${width};
   scroll-snap-align: center;
   @media only screen and (max-width: 1024px) {
-    display: flex;
-    flex-direction: column;
     width: 434px;
-    height: 268px;
   }
   @media only screen and (max-width: 500px) {
-    width: 355px;
-    height: 288px;
+    max-width: 88vw;
+  }
+  @media only screen and (max-width: 360px) {
   }
 `;
 export const TitleReviewWrapper = styled.div`
@@ -59,4 +69,5 @@ export const Stars = styled.div`
   position: absolute;
   top: 20px;
   right: 30px;
+  gap: 10px;
 `;
