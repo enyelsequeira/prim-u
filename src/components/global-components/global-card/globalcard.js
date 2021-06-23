@@ -19,7 +19,7 @@ function GlobalCard({
   return (
     <Card className={className}>
       <Wrapper>
-        <Img src={src} layout="fill" quality="100" alt={altImageName} />
+        <Img src={src} layout="fill" quality="100" alt={altImageName} placeholder="blur" />
       </Wrapper>
       <Body>
         <Title suppressHydrationWarning>{title}</Title>
