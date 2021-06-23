@@ -15,16 +15,25 @@ const Footer = () => {
             Prim-U app © {new Date().getFullYear()}{" "}
           </FooterTitles>
           <FooterList>
-            <a href="/"> PRIM-U App</a>
+            <a href="https://prim-u.com/" target="_blank" rel="noreferrer">
+              {" "}
+              PRIM-U App
+            </a>
           </FooterList>
           <FooterList>
-            <a href="">PRIM-U Privacy Policy</a>
+            <a href="https://prim-u.com/privacy-policy/" target="_blank" rel="noreferrer">
+              PRIM-U Privacy Policy
+            </a>
           </FooterList>
           <FooterList>
-            <a href="">Prim-U User Generated Content Policy</a>
+            <a href="https://prim-u.com/ucg-policy/" target="_blank" rel="noreferrer">
+              Prim-U User Generated Content Policy
+            </a>
           </FooterList>
           <FooterList>
-            <a href="">Prim-U Website Terms of Use</a>
+            <a href="https://prim-u.com/terms-of-use/" target="_blank" rel="noreferrer">
+              Prim-U Website Terms of Use
+            </a>
           </FooterList>
         </MiniSectionWrapper>
 
@@ -54,19 +63,32 @@ const Footer = () => {
               Follow Us
             </FooterTitles>
             <FooterList>
-              <a href="">Facebook</a>
+              <a href="https://www.facebook.com/PrimUApp/" target="_blank" rel="noreferrer">
+                Facebook
+              </a>
             </FooterList>
             <FooterList>
-              <a href="">Twitter</a>
+              <a href="https://twitter.com/Prim_UApp" target="_blank" rel="noreferrer">
+                Twitter
+              </a>
             </FooterList>
             <FooterList>
-              <a href="">LinkedIn</a>
+              <a href="https://www.linkedin.com/company/prim-u/" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
             </FooterList>
             <FooterList>
-              <a href="">YouTube</a>
+              <a
+                href="https://www.youtube.com/channel/UCZI6IktmwuGpieR2xA8UvGA/videos"
+                target="_blank"
+                rel="noreferrer">
+                YouTube
+              </a>
             </FooterList>
             <FooterList>
-              <a href="">Instagram</a>
+              <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noreferrer">
+                Instagram
+              </a>
             </FooterList>
           </MiniSectionWrapper>
         </RightSection>

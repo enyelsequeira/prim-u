@@ -3,7 +3,13 @@ import Image from "next/image";
 import React from "react";
 import Carousel from "../carousel/carousel";
 import { GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
-import { CarrouselCard, ReviewText, Stars, TitleReviewWrapper, GlobalSectionStyled } from "./reviews.styles";
+import {
+  CarrouselCard,
+  ReviewText,
+  Stars,
+  TitleReviewWrapper,
+  GlobalSectionStyled,
+} from "./reviews.styles";
 
 const Reviews = ({ data }) => {
   return (
@@ -12,8 +18,7 @@ const Reviews = ({ data }) => {
         fontSize={[34, 40, 50]}
         lineHeight={["small", "large"]}
         textAlign="center"
-        px={[5]}
-        >
+        px={[5]}>
         What Our <SpanTitle> Customers</SpanTitle> say{" "}
       </GlobalTitle>
 
@@ -37,15 +42,13 @@ const Reviews = ({ data }) => {
                       height={20}
                       layout="fixed"
                       quality={100}
-                      alt={`star-${index}`}
+                      alt="star-element"
                     />
                   ))}
                 </Stars>
               </TitleReviewWrapper>
 
-              <ReviewText fontSize={[18, 20, 18]}>
-                {review.content[0].content[0].value}
-              </ReviewText>
+              <ReviewText fontSize={[18, 20, 18]}>{review.content[0].content[0].value}</ReviewText>
             </CarrouselCard>
           );
         })}
