@@ -1,2 +1,2 @@
 export * from "./global-components";
-export { default as GlobalCard } from './global-card/globalcard'
+export { default as GlobalCard } from "./global-card/globalcard";

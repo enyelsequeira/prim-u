@@ -15,8 +15,9 @@ const Contact = ({ data }) => {
           <ContactCard
             key={i}
             src={`http:${card.fields.image.fields.file.url}`}
+            alt={card.fields.image.fields.file.title}
             title={card.fields.freelancersSalonsTitle}
-            text={[card.fields.description.content[0].content[0].value]}
+            services={card.fields.description}
             buttonText="Sign Up"
             href="https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer"
           />

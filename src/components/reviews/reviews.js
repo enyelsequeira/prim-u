@@ -37,6 +37,7 @@ const Reviews = ({ data }) => {
                       height={20}
                       layout="fixed"
                       quality={100}
+                      alt={`star-${index}`}
                     />
                   ))}
                 </Stars>

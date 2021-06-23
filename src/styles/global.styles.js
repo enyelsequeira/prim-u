@@ -24,9 +24,7 @@ const GlobalStyles = createGlobalStyle`
     -webkit-tap-highlight-color: transparent;
   }
 
-/**
-in here if you see we are using the styles from our theme for the global, for the color and the background these colors are coming from the theme 
- */
+
   body {
     background: ${(props) => props.theme.colors.white};
     color: ${(props) => props.theme.colors.black};
