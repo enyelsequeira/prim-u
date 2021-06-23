@@ -5,16 +5,14 @@ import { fontSize, lineHeight, space } from "styled-system";
 export const GlobalSectionStyled = styled(GlobalSection)`
   max-width: 100%;
   margin: 0;
-  padding-left: 60px;
+  padding-left: 0;
   padding-bottom: 80px;
   padding-top: 80px;
 
   @media only screen and (max-width: 1024px) {
-    padding-left: 40px;
     padding-top: 60px;
   }
   @media only screen and (max-width: 375px) {
-    padding-left: 10px;
     padding-top: 20px;
   }
 `;
@@ -124,7 +122,7 @@ export const BeautyButton = styled.button`
   ${space};
   ${fontSize};
   padding: 16px 0;
-  margin: 0 auto;
+  margin: 80px auto 0 auto;
   &:hover {
     cursor: pointer;
   }

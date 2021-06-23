@@ -1,4 +1,4 @@
-400/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/no-array-index-key */
 import Image from "next/image";
 import React from "react";
 import Carousel from "../carousel/carousel";
@@ -9,23 +9,23 @@ const Reviews = ({ data }) => {
   return (
     <GlobalSectionStyled>
       <GlobalTitle
-        fontSize={[34, 40, 54, 50]}
-        lineHeight={["mediumTwo", "large"]}
+        fontSize={[34, 40, 50]}
+        lineHeight={["small", "large"]}
         textAlign="center"
-        px={[1]}
-        mb={[40, 50, 54, 54, 80]}>
+        px={[5]}
+        >
         What Our <SpanTitle> Customers</SpanTitle> say{" "}
       </GlobalTitle>
 
       <Carousel>
-        {data.map((r) => {
+        {data.map((r, i) => {
           const {
             fields: { name, rating, review },
           } = r;
           return (
-            <CarrouselCard key={name} mb={[80]}>
+            <CarrouselCard key={i} mb={[80]}>
               <TitleReviewWrapper pt={[20]} pl={[20]}>
-                <GlobalSubtitle fontSize={[18, 20, 16, 18]} lineHeight={["sub"]}>
+                <GlobalSubtitle fontSize={[18, 20, 18, 18]} lineHeight={["sub"]}>
                   {name}
                 </GlobalSubtitle>
                 <Stars>
@@ -42,7 +42,7 @@ const Reviews = ({ data }) => {
                 </Stars>
               </TitleReviewWrapper>
 
-              <ReviewText px={[2]} py={[24]} fontSize={[18, 20, 18]} lineHeight={["sub", "xs"]}>
+              <ReviewText fontSize={[18, 20, 18]}>
                 {review.content[0].content[0].value}
               </ReviewText>
             </CarrouselCard>
