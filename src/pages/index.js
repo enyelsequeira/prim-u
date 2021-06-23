@@ -57,7 +57,6 @@ export default function Home({
       <Products data={beautyProducts} />
       <Divider />
 
-
       <Accordion
         data={faqQuestions}
         subtitle="For Customers"

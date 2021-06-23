@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from "react";
 import Image from "next/image";
-import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
+import { GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
   CarrouselCard,
   ProductText,
@@ -11,7 +11,7 @@ import {
   PriceContainer,
   Price,
   BeautyButton,
-  GlobalSectionStyled
+  GlobalSectionStyled,
 } from "./products.styles";
 import Carousel from "../carousel/carousel";
 
@@ -59,13 +59,14 @@ const Products = ({ data }) => {
           );
         })}
       </Carousel>
-      <BeautyButton as="a"
+      <BeautyButton
+        as="a"
         href="https://www.prim-u.app/en/list"
         target="_blank"
         rel="noreferrer"
         fontSize={[24]}
         lineHeight={["sub"]}
-        mx={"auto"}
+        mx="auto"
         type="button">
         check out beauty products
       </BeautyButton>
