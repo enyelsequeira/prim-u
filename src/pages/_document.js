@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
       image: "/images/icon.png",
     };
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <meta name="robots" content="follow, index" />
           <meta name="description" content={meta.description} />

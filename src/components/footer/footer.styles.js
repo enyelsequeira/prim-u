@@ -13,6 +13,7 @@ export const FooterSection = styled.footer`
   @media only screen and (max-width: 1280px) {
     padding: 40px 78px 60px 42px;
     justify-content: space-between;
+    margin-top: 40px;
   }
   @media only screen and (max-width: 768px) {
     flex-direction: row;

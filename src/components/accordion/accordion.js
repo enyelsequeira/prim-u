@@ -58,7 +58,11 @@ const Accordion = ({ data, subtitle, title, span }) => {
                     {fields.faqTitle || fields.partnersQuestions}
                   </GlobalSubtitle>
 
-                  <ButtonWrapper onClick={() => toggle(index)} type="button">
+                  <ButtonWrapper
+                    type="button"
+                    aria-label="close/open"
+                    onClick={() => toggle(index)}
+                    type="button">
                     {isAnswerShowing === index ? <AiOutlineMinus /> : <AiOutlinePlus />}
                   </ButtonWrapper>
                 </FaqQuestion>

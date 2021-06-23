@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { GlobalSection } from "../global-components";
 import { fontSize, lineHeight, space } from "styled-system";
+import { GlobalSection } from "../global-components";
 
 export const GlobalSectionStyled = styled(GlobalSection)`
   max-width: 100%;
@@ -101,7 +101,6 @@ export const Price = styled.p`
   ${fontSize};
 `;
 
-
 export const BeautyButton = styled.button`
   display: flex;
   align-self: center;
@@ -128,5 +127,5 @@ export const BeautyButton = styled.button`
   }
   @media only screen and (max-width: 405px) {
     display: none;
-  } 
+  }
 `;

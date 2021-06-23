@@ -53,6 +53,7 @@ const Carousel = (props) => {
       <Wrapper ref={carouselRef}>
         {props.children}
         <AngleLeft
+          aria-label="left-angle"
           onClick={() =>
             carouselRef.current.scrollBy({
               left: -100,
@@ -63,6 +64,7 @@ const Carousel = (props) => {
         />
 
         <AngleRight
+          aria-label="right-angle"
           onClick={() =>
             carouselRef.current.scrollBy({
               left: 100,

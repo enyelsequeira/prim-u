@@ -1,4 +1,3 @@
-import { Divider } from "../global-components";
 import {
   FooterList,
   FooterSection,
@@ -10,7 +9,6 @@ import {
 const Footer = () => {
   return (
     <>
-      <Divider />
       <FooterSection px={[20, 20, 40, 40, "0px"]}>
         <MiniSectionWrapper>
           <FooterTitles condensed fontSize={[18, , 18]} lineHeight={["sub", , "sub"]} pt={[60, 0]}>

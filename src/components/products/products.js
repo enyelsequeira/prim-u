@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React from "react";
 import Image from "next/image";
 import { GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
@@ -27,9 +26,9 @@ const Products = ({ data }) => {
         <SpanTitle>beauty products</SpanTitle> for u{" "}
       </GlobalTitle>
       <Carousel>
-        {data.map((products, index) => {
+        {data.map((products) => {
           return (
-            <CarrouselCard key={index} mb={[80]}>
+            <CarrouselCard key={products.fields.beautyProducts} mb={[80]}>
               <ImageWrapper>
                 <Image
                   src={`http:${products.fields.beautyProductImage.fields.file.url}`}
