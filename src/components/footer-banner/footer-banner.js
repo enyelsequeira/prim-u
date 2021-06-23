@@ -46,7 +46,15 @@ const FooterBanner = ({ data }) => {
         <InfoText fontSize={[18, 20]} lineHeight={["sub"]}>
           {data[0].fields.description.content[0].content[0].value}
         </InfoText>
-        <Subscribe fontSize={[24]}> Subscribe</Subscribe>
+        <Subscribe
+          as="a"
+          href="https://www.prim-u.app/en/list"
+          target="_blank"
+          rel="noreferrer"
+          fontSize={[24]}>
+          {" "}
+          Subscribe
+        </Subscribe>
       </InfoWrapper>
     </FooterBannerContainer>
   );
