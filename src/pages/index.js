@@ -53,9 +53,11 @@ export default function Home({
       <Video />
       <Divider />
       <Reviews data={reviews} />
-      <Divider mt={["80px"]} />
+      <Divider />
       <Products data={beautyProducts} />
-      <Divider mt={["80px"]} mb={["40px"]} />
+      <Divider />
+
+
       <Accordion
         data={faqQuestions}
         subtitle="For Customers"

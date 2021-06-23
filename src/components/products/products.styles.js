@@ -1,5 +1,21 @@
 import styled from "styled-components";
+import { GlobalSection } from "../global-components";
 import { fontSize, lineHeight, space } from "styled-system";
+
+export const GlobalSectionStyled = styled(GlobalSection)`
+  max-width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 80px;
+  padding-top: 80px;
+
+  @media only screen and (max-width: 1024px) {
+    padding-top: 60px;
+  }
+  @media only screen and (max-width: 375px) {
+    padding-top: 20px;
+  }
+`;
 
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
@@ -83,4 +99,34 @@ export const Price = styled.p`
   ${lineHeight};
   ${space};
   ${fontSize};
+`;
+
+
+export const BeautyButton = styled.button`
+  display: flex;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  width: 400px;
+  height: 60px;
+  background: ${({ theme }) => theme.colors.purple};
+  border: 1px solid ${({ theme }) => theme.colors.purple};
+  border-radius: 10px;
+  font-family: ${({ theme }) => theme.fonts.condensed};
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: ${({ theme }) => theme.colors.white};
+  text-transform: uppercase;
+  ${lineHeight};
+  ${space};
+  ${fontSize};
+  padding: 16px 0;
+  margin: 80px auto 0 auto;
+  &:hover {
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 405px) {
+    display: none;
+  } 
 `;
