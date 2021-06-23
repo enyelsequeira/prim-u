@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { GlobalCard, GlobalTitle } from "../global-components";
 
-export const Main = styled.main`
+export const Main = styled.section`
   padding: 100px 4vw;
   @media screen and (max-width: 767.69px) {
     padding: 60px 10px;
