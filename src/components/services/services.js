@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import { SpanTitle } from "../global-components";
 import { Container, ServiceCard, Main, Title } from "./services.styles";
 
@@ -10,9 +9,9 @@ const Services = ({ data }) => {
       </Title>
 
       <Container>
-        {data.reverse().map((card, i) => (
+        {data.reverse().map((card) => (
           <ServiceCard
-            key={i}
+            key={card.fields.title}
             src={`http:${card.fields.image.fields.file.url}`}
             alt={card.fields.image.fields.file.title}
             title={card.fields.title}

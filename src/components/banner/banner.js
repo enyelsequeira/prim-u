@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import { Main, BannerCard } from "./banner.styles";
 
 function Banner({ data }) {
