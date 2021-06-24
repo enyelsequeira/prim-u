@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
@@ -11,21 +11,28 @@ import {
 } from "./accordion.styles";
 
 const Accordion = ({ data, subtitle, title, span }) => {
-  console.log(data);
-
+  
+  // const [isAnswerShowing, setIsAnswerShowing] = useState(false);
   const [isAnswerShowing, setIsAnswerShowing] = useState(false);
+  const [dataa, setData] = useState([]);
   const [visible, setIsVisible] = useState(6);
-
-  const toggle = (index) => {
-    if (isAnswerShowing === index) {
-      // if clicked question is already active, then close it
-      return setIsAnswerShowing(null);
-    }
-
-    setIsAnswerShowing(index);
+  
+  useEffect(() => setData(data), [])
+  
+  const toggle = (question) => {
+    setData(dataa.map(d => d.sys.id === question.sys.id ? {...d, fields: { ...d['fields'], visible: d['fields']['visible'] ? false : true}} : d))
   };
+
+  // const toggle = (index) => {
+  //   if (isAnswerShowing === index) {
+  //     // if clicked question is already active, then close it
+  //     return setIsAnswerShowing(null);
+  //   }
+
+  //   setIsAnswerShowing(index);
+  // };
   const onLoadMoreClick = () => {
-    setIsVisible((v) => v + 1);
+    setIsVisible((v) => v + 4);
   };
   return (
     <>
@@ -46,7 +53,7 @@ const Accordion = ({ data, subtitle, title, span }) => {
           {subtitle}
         </GlobalSubtitle>
         <FaqContainer>
-          {data.slice(0, visible).map((question, index) => {
+          {dataa.slice(0, visible).map((question, index) => {
             const { fields } = question;
             return (
               <FaqQuestionsWrapper key={index}>
@@ -61,12 +68,15 @@ const Accordion = ({ data, subtitle, title, span }) => {
                     {fields.faqTitle || fields.partnersQuestions}
                   </GlobalSubtitle>
 
-                  <ButtonWrapper onClick={() => toggle(index)} type="button">
-                    {isAnswerShowing === index ? <AiOutlineMinus /> : <AiOutlinePlus />}
+                  {/* <ButtonWrapper onClick={() => toggle(index)} type="button">
+                    {isAnswerShowing === index ? <AiOutlineMinus /> : <AiOutlinePlus />} */}
+                  <ButtonWrapper onClick={() => toggle(question)} type="button">
+                    {fields['visible'] ? <AiOutlineMinus /> : <AiOutlinePlus />}
                   </ButtonWrapper>
                 </FaqQuestion>
 
-                {isAnswerShowing === index ? (
+                {/* {isAnswerShowing === index ? ( */}
+                {fields['visible'] ? (
                   <div>
                     <Answer fontSize={[18]} lineHeight={["sub"]} pt={[20, 22, 30]} pb={[40, 60]}>
                       {fields.answer.content[0].content[0].value}
@@ -82,7 +92,8 @@ const Accordion = ({ data, subtitle, title, span }) => {
           lineHeight={["sub"]}
           mx={"auto"}
           onClick={onLoadMoreClick}
-          type="button">
+          type="button"
+          disabled={visible >= dataa.length}>
           Show more
         </ShowMore>
       </GlobalSection>

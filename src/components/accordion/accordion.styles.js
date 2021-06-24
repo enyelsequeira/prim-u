@@ -80,6 +80,9 @@ export const ShowMore = styled.button`
     background-color: ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.white};
   }
+  &:disabled {
+    visibility: hidden;
+  }
 
   @media only screen and (max-width: 768px) {
     padding: 16px 105px;

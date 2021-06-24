@@ -15,7 +15,7 @@ const Reviews = ({ data }) => {
         px={[5]}
         >
         What Our <SpanTitle> Customers</SpanTitle> say{" "}
-      </GlobalTitle> */}
+      </GlobalTitle> 
 
       <Carousel>
         {data.map((r, i) => {
@@ -23,7 +23,7 @@ const Reviews = ({ data }) => {
             fields: { name, rating, review },
           } = r;
           return (
-            <CarrouselCard key={i} mb={[80]}>
+            <CarrouselCard key={i} mb={[60,80]}>
               <TitleReviewWrapper pt={[20]} pl={[20]}>
                 <GlobalSubtitle fontSize={[18, 20, 18, 18]} lineHeight={["sub"]}>
                   {name}
@@ -42,7 +42,7 @@ const Reviews = ({ data }) => {
                 </Stars>
               </TitleReviewWrapper>
 
-              <ReviewText px={[2]} py={[24]} fontSize={[18, 20, 18]} lineHeight={["sub", "xs"]}>
+              <ReviewText pl={[2]} pr={[30]} py={[24]} fontSize={[18, 20, 18]} lineHeight={["sub", "xs"]}>
                 {review.content[0].content[0].value}
               </ReviewText>
             </CarrouselCard>

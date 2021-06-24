@@ -26,7 +26,7 @@ export const GlobalSectionStyled = styled(GlobalSection)`
 
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
-  width: 520px;
+  /* width: 520px; */
   min-height: max-content;
   border-radius: 20px;
   position: relative;
@@ -38,13 +38,25 @@ export const CarrouselCard = styled.div`
   ${fontSize};
   ${width};
   scroll-snap-align: center;
+  width: calc(100vw - 64vw);
+  width: calc(22vw + 200px);
   @media only screen and (max-width: 1024px) {
-    width: 434px;
+    /* width: 434px; */
+    /* width: calc(100vw - 30px); */
+    width: calc(100vw - 57vw);
+  }
+  @media only screen and (max-width: 800px) {
+    /* width: 434px; */
+    /* width: calc(100vw - 30px); */
+    width: calc(100vw - 30vw);
+  }
+  @media only screen and (max-width: 640px) {
+    width: calc(100vw - 20vw);
   }
   @media only screen and (max-width: 500px) {
-    max-width: 88vw;
-  }
-  @media only screen and (max-width: 360px) {
+    /* max-width: 88vw; */
+    width: calc(100vw - 20px);
+    /* width: 100vw; */
   }
 `;
 export const TitleReviewWrapper = styled.div`

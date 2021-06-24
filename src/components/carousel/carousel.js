@@ -9,11 +9,11 @@ const Carousel = (props) => {
 
   useEffect(() => {
     carouselRef.current.addEventListener("scroll", (e) => {
-      setPercent(e.target.scrollLeft / (e.target.scrollWidth - e.target.getBoundingClientRect().width));
+      setPercent(Math.ceil(e.target.scrollLeft) / (e.target.scrollWidth - e.target.offsetWidth));
     });
   }, []);
 
-  console.log(percent)
+  // console.log(percent)
 
   useEffect(() => {
     if (carouselRef) {
@@ -65,7 +65,7 @@ const Carousel = (props) => {
               behavior: "smooth",
             })
           }
-          disabled={percent >= .99} />
+          disabled={percent >= 1} />
       </Wrapper>
     </CarrouselCards>
   );

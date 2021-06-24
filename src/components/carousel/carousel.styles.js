@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
   }
   &::-webkit-scrollbar-track {
     border-radius: 2px;
-    margin: 24vw;
+    margin: 23.9vw;
     background: #c4c4c4;
   }
   &::-webkit-scrollbar-thumb {
@@ -43,6 +43,7 @@ export const Wrapper = styled.div`
   @media only screen and (max-width: 640px) {
     padding-left: 0;
     gap: 16px;
+    /* gap: 1px; */
   }
 `
 
