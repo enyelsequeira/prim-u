@@ -17,7 +17,7 @@ import {
   Video,
 } from "../components";
 import { Divider } from "../components/global-components";
-import { dataTransformer } from "../helpers/data-transformer";
+import { dataTransformer, filterQuestions } from "../helpers/data-transformer";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -30,7 +30,9 @@ export default function Home({
   footerData,
   freelancersSalons,
   beautyProducts,
+  allQuestions,
 }) {
+  const { cQuestions, pQuestions } = filterQuestions(allQuestions);
   return (
     <BaseLayout>
       <Head>
@@ -88,6 +90,7 @@ export async function getStaticProps() {
     freelancersSalons,
     footerData,
     beautyProducts,
+    allQuestions,
   } = dataTransformer(res);
 
   return {
@@ -102,6 +105,7 @@ export async function getStaticProps() {
       footerData,
       freelancersSalons,
       beautyProducts,
+      allQuestions,
     },
   };
 }
