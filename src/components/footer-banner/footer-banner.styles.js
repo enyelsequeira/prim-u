@@ -61,22 +61,11 @@ export const Subscribe = styled(ShowMore)`
   ${space}
   ${fontSize}
   ${lineHeight}
-  @media only screen and (max-width: 1024px) {
-    padding: 11px 120px;
-    margin-top: 20px;
-  }
   @media only screen and (max-width: 768px) {
-    padding: 16px 105px;
     margin: auto;
     margin-top: 40px;
     && {
       align-self: center;
     }
-  }
-  @media only screen and (max-width: 640px) {
-    padding: 16px 105px;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 80px;
   }
 `;
