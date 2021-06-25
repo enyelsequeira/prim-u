@@ -1,22 +1,31 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { fontSize, lineHeight, space, width } from "styled-system";
+
+export const Main = styled.section`
+  padding: ${props => props.type ? '80px 4vw' : '20px 4vw 80px'};
+  @media screen and (max-width: 767.69px) {
+    padding: ${props => props.type ? '60px 20px' : '20px 20px 60px'};
+  }
+`;
 
 export const FaqContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  @media only screen and (max-width: 768px) {
-    gap: 15px;
-  }
-  @media only screen and (max-width: 640px) {
-    flex-direction: column;
-    display: flex;
-    gap: 40px;
-  }
-  @media only screen and (max-width: 1024px) {
-    gap: 42px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: min-content;
+  gap: 4vw;
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
   }
 `;
+
+export const Column = styled.div`
+  display: grid;
+  gap: 60px;
+  grid-auto-rows: max-content;
+  @media only screen and (max-width: 768px) {
+    gap: 40px;
+  }
+`
 
 export const FaqQuestionsWrapper = styled.div`
   display: flex;
@@ -28,19 +37,24 @@ export const FaqQuestion = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 25px;
 `;
 
-export const ButtonWrapper = styled.button`
+export const ButtonIcon = styled.button`
+  all: unset;
+  position: relative;
   width: 24px;
   height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
+  ${props => props.visible ? css`
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='4' viewBox='0 0 24 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3.5' width='3' height='24' transform='rotate(-90 0 3.5)' fill='black'/%3E%3C/svg%3E");
+  ` : css`
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='10.5' width='3' height='24' fill='black'/%3E%3Crect y='13.5' width='3' height='24' transform='rotate(-90 0 13.5)' fill='black'/%3E%3C/svg%3E");
+  `}
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
   border: none;
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 `;
 
 export const Answer = styled.p`
@@ -50,54 +64,55 @@ export const Answer = styled.p`
   font-weight: normal;
   letter-spacing: -0.01em;
   color: ${({ theme }) => theme.colors.black};
+  padding-top: ${props => props.visible ? '30px' : 0};
+  height: max-content;
+  max-height: ${props => props.visible ? '100vh' : 0};
+  opacity: ${props => props.visible ? 1 : 0};
+  transition: all .1s .05s, max-height .1s;
   ${lineHeight};
   ${space};
   ${fontSize};
 `;
 
 export const ShowMore = styled.button`
+  all: unset;
+  position: relative;
   display: flex;
   align-self: center;
-  width: fit-content;
+  justify-content: center;
   background: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.purple};
   border-radius: 10px;
   font-family: ${({ theme }) => theme.fonts.condensed};
   font-style: normal;
   font-weight: bold;
-  text-align: center;
   letter-spacing: -0.01em;
   color: ${({ theme }) => theme.colors.purple};
   text-transform: uppercase;
-  transition: 0.9s;
+  transition: 0.3s;
   ${lineHeight};
   ${space};
   ${fontSize};
-  padding: 11px 118px;
+  padding: 15px 118px;
   margin-top: 100px;
-  &:hover {
+  &:hover:not(:disabled) {
     cursor: pointer;
     background-color: ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.white};
   }
   &:disabled {
-    visibility: hidden;
+    opacity: .5;
+    cursor: default;
+    transition: 0s;
   }
 
-  @media only screen and (max-width: 768px) {
-    padding: 16px 105px;
-    margin-top: 60px;
-  }
   @media only screen and (max-width: 1024px) {
-    padding: 11px 57px;
+    padding: 15px 57px;
     margin-top: 80px;
   }
-  @media only screen and (max-width: 640px) {
-    padding: 16px 105px;
+  @media only screen and (max-width: 768px) {
+    width: min(100%, 600px);
+    padding: 15px 0;
     margin-top: 60px;
   }
-  /* @media only screen and (max-width: 1440px) {
-    padding: 11px 118px;
-    margin-top: 100px;
-  } */
 `;
