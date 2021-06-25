@@ -34,7 +34,7 @@ export const GlobalTitle = styled.p`
   ${width}
   ${textAlign}
 
- ${(props) =>
+ /* ${(props) =>
     props.textAlign &&
     css`
       text-align: ${props.textAlign};
@@ -68,7 +68,7 @@ export const GlobalTitle = styled.p`
     props.pr &&
     css`
       padding-right: ${props.pr};
-    `};
+    `}; */
 `;
 
 export const SpanTitle = styled.span`
@@ -94,7 +94,7 @@ export const GlobalSubtitle = styled.p`
   ${lineHeight};
   ${width}/* in case we need to pass different props */;
 
-  ${(props) =>
+  /* ${(props) =>
     props.size &&
     css`
       font-size: ${props.size};
@@ -125,7 +125,7 @@ export const GlobalSubtitle = styled.p`
     props.align &&
     css`
       text-align: ${props.align};
-    `};
+    `}; */
 `;
 
 export const Divider = styled.div`

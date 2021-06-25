@@ -5,34 +5,39 @@ import { GlobalSection, GlobalSubtitle } from "../global-components";
 
 export const FooterBannerContainer = styled(GlobalSection)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: max(400px, calc(40vw + 54px)) 1fr;
+  grid-template-rows: max(400px, calc(40vw + 54px));
+  gap: 4vw;
+  max-width: 100%;
+  width: 100%;
+  padding: 80px 4vw 100px;
+  margin: 0;
 
   @media only screen and (max-width: 1024px) {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    padding: 80px 25px 100px;
+    gap: 30px;
   }
   @media only screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+    padding: 60px 20px 80px;
     align-items: center;
+    text-align: center;
   }
-  @media only screen and (max-width: 640px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  @media only screen and (max-width: 500px) {
+    text-align: left;
   }
 `;
 
 export const FooterImageWrapper = styled.div`
-  @media only screen and (max-width: 640px) {
-    padding-bottom: 40px;
-  }
+  position: relative;
+  width: 100%;
+  height: 100%;
   @media only screen and (max-width: 768px) {
-    padding-bottom: 30px;
+    width: min(100%, 450px);
+    height: min(calc(100vw - 40px), 400px);;
+    margin: auto;
   }
 `;
 
@@ -40,46 +45,34 @@ export const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 630px;
-  @media only screen and (max-width: 1280px) {
-    width: fit-content;
-  }
-  @media only screen and (max-width: 1024px) {
-    align-self: center;
-    width: fit-content;
-  }
 `;
 
-export const InfoText = styled(GlobalSubtitle)`
-  font-weight: normal;
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-  }
-
-  @media only screen and (max-width: 640px) {
-    text-align: left;
-  }
-`;
+export const InfoText = styled(GlobalSubtitle)``;
 
 export const Subscribe = styled(ShowMore)`
-  display: flex;
-  align-self: flex-start;
+  position: relative;
+  display: grid;
+  place-items: center;
+  && {
+    align-self: flex-start;
+  }
   margin-top: 60px;
   ${width}
   ${space}
   ${fontSize}
   ${lineHeight}
-   @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
+    padding: 11px 120px;
+    margin-top: 20px;
+  }
+  @media only screen and (max-width: 768px) {
     padding: 16px 105px;
     margin: auto;
     margin-top: 40px;
+    && {
+      align-self: center;
+    }
   }
-  @media only screen and (max-width: 1024px) {
-    padding: 11px 120px;
-    /* margin: auto; */
-    margin-top: 20px;
-  }
-
   @media only screen and (max-width: 640px) {
     padding: 16px 105px;
     margin: auto;
