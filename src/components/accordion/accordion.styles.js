@@ -31,6 +31,9 @@ export const FaqQuestionsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   ${width}
+  & p {
+    flex: 1;
+  }
 `;
 
 export const FaqQuestion = styled.div`
