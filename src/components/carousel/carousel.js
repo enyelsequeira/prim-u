@@ -13,8 +13,6 @@ const Carousel = (props) => {
     });
   }, []);
 
-  // console.log(percent)
-
   useEffect(() => {
     if (carouselRef) {
       let isDown = false;
