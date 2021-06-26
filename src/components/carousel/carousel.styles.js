@@ -42,7 +42,6 @@ export const Wrapper = styled.div`
       }
   }
   @media only screen and (max-width: 640px) {
-    /* padding-left: 0; */
     padding-left: 10px;
     gap: 16px;
   }
