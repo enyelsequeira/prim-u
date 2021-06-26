@@ -24,7 +24,7 @@ const Reviews = ({ data }) => {
           } = r;
           return (
             <CarrouselCard key={i} mb={[60,80]}>
-              <TitleReviewWrapper pt={[20]} pl={[20]}>
+              <TitleReviewWrapper pt={[20]} px={[20]}>
                 <GlobalSubtitle fontSize={[18, 20, 18, 18]} lineHeight={["sub"]}>
                   {name}
                 </GlobalSubtitle>

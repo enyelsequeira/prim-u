@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from "react";
 import Image from "next/image";
-import { GlobalSection, GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
+import { GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
   CarrouselCard,
   ProductText,
@@ -19,11 +19,10 @@ const Products = ({ data }) => {
   return (
     <GlobalSectionStyled>
       <GlobalTitle
-        fontSize={[34, 40, 54, 50]}
-        lineHeight={["mediumTwo", "large"]}
+        fontSize={[34, 40, 50]}
+        lineHeight={["small", "large"]}
         textAlign="center"
-        px={[1]}
-        mb={[40, 50, 54, 54, 80]}>
+        px={[5]}>
         <SpanTitle>beauty products</SpanTitle> for u{" "}
       </GlobalTitle>
       <Carousel>
@@ -37,6 +36,7 @@ const Products = ({ data }) => {
                   height={220}
                   layout="intrinsic"
                   quality={100}
+                  alt={products.fields.beautyProductImage.fields.file.title}
                 />
               </ImageWrapper>
               <InfoWrapper>
@@ -58,17 +58,17 @@ const Products = ({ data }) => {
           );
         })}
       </Carousel>
-      <BeautyButton
+      <BeautyButton as="a"
+        href="https://www.prim-u.app/en/list"
+        target="_blank"
+        rel="noreferrer"
         fontSize={[24]}
         lineHeight={["sub"]}
         mx={"auto"}
-        type="button"
-        href="https://www.prim-u.app/en/list">
+        type="button">
         check out beauty products
       </BeautyButton>
     </GlobalSectionStyled>
-
-
   );
 };
 export default Products;

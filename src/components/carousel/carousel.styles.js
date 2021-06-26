@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
   padding-left: 4vw;
 
   &::-webkit-scrollbar {
+    display: block;
     height: 2px;
   }
   &::-webkit-scrollbar-track {
@@ -41,9 +42,9 @@ export const Wrapper = styled.div`
       }
   }
   @media only screen and (max-width: 640px) {
-    padding-left: 0;
+    /* padding-left: 0; */
+    padding-left: 10px;
     gap: 16px;
-    /* gap: 1px; */
   }
 `
 
