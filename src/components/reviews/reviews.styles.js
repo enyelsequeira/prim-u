@@ -19,7 +19,6 @@ export const CarrouselCard = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  scroll-snap-align: center;
   ${lineHeight};
   ${space};
   ${fontSize};
@@ -37,7 +36,7 @@ export const CarrouselCard = styled.div`
     width: calc(100vw - 20vw);
   }
   @media only screen and (max-width: 500px) {
-    width: calc(100vw - 20px);
+    width: calc(100vw - 25px);
   }
 `;
 export const TitleReviewWrapper = styled.div`
