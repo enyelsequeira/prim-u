@@ -34,11 +34,13 @@ function Platform() {
               href="https://apps.apple.com/za/app/prim-u/id1377092370"
               target="_blank"
               rel="noreferrer"
+              aria-label="app-store"
             />
             <GoogleButton
               href="https://play.google.com/store/apps/details?id=com.yelo.primu"
               target="_blank"
               rel="noreferrer"
+              aria-label="google-store"
             />
           </ButtonContainer>
         </Body>

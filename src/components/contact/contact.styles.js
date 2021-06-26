@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { GlobalCard } from "../global-components";
-import { Main as Section } from '../services/services.styles'
+import { Main as Section } from "../services/services.styles";
 
 export const Main = styled(Section)`
   @media screen and (max-width: 767.9px) {
     padding-bottom: 80px;
   }
-`
+`;
 
 export const Container = styled.div`
   display: grid;
@@ -29,7 +29,7 @@ export const ContactCard = styled(GlobalCard)`
   padding: 0;
   grid-template-columns: 1fr;
   grid-auto-rows: min-content;
-  
+
   & .image-wrapper {
     height: 460px;
     height: max(326px, calc(25vw + 100px));
@@ -44,7 +44,7 @@ export const ContactCard = styled(GlobalCard)`
     line-height: 45px;
     margin: 0;
     position: absolute;
-    top: max(163px, calc((25vw + 100px)/2));;
+    top: max(163px, calc((25vw + 100px) / 2));
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -52,7 +52,7 @@ export const ContactCard = styled(GlobalCard)`
     position: absolute;
     width: 182px;
     height: 60px;
-    top: max(163px, calc((25vw + 100px)/2));
+    top: max(163px, calc((25vw + 100px) / 2));
     left: 50%;
     transform: translateX(-50%);
     margin-top: 63px;
@@ -62,7 +62,7 @@ export const ContactCard = styled(GlobalCard)`
     font-size: 20px;
     line-height: 28px;
     order: 1;
-    color: ${props => props.theme.colors.black};
+    color: ${(props) => props.theme.colors.black};
     margin-top: max(366px, calc(25vw + 140px));
   }
   @media screen and (max-width: 767.9px) {
@@ -84,4 +84,4 @@ export const ContactCard = styled(GlobalCard)`
       padding: 0 10px;
     }
   }
-`
+`;

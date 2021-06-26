@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React from "react";
 import Image from "next/image";
 import { GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
@@ -11,7 +10,7 @@ import {
   PriceContainer,
   Price,
   BeautyButton,
-  GlobalSectionStyled
+  GlobalSectionStyled,
 } from "./products.styles";
 import Carousel from "../carousel/carousel";
 
@@ -26,9 +25,9 @@ const Products = ({ data }) => {
         <SpanTitle>beauty products</SpanTitle> for u{" "}
       </GlobalTitle>
       <Carousel>
-        {data.map((products, index) => {
+        {data.map((products) => {
           return (
-            <CarrouselCard key={index} mb={[80]}>
+            <CarrouselCard key={products.fields.beautyProducts} mb={[80]}>
               <ImageWrapper>
                 <Image
                   src={`http:${products.fields.beautyProductImage.fields.file.url}`}
@@ -59,12 +58,14 @@ const Products = ({ data }) => {
         })}
       </Carousel>
       <BeautyButton as="a"
+
         href="https://www.prim-u.app/en/list"
         target="_blank"
         rel="noreferrer"
         fontSize={[24]}
         lineHeight={["sub"]}
         mx={"auto"}
+
         type="button">
         check out beauty products
       </BeautyButton>

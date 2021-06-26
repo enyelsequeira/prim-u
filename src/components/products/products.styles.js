@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { GlobalSection } from "../global-components";
 import { fontSize, lineHeight, space } from "styled-system";
+import { GlobalSection } from "../global-components";
 
 export const GlobalSectionStyled = styled(GlobalSection)`
   max-width: 100%;
@@ -8,6 +8,7 @@ export const GlobalSectionStyled = styled(GlobalSection)`
   padding: 80px 0;
   @media only screen and (max-width: 640px) {
     padding: 60px 0px 80px;
+
   }
 `;
 
@@ -96,7 +97,6 @@ export const Price = styled.p`
   ${fontSize};
 `;
 
-
 export const BeautyButton = styled.button`
   display: flex;
   align-self: center;
@@ -127,3 +127,4 @@ export const BeautyButton = styled.button`
     font-size: 20px;
   }
 `;
+
