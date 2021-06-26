@@ -5,15 +5,10 @@ import { GlobalSection } from "../global-components";
 export const GlobalSectionStyled = styled(GlobalSection)`
   max-width: 100%;
   margin: 0;
-  padding-left: 0;
-  padding-bottom: 80px;
-  padding-top: 80px;
+  padding: 80px 0;
+  @media only screen and (max-width: 640px) {
+    padding: 60px 0px 80px;
 
-  @media only screen and (max-width: 1024px) {
-    padding-top: 60px;
-  }
-  @media only screen and (max-width: 375px) {
-    padding-top: 20px;
   }
 `;
 
@@ -26,6 +21,7 @@ export const CarrouselCard = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  scroll-snap-align: center;
   ${lineHeight};
   ${space};
   ${fontSize};
@@ -106,7 +102,7 @@ export const BeautyButton = styled.button`
   align-self: center;
   align-content: center;
   justify-content: center;
-  width: 400px;
+  max-width: 400px;
   height: 60px;
   background: ${({ theme }) => theme.colors.purple};
   border: 1px solid ${({ theme }) => theme.colors.purple};
@@ -122,10 +118,13 @@ export const BeautyButton = styled.button`
   ${fontSize};
   padding: 16px 0;
   margin: 80px auto 0 auto;
+  margin-top: max(55px, 5.5vw);
   &:hover {
     cursor: pointer;
   }
-  @media only screen and (max-width: 405px) {
-    display: none;
+  @media screen and (max-width: 640px) {
+    max-width: 300px;
+    font-size: 20px;
   }
 `;
+

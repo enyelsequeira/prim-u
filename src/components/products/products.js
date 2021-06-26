@@ -18,11 +18,10 @@ const Products = ({ data }) => {
   return (
     <GlobalSectionStyled>
       <GlobalTitle
-        fontSize={[34, 40, 54, 50]}
-        lineHeight={["mediumTwo", "large"]}
+        fontSize={[34, 40, 50]}
+        lineHeight={["small", "large"]}
         textAlign="center"
-        px={[1]}
-        mb={[40, 50, 54, 54, 80]}>
+        px={[5]}>
         <SpanTitle>beauty products</SpanTitle> for u{" "}
       </GlobalTitle>
       <Carousel>
@@ -58,14 +57,15 @@ const Products = ({ data }) => {
           );
         })}
       </Carousel>
-      <BeautyButton
-        as="a"
+      <BeautyButton as="a"
+
         href="https://www.prim-u.app/en/list"
         target="_blank"
         rel="noreferrer"
         fontSize={[24]}
         lineHeight={["sub"]}
-        mx="auto"
+        mx={"auto"}
+
         type="button">
         check out beauty products
       </BeautyButton>

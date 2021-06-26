@@ -7,27 +7,30 @@ export const CarrouselCards = styled.div`
   @media only screen and (max-width: 767.9px) {
     margin-top: 40px;
   }
-`;
+`
+
 
 export const Wrapper = styled.div`
   display: grid;
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-behavior: smooth;
   grid-auto-flow: column;
   grid-template-rows: 1fr;
   column-gap: 40px;
   scroll-snap-type: both mandatory;
   padding-left: 4vw;
+
+
   &::-webkit-scrollbar {
+    display: block;
     height: 2px;
   }
-  /* Track */
   &::-webkit-scrollbar-track {
     border-radius: 2px;
-    margin: 24vw;
+    margin: 23.9vw;
+
     background: #c4c4c4;
   }
-  /* Handle */
   &::-webkit-scrollbar-thumb {
     background: black;
     border-radius: 2px;
@@ -45,7 +48,8 @@ export const Wrapper = styled.div`
     padding-left: 10px;
     gap: 16px;
   }
-`;
+`
+
 
 export const AngleLeft = styled.button`
   all: unset;
@@ -61,20 +65,27 @@ export const AngleLeft = styled.button`
   background-position: center;
   background-repeat: no-repeat;
   background-size: 6.5px 13px;
+
+
   &:disabled {
     opacity: .4;
     cursor: not-allowed;
   }
+
+
   @media only screen and (max-width: 768px) {
     left: 8vw;
   }
-  `;
+  `
+
 
 export const AngleRight = styled(AngleLeft)`
   left: auto;
   right: 21vw;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='10' height='17' viewBox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 2L8 8.5L1.5 15' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
   @media only screen and (max-width: 768px) {
     right: 8vw;
   }
-`;
+`
+

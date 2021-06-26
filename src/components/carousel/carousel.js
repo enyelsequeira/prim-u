@@ -9,9 +9,7 @@ const Carousel = (props) => {
 
   useEffect(() => {
     carouselRef.current.addEventListener("scroll", (e) => {
-      setPercent(
-        e.target.scrollLeft / (e.target.scrollWidth - e.target.getBoundingClientRect().width),
-      );
+      setPercent(Math.ceil(e.target.scrollLeft) / (e.target.scrollWidth - e.target.offsetWidth));
     });
   }, []);
 
@@ -51,26 +49,23 @@ const Carousel = (props) => {
       <Wrapper ref={carouselRef}>
         {props.children}
         <AngleLeft
-          aria-label="left-angle"
           onClick={() =>
             carouselRef.current.scrollBy({
               left: -100,
               behavior: "smooth",
             })
           }
-          disabled={percent === 0}
-        />
-
+          disabled={percent === 0} />
         <AngleRight
-          aria-label="right-angle"
+
           onClick={() =>
             carouselRef.current.scrollBy({
               left: 100,
               behavior: "smooth",
             })
           }
-          disabled={percent >= 0.99}
-        />
+          disabled={percent >= 1} />
+
       </Wrapper>
     </CarrouselCards>
   );

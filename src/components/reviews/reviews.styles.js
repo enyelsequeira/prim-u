@@ -5,42 +5,39 @@ import { fontSize, lineHeight, space, width } from "styled-system";
 export const GlobalSectionStyled = styled(GlobalSection)`
   max-width: 100%;
   margin: 0;
-  padding-left: 0;
-  padding-bottom: 80px;
-  padding-top: 80px;
+  padding: 80px 0;
+  @media only screen and (max-width: 640px) {
+    padding: 60px 0px 80px;
 
-  
-  @media only screen and (max-width: 1024px) {
-    
-    padding-top: 60px;
-  }
-  @media only screen and (max-width: 375px) {
-    padding-top: 20px;
   }
 `;
 
 
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
-  width: 520px;
-  height: 240px;
+  min-height: max-content;
   border-radius: 20px;
-  overflow: hidden;
-  display: inline-block;
   position: relative;
+  display: flex;
+  flex-direction: column;
   ${lineHeight};
   ${space};
   ${fontSize};
   ${width};
+  scroll-snap-align: center;
+  width: calc(100vw - 64vw);
+  width: calc(22vw + 200px);
   @media only screen and (max-width: 1024px) {
-    display: flex;
-    flex-direction: column;
-    width: 434px;
-    height: 268px;
+    width: calc(100vw - 57vw);
+  }
+  @media only screen and (max-width: 800px) {
+    width: calc(100vw - 30vw);
+  }
+  @media only screen and (max-width: 640px) {
+    width: calc(100vw - 20vw);
   }
   @media only screen and (max-width: 500px) {
-    width: 355px;
-    height: 288px;
+    width: calc(100vw - 25px);
   }
 `;
 export const TitleReviewWrapper = styled.div`
@@ -68,7 +65,7 @@ export const ReviewText = styled.p`
 export const Stars = styled.div`
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 20px;
-  right: 30px;
+  position: relative;
+  align-self: center;
+  gap: 10px;
 `;
