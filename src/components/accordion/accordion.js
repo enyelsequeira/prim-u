@@ -63,7 +63,7 @@ const Accordion = ({ data, subtitle, title, span }) => {
           fontSize={[24, 30, 32]}
           mb={[29, 32, 54, 60]}
           border="2px solid black"
-          pb='6px'>
+          pb={['2px','6px']}>
           {subtitle}
         </GlobalSubtitle>
         <FaqContainer>
