@@ -59,7 +59,6 @@ export const filterQuestions = (questions) => {
         pQuestions.push(single);
       }
     });
-    console.log(question);
   });
 
   return {
