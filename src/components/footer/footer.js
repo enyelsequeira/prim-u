@@ -86,7 +86,7 @@ const Footer = () => {
               </a>
             </FooterList>
             <FooterList>
-              <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/prim_uapp/" target="_blank" rel="noreferrer">
                 Instagram
               </a>
             </FooterList>

@@ -26,7 +26,7 @@ function NavBar() {
   return (
     <Nav isOpen={isOpen} lightNav={lightNav}>
       <NavContainer>
-        <LogoContainer href="/">
+        <LogoContainer href="#">
           <LogoIcon />
           <LogoTitle>PRIM–U</LogoTitle>
         </LogoContainer>
