@@ -23,6 +23,7 @@ const Events = ({ data }) => {
         ))}
       </Container>
     </Main>
+
   );
 };
 

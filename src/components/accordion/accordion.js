@@ -46,6 +46,7 @@ const Accordion = ({ data, subtitle, title, span }) => {
     )
   }
 
+
   const onLoadMoreClick = () => {
     setIsVisible((v) => v + 4);
   };
@@ -88,6 +89,7 @@ const Accordion = ({ data, subtitle, title, span }) => {
                   })}
               </Column>
           }
+
         </FaqContainer>
         <ShowMore
           fontSize={[24, 29, 32]}

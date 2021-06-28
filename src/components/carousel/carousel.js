@@ -57,6 +57,7 @@ const Carousel = (props) => {
           }
           disabled={percent === 0} />
         <AngleRight
+
           onClick={() =>
             carouselRef.current.scrollBy({
               left: 100,
@@ -64,6 +65,7 @@ const Carousel = (props) => {
             })
           }
           disabled={percent >= 1} />
+
       </Wrapper>
     </CarrouselCards>
   );

@@ -9,6 +9,7 @@ import {
 } from "./footer-banner.styles";
 
 const FooterBanner = ({ data }) => {
+  //* uncessary logic, might remove if need be
   let filteredTitle = "";
   let spanText = "";
 
@@ -31,6 +32,7 @@ const FooterBanner = ({ data }) => {
           src={`http:${data[0].fields.footerBannerImage.fields.file.url}`}
           layout="fill"
           alt="footerBannerImage"
+
         />
       </FooterImageWrapper>
       <InfoWrapper>
@@ -44,6 +46,7 @@ const FooterBanner = ({ data }) => {
           {data[0].fields.description.content[0].content[0].value}
         </InfoText>
         <Subscribe fontSize={[24]}>Subscribe</Subscribe>
+
       </InfoWrapper>
     </FooterBannerContainer>
   );

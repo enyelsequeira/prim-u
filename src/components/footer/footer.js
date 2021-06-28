@@ -1,4 +1,3 @@
-import { Divider } from "../global-components";
 import {
   FooterList,
   FooterSection,
@@ -10,16 +9,32 @@ import {
 const Footer = () => {
   return (
     <>
-      <Divider />
       <FooterSection px={[20, 20, 40, 40, "0px"]}>
         <MiniSectionWrapper>
           <FooterTitles condensed fontSize={[18, , 18]} lineHeight={["sub", , "sub"]} pt={[60, 0]}>
             Prim-U app © {new Date().getFullYear()}{" "}
           </FooterTitles>
-          <FooterList>PRIM-U App</FooterList>
-          <FooterList>PRIM-U Privacy Policy</FooterList>
-          <FooterList>Prim-U User Generated Content Policy</FooterList>
-          <FooterList>Prim-U Website Terms of Use</FooterList>
+          <FooterList>
+            <a href="https://prim-u.com/" target="_blank" rel="noreferrer">
+              {" "}
+              PRIM-U App
+            </a>
+          </FooterList>
+          <FooterList>
+            <a href="https://prim-u.com/privacy-policy/" target="_blank" rel="noreferrer">
+              PRIM-U Privacy Policy
+            </a>
+          </FooterList>
+          <FooterList>
+            <a href="https://prim-u.com/ucg-policy/" target="_blank" rel="noreferrer">
+              Prim-U User Generated Content Policy
+            </a>
+          </FooterList>
+          <FooterList>
+            <a href="https://prim-u.com/terms-of-use/" target="_blank" rel="noreferrer">
+              Prim-U Website Terms of Use
+            </a>
+          </FooterList>
         </MiniSectionWrapper>
 
         <RightSection>
@@ -31,8 +46,12 @@ const Footer = () => {
               pt={[60, 0]}>
               Contact us
             </FooterTitles>
-            <FooterList>hello@prim-u.com</FooterList>
-            <FooterList>+31-123-45-67</FooterList>
+            <FooterList>
+              <a href="mailto:hello@prim-u.com"> hello@prim-u.com</a>
+            </FooterList>
+            <FooterList>
+              <a href="tel=+31-123-45-67">+31-123-45-67</a>
+            </FooterList>
           </MiniSectionWrapper>
 
           <MiniSectionWrapper>
@@ -43,11 +62,34 @@ const Footer = () => {
               pt={[60, 0]}>
               Follow Us
             </FooterTitles>
-            <FooterList>Facebook</FooterList>
-            <FooterList>Twitter</FooterList>
-            <FooterList>LinkedIn</FooterList>
-            <FooterList>YouTube</FooterList>
-            <FooterList>Instagram</FooterList>
+            <FooterList>
+              <a href="https://www.facebook.com/PrimUApp/" target="_blank" rel="noreferrer">
+                Facebook
+              </a>
+            </FooterList>
+            <FooterList>
+              <a href="https://twitter.com/Prim_UApp" target="_blank" rel="noreferrer">
+                Twitter
+              </a>
+            </FooterList>
+            <FooterList>
+              <a href="https://www.linkedin.com/company/prim-u/" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+            </FooterList>
+            <FooterList>
+              <a
+                href="https://www.youtube.com/channel/UCZI6IktmwuGpieR2xA8UvGA/videos"
+                target="_blank"
+                rel="noreferrer">
+                YouTube
+              </a>
+            </FooterList>
+            <FooterList>
+              <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noreferrer">
+                Instagram
+              </a>
+            </FooterList>
           </MiniSectionWrapper>
         </RightSection>
       </FooterSection>

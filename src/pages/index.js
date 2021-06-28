@@ -17,12 +17,10 @@ import {
   Video,
 } from "../components";
 import { Divider } from "../components/global-components";
-import { CarrouselCard } from "../components/products/products.styles";
-import { dataTransformer } from "../helpers/data-transformer";
+import { dataTransformer, filterQuestions } from "../helpers/data-transformer";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
-  data,
   services,
   faqQuestions,
   partnersQuestions,
@@ -32,28 +30,29 @@ export default function Home({
   footerData,
   freelancersSalons,
   beautyProducts,
+  allQuestions,
 }) {
+  const { cQuestions, pQuestions } = filterQuestions(allQuestions);
   return (
     <BaseLayout>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Home page of Prim-U</title>
+        <meta name="robots" content="follow, index" />
+        <meta
+          name="description"
+          content="welcome to our beauty service providing the best products and services out ther"
+        />
       </Head>
-
       <NavBar />
       <Hero />
       <Banner data={banner} />
       <Services data={services} />
       <Divider />
-
       <Events data={bigCards} />
       <Divider />
-
       <Contact data={freelancersSalons} />
-
       <Platform />
       <Video />
-
       <Divider />
       <Reviews data={reviews} />
       <Divider />
@@ -69,6 +68,7 @@ export default function Home({
       <Accordion data={partnersQuestions} subtitle="For Partners" />
       <Divider />
       {/* <Divider mt={[60, 100, 80]} mb={[60, 80, 80]} /> */}
+
 
       <FooterBanner data={footerData} />
       <Footer />
@@ -93,6 +93,7 @@ export async function getStaticProps() {
     freelancersSalons,
     footerData,
     beautyProducts,
+    allQuestions,
   } = dataTransformer(res);
 
   return {
@@ -107,6 +108,7 @@ export async function getStaticProps() {
       footerData,
       freelancersSalons,
       beautyProducts,
+      allQuestions,
     },
   };
 }

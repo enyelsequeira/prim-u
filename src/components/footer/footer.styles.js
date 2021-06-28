@@ -13,6 +13,7 @@ export const FooterSection = styled.footer`
   @media only screen and (max-width: 1280px) {
     padding: 40px 78px 60px 42px;
     justify-content: space-between;
+    margin-top: 40px;
   }
   @media only screen and (max-width: 768px) {
     flex-direction: row;
@@ -57,6 +58,10 @@ export const FooterList = styled.p`
   font-size: 18px;
   line-height: 28px;
   padding-bottom: 10px;
+  > a {
+    font-size: inherit;
+    line-height: inherit;
+  }
   @media only screen and (max-width: 768px) {
     font-size: 18px;
     line-height: 16px;

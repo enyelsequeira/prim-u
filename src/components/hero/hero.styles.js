@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { GlobalTitle } from "../global-components";
 
-export const Main = styled.main`
+export const Main = styled.section`
   position: relative;
   padding: 0 4vw;
   width: 100%;

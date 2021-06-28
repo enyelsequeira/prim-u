@@ -8,6 +8,7 @@ export const GlobalSectionStyled = styled(GlobalSection)`
   padding: 80px 0;
   @media only screen and (max-width: 640px) {
     padding: 60px 0px 80px;
+
   }
 `;
 
@@ -50,10 +51,16 @@ export const TitleReviewWrapper = styled.div`
 export const ReviewText = styled.p`
   font-family: ${({ theme }) => theme.fonts.roboto};
   text-align: left;
-  ${lineHeight};
+  padding: 18px 31px 34px 20px;
+  line-height: 28px;
   ${space};
   ${fontSize};
   ${width};
+  @media only screen and (max-width: 500px) {
+    width: 323px;
+    padding: 20px 16px 24px 16px;
+  }
+
 `;
 export const Stars = styled.div`
   display: flex;
