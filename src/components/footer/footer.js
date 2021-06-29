@@ -8,10 +8,12 @@ import {
 
 const Footer = () => {
   return (
-    <>
       <FooterSection px={[20, 20, 40, 40, "0px"]}>
         <MiniSectionWrapper>
-          <FooterTitles condensed fontSize={[18, , 18]} lineHeight={["sub", , "sub"]} pt={[60, 0]}>
+          <FooterTitles 
+            condensed
+            fontSize="18px"
+            lineHeight="sub">
             Prim-U app © {new Date().getFullYear()}{" "}
           </FooterTitles>
           <FooterList>
@@ -41,25 +43,23 @@ const Footer = () => {
           <MiniSectionWrapper extra>
             <FooterTitles
               condensed
-              fontSize={[18, , 18]}
-              lineHeight={["sub", , "sub"]}
-              pt={[60, 0]}>
+              fontSize="18px"
+              lineHeight="sub">
               Contact us
             </FooterTitles>
             <FooterList>
               <a href="mailto:hello@prim-u.com"> hello@prim-u.com</a>
             </FooterList>
             <FooterList>
-              <a href="tel=+31-123-45-67">+31-123-45-67</a>
+              <a href="tel=+31-123-45-67" target="_blank" rel="noreferrer">+31-123-45-67</a>
             </FooterList>
           </MiniSectionWrapper>
 
           <MiniSectionWrapper>
             <FooterTitles
               condensed
-              fontSize={[18, , 18]}
-              lineHeight={["sub", , "sub"]}
-              pt={[60, 0]}>
+              fontSize="18px"
+              lineHeight="sub">
               Follow Us
             </FooterTitles>
             <FooterList>
@@ -93,7 +93,6 @@ const Footer = () => {
           </MiniSectionWrapper>
         </RightSection>
       </FooterSection>
-    </>
   );
 };
 
