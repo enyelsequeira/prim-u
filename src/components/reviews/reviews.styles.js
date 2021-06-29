@@ -57,7 +57,6 @@ export const ReviewText = styled.p`
   ${fontSize};
   ${width};
   @media only screen and (max-width: 500px) {
-    width: 323px;
     padding: 20px 16px 24px 16px;
   }
 
