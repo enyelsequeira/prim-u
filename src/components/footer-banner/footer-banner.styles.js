@@ -47,7 +47,9 @@ export const InfoWrapper = styled.div`
   justify-content: center;
 `;
 
-export const InfoText = styled(GlobalSubtitle)``;
+export const InfoText = styled(GlobalSubtitle)`
+  width: 100%;
+`;
 
 export const Subscribe = styled(ShowMore)`
   position: relative;
