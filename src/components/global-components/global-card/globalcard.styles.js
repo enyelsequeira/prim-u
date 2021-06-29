@@ -94,7 +94,6 @@ export const Text = styled(SubTitle).attrs({ className: "text" })`
     margin-bottom: ${(props) => (props.hasSubtitle ? "32px" : "0")};
   }
   @media screen and (max-width: 640px) {
-    display: contents;
     &:nth-child(2) {
       margin-bottom: ${(props) => (props.hasSubtitle ? "20px" : "0")};
     }
