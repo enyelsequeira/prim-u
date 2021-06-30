@@ -134,7 +134,7 @@ export const Divider = styled.div`
   ${space};
 `;
 
-export const GlobalButton = styled.button`
+export const GlobalButton = styled.a`
   all: unset;
   position: relative;
   display: grid;

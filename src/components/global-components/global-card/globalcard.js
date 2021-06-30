@@ -37,7 +37,7 @@ function GlobalCard({
         {services && documentToReactComponents(services, provideServices)}
         {text && text.map((p, i) => <Text key={i}>{p} </Text>)}
       </Body>
-      <Button as="a" href={href} target="_blank" rel="noreferrer">
+      <Button href={href} target="_blank" rel="noreferrer">
         {buttonText}
       </Button>
     </Card>
