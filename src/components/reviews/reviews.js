@@ -1,14 +1,13 @@
-/* eslint-disable react/no-array-index-key */
 import Image from "next/image";
 import React from "react";
 import Carousel from "../carousel/carousel";
 import { GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
   CarrouselCard,
+  GlobalSectionStyled,
   ReviewText,
   Stars,
   TitleReviewWrapper,
-  GlobalSectionStyled,
 } from "./reviews.styles";
 
 const Reviews = ({ data }) => {
