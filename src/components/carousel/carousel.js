@@ -52,7 +52,7 @@ const Carousel = (props) => {
           aria-label="angle left"
           onClick={() =>
             carouselRef.current.scrollBy({
-              left: -100,
+              left: -200,
               behavior: "smooth",
             })
           }
