@@ -19,11 +19,11 @@ const Events = ({ data }) => {
             text={[card.fields.description.content[0].content[0].value]}
             buttonText="Make a Booking"
             href="https://www.prim-u.app/en/list"
+            altImageName={card.fields.servicesImages.fields.file.title}
           />
         ))}
       </Container>
     </Main>
-
   );
 };
 

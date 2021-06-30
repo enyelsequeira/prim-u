@@ -55,17 +55,17 @@ const Carousel = (props) => {
               behavior: "smooth",
             })
           }
-          disabled={percent === 0} />
+          disabled={percent === 0}
+        />
         <AngleRight
-
           onClick={() =>
             carouselRef.current.scrollBy({
               left: 100,
               behavior: "smooth",
             })
           }
-          disabled={percent >= 1} />
-
+          disabled={percent >= 1}
+        />
       </Wrapper>
     </CarrouselCards>
   );

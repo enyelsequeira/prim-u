@@ -8,7 +8,6 @@ export const GlobalSectionStyled = styled(GlobalSection)`
   padding: 80px 0;
   @media only screen and (max-width: 640px) {
     padding: 60px 0px 80px;
-
   }
 `;
 
@@ -127,4 +126,3 @@ export const BeautyButton = styled.button`
     font-size: 20px;
   }
 `;
-

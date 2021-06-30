@@ -13,7 +13,7 @@ const Services = ({ data }) => {
           <ServiceCard
             key={card.fields.title}
             src={`http:${card.fields.image.fields.file.url}`}
-            alt={card.fields.image.fields.file.title}
+            altImageName={card.fields.image.fields.file.title}
             title={card.fields.title}
           />
         ))}

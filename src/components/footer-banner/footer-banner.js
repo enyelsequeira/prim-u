@@ -31,22 +31,27 @@ const FooterBanner = ({ data }) => {
         <Image
           src={`http:${data[0].fields.footerBannerImage.fields.file.url}`}
           layout="fill"
-          alt="footerBannerImage"
-
+          altImageName="footerBannerImage"
         />
       </FooterImageWrapper>
       <InfoWrapper>
         <GlobalTitle
           fontSize={[34, 39, 39, 50]}
-          lineHeight={["small","small","small", "large"]}
+          lineHeight={["small", "small", "small", "large"]}
           pb={[40]}>
           {filteredTitle} <SpanTitle>{spanText}</SpanTitle>
         </GlobalTitle>
         <InfoText fontSize={[18, 20]} lineHeight={["sub"]}>
           {data[0].fields.description.content[0].content[0].value}
         </InfoText>
-        <Subscribe as="a" href="https://www.instagram.com/prim_uapp/" target="_blank" rel="noreferrer" fontSize={[24]}>Subscribe</Subscribe>
-
+        <Subscribe
+          as="a"
+          href="https://www.instagram.com/prim_uapp/"
+          target="_blank"
+          rel="noreferrer"
+          fontSize={[24]}>
+          Subscribe
+        </Subscribe>
       </InfoWrapper>
     </FooterBannerContainer>
   );

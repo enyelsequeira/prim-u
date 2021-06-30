@@ -15,7 +15,7 @@ const Contact = ({ data }) => {
           <ContactCard
             key={i}
             src={`http:${card.fields.image.fields.file.url}`}
-            alt={card.fields.image.fields.file.title}
+            altImageName={card.fields.image.fields.file.title}
             title={card.fields.freelancersSalonsTitle}
             services={card.fields.description}
             buttonText="Sign Up"

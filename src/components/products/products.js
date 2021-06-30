@@ -57,15 +57,14 @@ const Products = ({ data }) => {
           );
         })}
       </Carousel>
-      <BeautyButton as="a"
-
+      <BeautyButton
+        as="a"
         href="https://www.prim-u.app/en/list"
         target="_blank"
         rel="noreferrer"
         fontSize={[24]}
         lineHeight={["sub"]}
-        mx={"auto"}
-
+        mx="auto"
         type="button">
         check out beauty products
       </BeautyButton>
