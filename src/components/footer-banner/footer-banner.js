@@ -31,7 +31,7 @@ const FooterBanner = ({ data }) => {
         <Image
           src={`http:${data[0].fields.footerBannerImage.fields.file.url}`}
           layout="fill"
-          alt={data[0].fields.footerBannerImage.fields.file.title}
+          alt={data[0].fields.footerBannerImage.fields.title}
         />
       </FooterImageWrapper>
       <InfoWrapper>

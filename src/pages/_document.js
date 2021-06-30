@@ -45,8 +45,7 @@ export default class MyDocument extends Document {
           <meta property="og:description" content={meta.description} />
           <meta property="og:title" content={meta.title} />
           <meta property="og:image" content={meta.image} />
-          <link rel="icon" href={meta.image} sizes="32x32" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href={meta.image} sizes="32x36" />
           <meta name="robots" content="index, follow" />
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"

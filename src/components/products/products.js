@@ -1,18 +1,18 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
+import Carousel from "../carousel/carousel";
 import { GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
+  BeautyButton,
   CarrouselCard,
-  ProductText,
-  TitleWrapper,
+  GlobalSectionStyled,
   ImageWrapper,
   InfoWrapper,
-  PriceContainer,
   Price,
-  BeautyButton,
-  GlobalSectionStyled,
+  PriceContainer,
+  ProductText,
+  TitleWrapper,
 } from "./products.styles";
-import Carousel from "../carousel/carousel";
 
 const Products = ({ data }) => {
   return (
@@ -35,7 +35,7 @@ const Products = ({ data }) => {
                   height={220}
                   layout="intrinsic"
                   quality={100}
-                  alt={products.fields.beautyProductImage.fields.file.title}
+                  alt={products.fields.beautyProductImage.fields.title}
                 />
               </ImageWrapper>
               <InfoWrapper>

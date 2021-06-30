@@ -1,7 +1,6 @@
 import { SpanTitle } from "../global-components";
-import { Container, EventCard, Main } from "./events.styles";
-/* eslint-disable react/no-array-index-key */
 import { Title } from "../services/services.styles";
+import { Container, EventCard, Main } from "./events.styles";
 
 const Events = ({ data }) => {
   return (
@@ -11,17 +10,19 @@ const Events = ({ data }) => {
       </Title>
 
       <Container>
-        {data.map((card, i) => (
-          <EventCard
-            key={i}
-            src={`http:${card.fields.servicesImages.fields.file.url}`}
-            title={card.fields.bigCardsTitle}
-            text={[card.fields.description.content[0].content[0].value]}
-            buttonText="Make a Booking"
-            href="https://www.prim-u.app/en/list"
-            altImageName={card.fields.servicesImages.fields.file.title}
-          />
-        ))}
+        {data.map((card) => {
+          return (
+            <EventCard
+              key={card.fields.servicesImages.fields.title}
+              src={`http:${card.fields.servicesImages.fields.file.url}`}
+              title={card.fields.bigCardsTitle}
+              text={[card.fields.description.content[0].content[0].value]}
+              buttonText="Make a Booking"
+              href="https://www.prim-u.app/en/list"
+              altImageName={card.fields.servicesImages.fields.title}
+            />
+          );
+        })}
       </Container>
     </Main>
   );

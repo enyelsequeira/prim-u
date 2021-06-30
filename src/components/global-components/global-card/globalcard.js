@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { eventsOption, options, provideServices } from "../../../helpers/options";
-import { Body, Button, Card, Wrapper, Img, SubTitle, Text, Title } from "./globalcard.styles";
+import { Body, Button, Card, Img, SubTitle, Text, Title, Wrapper } from "./globalcard.styles";
 
 function GlobalCard({
   title,
@@ -23,8 +23,9 @@ function GlobalCard({
           src={src}
           layout="fill"
           quality="100"
-          alt={`altImageName ? ${altImageName} : ${title}`}
+          alt={`${altImageName || title}`}
           placeholder="blur"
+          blurDataURL={src}
         />
       </Wrapper>
       <Body>

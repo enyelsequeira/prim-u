@@ -1,9 +1,7 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-array-index-key */
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AngleLeft, AngleRight, CarrouselCards, Wrapper } from "./carousel.styles";
 
-const Carousel = (props) => {
+const Carousel = ({ children }) => {
   const carouselRef = useRef();
   const [percent, setPercent] = useState(0);
 
@@ -47,7 +45,7 @@ const Carousel = (props) => {
   return (
     <CarrouselCards>
       <Wrapper ref={carouselRef}>
-        {props.children}
+        {children}
         <AngleLeft
           aria-label="angle left"
           onClick={() =>
