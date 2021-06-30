@@ -2,9 +2,9 @@ import styled, { css } from "styled-components";
 import { fontSize, lineHeight, space, width } from "styled-system";
 
 export const Main = styled.section`
-  padding: ${props => props.type ? '80px 4vw' : '20px 4vw 80px'};
+  padding: ${(props) => (props.type ? "80px 4vw" : "20px 4vw 80px")};
   @media screen and (max-width: 767.69px) {
-    padding: ${props => props.type ? '60px 20px' : '20px 20px 60px'};
+    padding: ${(props) => (props.type ? "60px 20px" : "20px 20px 60px")};
   }
 `;
 
@@ -25,7 +25,7 @@ export const Column = styled.div`
   @media only screen and (max-width: 768px) {
     gap: 40px;
   }
-`
+`;
 
 export const FaqQuestionsWrapper = styled.div`
   display: flex;
@@ -48,11 +48,14 @@ export const ButtonIcon = styled.button`
   position: relative;
   width: 24px;
   height: 24px;
-  ${props => props.visible ? css`
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='4' viewBox='0 0 24 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3.5' width='3' height='24' transform='rotate(-90 0 3.5)' fill='black'/%3E%3C/svg%3E");
-  ` : css`
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='10.5' width='3' height='24' fill='black'/%3E%3Crect y='13.5' width='3' height='24' transform='rotate(-90 0 13.5)' fill='black'/%3E%3C/svg%3E");
-  `}
+  ${(props) =>
+    props.visible
+      ? css`
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='4' viewBox='0 0 24 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3.5' width='3' height='24' transform='rotate(-90 0 3.5)' fill='black'/%3E%3C/svg%3E");
+        `
+      : css`
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='10.5' width='3' height='24' fill='black'/%3E%3Crect y='13.5' width='3' height='24' transform='rotate(-90 0 13.5)' fill='black'/%3E%3C/svg%3E");
+        `}
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -67,11 +70,11 @@ export const Answer = styled.p`
   font-weight: normal;
   letter-spacing: -0.01em;
   color: ${({ theme }) => theme.colors.black};
-  padding-top: ${props => props.visible ? '30px' : 0};
+  padding-top: ${(props) => (props.visible ? "30px" : 0)};
   height: max-content;
-  max-height: ${props => props.visible ? '100vh' : 0};
-  opacity: ${props => props.visible ? 1 : 0};
-  transition: all .1s .05s, max-height .1s;
+  max-height: ${(props) => (props.visible ? "100vh" : 0)};
+  opacity: ${(props) => (props.visible ? 1 : 0)};
+  transition: all 0.1s 0.05s, max-height 0.1s;
   ${lineHeight};
   ${space};
   ${fontSize};
@@ -104,7 +107,7 @@ export const ShowMore = styled.button`
     color: ${({ theme }) => theme.colors.white};
   }
   &:disabled {
-    opacity: .5;
+    opacity: 0.5;
     cursor: default;
     transition: 0s;
   }

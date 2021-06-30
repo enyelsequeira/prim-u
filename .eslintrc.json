@@ -37,6 +37,7 @@
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
     "no-sparse-arrays": "off",
+    "react/no-array-index-key": "off",
 
     "react/jsx-filename-extension": [
       1,

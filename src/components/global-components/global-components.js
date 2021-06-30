@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 import styled, { css } from "styled-components";
-import { fontSize, lineHeight, space, textAlign, width} from "styled-system";
+import { fontSize, lineHeight, space, textAlign, width } from "styled-system";
 
 export const GlobalWrapper = styled.main`
   max-width: 1440px;
@@ -134,7 +134,7 @@ export const Divider = styled.div`
   ${space};
 `;
 
-export const GlobalButton = styled.button`
+export const GlobalButton = styled.a`
   all: unset;
   position: relative;
   display: grid;

@@ -3,12 +3,12 @@ import { GlobalSubtitle, GlobalTitle, SpanTitle } from "../global-components";
 import {
   Answer,
   ButtonIcon,
+  Column,
   FaqContainer,
   FaqQuestion,
   FaqQuestionsWrapper,
-  ShowMore,
   Main,
-  Column,
+  ShowMore,
 } from "./accordion.styles";
 
 const Accordion = ({ data, subtitle, title, span }) => {
@@ -43,7 +43,12 @@ const Accordion = ({ data, subtitle, title, span }) => {
             align="left">
             {fields.faqTitle || fields.partnersQuestions}
           </GlobalSubtitle>
-          <ButtonIcon onClick={() => toggle(question)} visible={fields.visible} type="button" />
+          <ButtonIcon
+            onClick={() => toggle(question)}
+            visible={fields.visible}
+            type="button"
+            aria-label="showmore-showless"
+          />
         </FaqQuestion>
         <Answer visible={fields.visible} fontSize={[18]} lineHeight={["sub"]}>
           {fields.answer.content[0].content[0].value}

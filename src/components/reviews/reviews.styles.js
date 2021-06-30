@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { GlobalSection } from "../global-components";
 import { fontSize, lineHeight, space, width } from "styled-system";
+import { GlobalSection } from "../global-components";
 
 export const GlobalSectionStyled = styled(GlobalSection)`
   max-width: 100%;
@@ -8,10 +8,8 @@ export const GlobalSectionStyled = styled(GlobalSection)`
   padding: 80px 0;
   @media only screen and (max-width: 640px) {
     padding: 60px 0px 80px;
-
   }
 `;
-
 
 export const CarrouselCard = styled.div`
   background: ${({ theme }) => theme.colors.gray};
@@ -59,7 +57,6 @@ export const ReviewText = styled.p`
   @media only screen and (max-width: 500px) {
     padding: 20px 16px 24px 16px;
   }
-
 `;
 export const Stars = styled.div`
   display: flex;

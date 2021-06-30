@@ -1,5 +1,5 @@
 import { SpanTitle } from "../global-components";
-import { Container, ServiceCard, Main, Title } from "./services.styles";
+import { Container, Main, ServiceCard, Title } from "./services.styles";
 
 const Services = ({ data }) => {
   return (
@@ -12,8 +12,8 @@ const Services = ({ data }) => {
         {data.reverse().map((card) => (
           <ServiceCard
             key={card.fields.title}
-            src={`http:${card.fields.image.fields.file.url}`}
-            altImageName={card.fields.image.fields.file.title}
+            src={`https:${card.fields.image.fields.file.url}`}
+            altImageName={card.fields.image.fields.title}
             title={card.fields.title}
           />
         ))}

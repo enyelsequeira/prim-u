@@ -7,8 +7,7 @@ export const CarrouselCards = styled.div`
   @media only screen and (max-width: 767.9px) {
     margin-top: 40px;
   }
-`
-
+`;
 
 export const Wrapper = styled.div`
   display: grid;
@@ -19,7 +18,6 @@ export const Wrapper = styled.div`
   column-gap: 40px;
   scroll-snap-type: both mandatory;
   padding-left: 4vw;
-
 
   &::-webkit-scrollbar {
     display: block;
@@ -39,17 +37,16 @@ export const Wrapper = styled.div`
     gap: 24px;
   }
   @media only screen and (max-width: 768px) {
-      padding-left: 10px;
-      &::-webkit-scrollbar-track {
-        margin: 15vw;
-      }
+    padding-left: 10px;
+    &::-webkit-scrollbar-track {
+      margin: 15vw;
+    }
   }
   @media only screen and (max-width: 640px) {
     padding-left: 10px;
     gap: 16px;
   }
-`
-
+`;
 
 export const AngleLeft = styled.button`
   all: unset;
@@ -66,18 +63,15 @@ export const AngleLeft = styled.button`
   background-repeat: no-repeat;
   background-size: 6.5px 13px;
 
-
   &:disabled {
-    opacity: .4;
+    opacity: 0.4;
     cursor: not-allowed;
   }
-
 
   @media only screen and (max-width: 768px) {
     left: 8vw;
   }
-  `
-
+`;
 
 export const AngleRight = styled(AngleLeft)`
   left: auto;
@@ -87,5 +81,4 @@ export const AngleRight = styled(AngleLeft)`
   @media only screen and (max-width: 768px) {
     right: 8vw;
   }
-`
-
+`;

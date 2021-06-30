@@ -36,7 +36,7 @@ export const FooterImageWrapper = styled.div`
   height: 100%;
   @media only screen and (max-width: 768px) {
     width: min(100%, 450px);
-    height: min(calc(100vw - 40px), 400px);;
+    height: min(calc(100vw - 40px), 400px);
     margin: auto;
   }
 `;

@@ -1,7 +1,6 @@
-/* eslint-disable react/no-array-index-key */
 import { SpanTitle } from "../global-components";
-import { Container, Main, ContactCard } from "./contact.styles";
 import { Title } from "../services/services.styles";
+import { ContactCard, Container, Main } from "./contact.styles";
 
 const Contact = ({ data }) => {
   return (
@@ -11,11 +10,11 @@ const Contact = ({ data }) => {
       </Title>
 
       <Container>
-        {data.map((card, i) => (
+        {data.map((card) => (
           <ContactCard
-            key={i}
-            src={`http:${card.fields.image.fields.file.url}`}
-            altImageName={card.fields.image.fields.file.title}
+            key={card.fields.image.fields.title}
+            src={`https:${card.fields.image.fields.file.url}`}
+            altImageName={card.fields.image.fields.title}
             title={card.fields.freelancersSalonsTitle}
             services={card.fields.description}
             buttonText="Sign Up"
