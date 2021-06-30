@@ -12,7 +12,7 @@ const Services = ({ data }) => {
         {data.reverse().map((card) => (
           <ServiceCard
             key={card.fields.title}
-            src={`http:${card.fields.image.fields.file.url}`}
+            src={`https:${card.fields.image.fields.file.url}`}
             altImageName={card.fields.image.fields.title}
             title={card.fields.title}
           />

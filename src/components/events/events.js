@@ -14,7 +14,7 @@ const Events = ({ data }) => {
           return (
             <EventCard
               key={card.fields.servicesImages.fields.title}
-              src={`http:${card.fields.servicesImages.fields.file.url}`}
+              src={`https:${card.fields.servicesImages.fields.file.url}`}
               title={card.fields.bigCardsTitle}
               text={[card.fields.description.content[0].content[0].value]}
               buttonText="Make a Booking"

@@ -13,7 +13,7 @@ const Contact = ({ data }) => {
         {data.map((card) => (
           <ContactCard
             key={card.fields.image.fields.title}
-            src={`http:${card.fields.image.fields.file.url}`}
+            src={`https:${card.fields.image.fields.file.url}`}
             altImageName={card.fields.image.fields.title}
             title={card.fields.freelancersSalonsTitle}
             services={card.fields.description}

@@ -4,7 +4,7 @@ function Banner({ data }) {
   return (
     <Main>
       <BannerCard
-        src={`http:${data[0].fields.images[0].fields.file.url}`}
+        src={`https:${data[0].fields.images[0].fields.file.url}`}
         title={data[0].fields.title}
         altImageName={data[0].fields.images[0].fields.title}
         banner={data[0].fields.description}

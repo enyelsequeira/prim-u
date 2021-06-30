@@ -30,7 +30,7 @@ const Products = ({ data }) => {
             <CarrouselCard key={products.fields.beautyProducts} mb={[80]}>
               <ImageWrapper>
                 <Image
-                  src={`http:${products.fields.beautyProductImage.fields.file.url}`}
+                  src={`https:${products.fields.beautyProductImage.fields.file.url}`}
                   width={400}
                   height={220}
                   layout="intrinsic"
