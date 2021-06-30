@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta name="robots" content="follow, index" />
           <meta name="description" content={meta.description} />
-          <meta charset="UTF-8" />
+          <meta charSet="UTF-8" />
           <meta property="og:site_name" content={meta.title} />
           <meta property="og:description" content={meta.description} />
           <meta property="og:title" content={meta.title} />

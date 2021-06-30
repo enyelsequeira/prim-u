@@ -69,7 +69,6 @@ export default function Home({
       <Divider />
       {/* <Divider mt={[60, 100, 80]} mb={[60, 80, 80]} /> */}
 
-
       <FooterBanner data={footerData} />
       <Footer />
     </BaseLayout>
