@@ -36,11 +36,11 @@ export default function Home({
   return (
     <BaseLayout>
       <Head>
-        <title>Home page of Prim-U</title>
+        <title>Prim-U</title>
         <meta name="robots" content="follow, index" />
         <meta
           name="description"
-          content="welcome to our beauty service providing the best products and services out ther"
+          content="welcome to our beauty service providing the best products and services out there"
         />
       </Head>
       <NavBar />
@@ -67,7 +67,6 @@ export default function Home({
       />
       <Accordion data={partnersQuestions} subtitle="For Partners" />
       <Divider />
-      {/* <Divider mt={[60, 100, 80]} mb={[60, 80, 80]} /> */}
 
       <FooterBanner data={footerData} />
       <Footer />

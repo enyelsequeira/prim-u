@@ -1,16 +1,15 @@
-import heroImage from "../../../public/images/hero.jpg";
 import { Container, Img, Main, Title } from "./hero.styles";
 
 function Hero() {
   return (
     <Main>
       <Img
-        src={heroImage}
+        src="/images/hero.jpg"
         layout="fill"
         quality="100"
         alt="heroimageofwoman"
         placeholder="blur"
-        blurDataURL={heroImage}
+        blurDataURL="/images/hero.jpg"
       />
       <Container>
         <Title>REINVENTING BEAUTY ON DEMAND</Title>
