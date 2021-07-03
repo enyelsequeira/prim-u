@@ -11,11 +11,11 @@ const Carousel = ({ children }) => {
     });
     carouselRef.current.addEventListener("click", (e) => {
       if (e.target !== e.currentTarget) {
+        const scrollingDistance =
+          e.target.getBoundingClientRect().left -
+          (e.currentTarget.offsetWidth - e.target.getBoundingClientRect().width) / 2;
         e.currentTarget.scrollBy({
-          left: Math.floor(
-            e.target.getBoundingClientRect().left -
-              (e.currentTarget.offsetWidth - e.target.getBoundingClientRect().width) / 2,
-          ),
+          left: Math.abs(scrollingDistance) > 1 ? scrollingDistance : 0,
         });
       }
     });
