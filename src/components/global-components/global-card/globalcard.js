@@ -26,6 +26,7 @@ function GlobalCard({
           alt={`${altImageName || title}`}
           placeholder="blur"
           blurDataURL={src}
+          priority="true"
         />
       </Wrapper>
       <Body>

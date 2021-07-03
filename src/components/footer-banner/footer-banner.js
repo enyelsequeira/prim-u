@@ -32,6 +32,7 @@ const FooterBanner = ({ data }) => {
           src={`https:${data[0].fields.footerBannerImage.fields.file.url}`}
           layout="fill"
           alt={data[0].fields.footerBannerImage.fields.title}
+          priority="true"
         />
       </FooterImageWrapper>
       <InfoWrapper>

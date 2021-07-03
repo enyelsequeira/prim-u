@@ -9,14 +9,18 @@ const Services = ({ data }) => {
       </Title>
 
       <Container>
-        {data.reverse().map((card) => (
-          <ServiceCard
-            key={card.fields.title}
-            src={`https:${card.fields.image.fields.file.url}`}
-            altImageName={card.fields.image.fields.title}
-            title={card.fields.title}
-          />
-        ))}
+        {data.reverse().map((card) => {
+          return (
+            <a href={card.fields.link} key={card.fields.title} target="_blank" rel="noreferrer">
+              <ServiceCard
+                key={card.fields.title}
+                src={`https:${card.fields.image.fields.file.url}`}
+                altImageName={card.fields.image.fields.title}
+                title={card.fields.title}
+              />
+            </a>
+          );
+        })}
       </Container>
     </Main>
   );
