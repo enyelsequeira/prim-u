@@ -9,13 +9,16 @@ const Carousel = ({ children }) => {
     carouselRef.current.addEventListener("scroll", (e) => {
       setPercent(Math.ceil(e.target.scrollLeft) / (e.target.scrollWidth - e.target.offsetWidth));
     });
-    carouselRef.current.addEventListener('click', e => {
-      if(e.target !== e.currentTarget) {
+    carouselRef.current.addEventListener("click", (e) => {
+      if (e.target !== e.currentTarget) {
         e.currentTarget.scrollBy({
-          left: Math.floor(e.target.getBoundingClientRect().left - (e.currentTarget.offsetWidth - e.target.getBoundingClientRect().width) / 2)
+          left: Math.floor(
+            e.target.getBoundingClientRect().left -
+              (e.currentTarget.offsetWidth - e.target.getBoundingClientRect().width) / 2,
+          ),
         });
       }
-    })
+    });
   }, []);
 
   useEffect(() => {
@@ -51,9 +54,7 @@ const Carousel = ({ children }) => {
 
   return (
     <CarrouselCards>
-      <Wrapper ref={carouselRef}>
-        {children}
-      </Wrapper>
+      <Wrapper ref={carouselRef}>{children}</Wrapper>
       <AngleLeft
         aria-label="angle left"
         onClick={() =>
