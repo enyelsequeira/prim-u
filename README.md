@@ -1,5 +1,7 @@
 # NextJs Starter Template
 
+# **[Click to View](https://prim-u.vercel.app)**
+
 ## Introduction
 
 This repo is a simple starting template Prim-u
