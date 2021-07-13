@@ -31,7 +31,3 @@ template/
 2. `cd` in the project directory.
 3. Run `git remote rm origin` to remove the remote refenrece.
 4. Run `yarn` to install dependencies
-
-name prim-u
-spaceid =""
-accesT= 6CYnQJMm1J9PqAIfK0-i1c0h-n8krHGJfNdBOTnVoxU
