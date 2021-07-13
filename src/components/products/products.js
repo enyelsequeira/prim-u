@@ -49,7 +49,7 @@ const Products = ({ data }) => {
                 </ProductText>
                 <PriceContainer>
                   <Price fontSize={[18]} lineHeight={["sub"]}>
-                    ₽ {products.fields.price}
+                    R {products.fields.price}
                   </Price>
                 </PriceContainer>
               </InfoWrapper>
