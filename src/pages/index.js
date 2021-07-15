@@ -54,10 +54,10 @@ export default function Home({
       <Platform />
       <Video />
       <Divider />
-      <Reviews data={reviews} />
+      {/* <Reviews data={reviews} />
       <Divider />
       <Products data={beautyProducts} />
-      <Divider />
+      <Divider /> */}
 
       <Accordion
         data={faqQuestions}
