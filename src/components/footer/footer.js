@@ -42,11 +42,11 @@ const Footer = () => {
             Contact us
           </FooterTitles>
           <FooterList>
-            <a href="mailto:hello@prim-u.com"> hello@prim-u.com</a>
+            <a href="mailto:info@prim-u.com<"> info@prim-u.com</a>
           </FooterList>
           <FooterList>
-            <a href="tel=+31-123-45-67" target="_blank" rel="noreferrer">
-              +31-123-45-67
+            <a href="tel=+27-0600703045" target="_blank" rel="noreferrer">
+              +27-0600703045
             </a>
           </FooterList>
         </MiniSectionWrapper>

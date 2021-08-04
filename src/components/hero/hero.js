@@ -11,7 +11,7 @@ function Hero() {
         alt="heroimageofwoman"
         placeholder="blur"
         blurDataURL={heroImg}
-        priority="true"
+        priority
       />
       <Container>
         <Title>REINVENTING BEAUTY ON DEMAND</Title>

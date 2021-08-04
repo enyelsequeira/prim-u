@@ -94,6 +94,7 @@ export const Button = styled.button`
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.white};
   transition: all 0.3s;
+  padding: ${(props) => (props.extra ? "1rem 2rem" : "")};
   cursor: pointer;
   @media screen and (max-width: 640px) {
     width: 100%;
