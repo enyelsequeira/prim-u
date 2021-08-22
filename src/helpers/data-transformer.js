@@ -12,6 +12,7 @@ export const dataTransformer = (fetchData) => {
   const allQuestions = [];
 
   fetchData.items.map((entry) => {
+    // console.log(entry);
     if (entry.fields.id) {
       services.push(entry);
     } else if (entry.fields.faqTitle) {
@@ -22,7 +23,7 @@ export const dataTransformer = (fetchData) => {
       bigCards.push(entry);
     } else if (entry.fields.name) {
       reviews.push(entry);
-    } else if (entry.fields.title === "For Costumers") {
+    } else if (entry.fields.title === "For Custumers") {
       banner.push(entry);
     } else if (entry.fields.footerTittle) {
       footerData.push(entry);

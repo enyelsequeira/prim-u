@@ -1,6 +1,7 @@
 import { BannerCard, Main } from "./banner.styles";
 
 function Banner({ data }) {
+  console.log(data);
   return (
     <Main>
       <BannerCard

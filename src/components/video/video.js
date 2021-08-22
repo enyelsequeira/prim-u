@@ -17,7 +17,7 @@ function Video() {
           <p>Prim-u make up</p>
         </VideoElement>
         <Button as="a" href="https://www.prim-u.app/en/list" target="_blank" rel="noreferrer">
-          book a make up
+          BOOK AN APPOINTMENT
         </Button>
         <Button
           extra

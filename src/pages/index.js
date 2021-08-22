@@ -30,9 +30,9 @@ export default function Home({
   footerData,
   freelancersSalons,
   beautyProducts,
+  data,
   allQuestions,
 }) {
-  const { cQuestions, pQuestions } = filterQuestions(allQuestions);
   return (
     <BaseLayout>
       <Head>
@@ -54,10 +54,6 @@ export default function Home({
       <Platform />
       <Video />
       <Divider />
-      {/* <Reviews data={reviews} />
-      <Divider />
-      <Products data={beautyProducts} />
-      <Divider /> */}
 
       <Accordion
         data={faqQuestions}
