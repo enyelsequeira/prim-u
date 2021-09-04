@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <FooterSection px={[20, 20, 40, 40, "0px"]}>
+    <FooterSection px={[20, 20, 40, 40, "0px"]} id="contacts">
       <MiniSectionWrapper>
         <FooterTitles condensed fontSize="18px" lineHeight="sub">
           Prim-U app © {new Date().getFullYear()}{" "}

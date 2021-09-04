@@ -15,9 +15,11 @@ import {
   Reviews,
   Services,
   Video,
+  Regulations,
+  SubscribeSection,
 } from "../components";
 import { Divider } from "../components/global-components";
-import { dataTransformer, filterQuestions } from "../helpers/data-transformer";
+import { dataTransformer } from "../helpers/data-transformer";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -25,13 +27,9 @@ export default function Home({
   faqQuestions,
   partnersQuestions,
   bigCards,
-  reviews,
   banner,
   footerData,
   freelancersSalons,
-  beautyProducts,
-  data,
-  allQuestions,
 }) {
   return (
     <BaseLayout>
@@ -43,6 +41,7 @@ export default function Home({
           content="welcome to our beauty service providing the best products and services out there"
         />
       </Head>
+
       <NavBar />
       <Hero />
       <Banner data={banner} />
@@ -65,6 +64,7 @@ export default function Home({
       <Divider />
 
       <FooterBanner data={footerData} />
+      <SubscribeSection />
       <Footer />
     </BaseLayout>
   );

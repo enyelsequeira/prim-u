@@ -11,3 +11,5 @@ export { default as Products } from "./products/products";
 export { default as Reviews } from "./reviews/reviews";
 export { default as Services } from "./services/services";
 export { default as Video } from "./video/video";
+export { default as SubscribeSection } from "./susbcribe/subscribe";
+export { default as Regulations } from "./regulations/regulations";

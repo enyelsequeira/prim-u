@@ -1,7 +1,7 @@
+// import Regulations from "../regulations/regulations";
 import { BannerCard, Main } from "./banner.styles";
 
 function Banner({ data }) {
-  console.log(data);
   return (
     <Main>
       <BannerCard
@@ -12,6 +12,7 @@ function Banner({ data }) {
         href={data[0].fields.link}
         buttonText="Make a Booking"
       />
+      {/* <Regulations /> */}
     </Main>
   );
 }

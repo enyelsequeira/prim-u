@@ -49,9 +49,14 @@ const FooterBanner = ({ data }) => {
           as="a"
           href="https://www.instagram.com/prim_uapp/"
           target="_blank"
-          rel="noreferrer"
-          fontSize={[24]}>
-          Subscribe
+          rel="noreferrer">
+          <Image src="/images/instagram.svg" width="59" height="50" />
+          <GlobalTitle
+            fontSize={[34, 39, 39, 50]}
+            lineHeight={["small", "small", "small", "large"]}
+            marginLeft="20px">
+            Prim_U app
+          </GlobalTitle>
         </Subscribe>
       </InfoWrapper>
     </FooterBannerContainer>

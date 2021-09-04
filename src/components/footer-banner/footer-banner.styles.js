@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { fontSize, lineHeight, space, width } from "styled-system";
-import { ShowMore } from "../accordion/accordion.styles";
 import { GlobalSection, GlobalSubtitle } from "../global-components";
 
 export const FooterBannerContainer = styled(GlobalSection)`
@@ -51,23 +50,26 @@ export const InfoText = styled(GlobalSubtitle)`
   width: 100%;
 `;
 
-export const Subscribe = styled(ShowMore)`
-  position: relative;
-  display: grid;
+export const Subscribe = styled.div`
+  display: flex;
+  flex-direction: row;
+  font-family: ${({ theme }) => theme.fonts.condensed};
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+  color: ${({ theme }) => theme.colors.purple};
+  text-transform: uppercase;
   place-items: center;
-  && {
-    align-self: flex-start;
-  }
+
   margin-top: 60px;
   ${width}
   ${space}
   ${fontSize}
-  ${lineHeight}
+  ${lineHeight} 
   @media only screen and (max-width: 768px) {
-    margin: auto;
     margin-top: 40px;
     && {
-      align-self: center;
+      align-self: flex-start;
     }
   }
 `;

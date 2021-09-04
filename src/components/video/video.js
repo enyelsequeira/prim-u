@@ -19,14 +19,6 @@ function Video() {
         <Button as="a" href="https://www.prim-u.app/en/list" target="_blank" rel="noreferrer">
           BOOK AN APPOINTMENT
         </Button>
-        <Button
-          extra
-          as="a"
-          href="https://mailchi.mp/1675bc26d60d/subscribe"
-          target="_blank"
-          rel="noreferrer">
-          Subscribe to us
-        </Button>
       </Container>
     </Main>
   );

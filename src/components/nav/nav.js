@@ -45,6 +45,9 @@ function NavBar() {
           <NavLink as="a" href="#faq">
             FAQ
           </NavLink>
+          <NavLink as="a" href="#contacts">
+            CONTACTS
+          </NavLink>
         </NavLinks>
       </NavContainer>
     </Nav>
