@@ -9,7 +9,7 @@ const SubscribeSection = () => {
       </GlobalTitle>
       <SubscribeBtn
         as="a"
-        href="https://www.instagram.com/prim_uapp/"
+        href="https://mailchi.mp/1675bc26d60d/subscribe"
         target="_blank"
         rel="noreferrer"
         fontSize={[24]}>
