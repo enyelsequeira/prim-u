@@ -5,7 +5,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
     <Script 
     strategy='lazyOnload'
-    src={`https://www.googletagmanager.com/gtag/js?id=AW-788075148`}/>
+    src={'https://www.googletagmanager.com/gtag/js?id=AW-788075148'}/>
   
     <Script 
       strategy='lazyOnload'>
