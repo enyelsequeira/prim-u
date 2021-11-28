@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import {
   LogoContainer,
   LogoIcon,
@@ -17,19 +18,21 @@ function NavBar() {
     if (window.scrollY > 60) setLightNav(true);
     else setLightNav(false);
   }
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
 
   return (
-    <Nav isOpen={isOpen} lightNav={lightNav}>
+    <Nav isOpen={isOpen} lightNav={lightNav} color={lightNav ? "secondary" : "primary"}>
       <NavContainer>
-        <LogoContainer href="#">
-          <LogoIcon />
-          <LogoTitle>PRIM–U</LogoTitle>
-        </LogoContainer>
+        <Link href="/">
+          <LogoContainer>
+            <LogoIcon />
+            <LogoTitle>PRIM–U</LogoTitle>
+          </LogoContainer>
+        </Link>
+
         <NavIcon onClick={() => setIsOpen(!isOpen)} />
         <NavLinks>
           <NavLink as="a" href="https://www.prim-u.app/en/list" target="_blank" rel="noreferrer">
@@ -42,10 +45,10 @@ function NavBar() {
             rel="noreferrer">
             WORK WITH US
           </NavLink>
-          <NavLink as="a" href="#faq">
+          <NavLink as="a" href="/#faq">
             FAQ
           </NavLink>
-          <NavLink as="a" href="#contacts">
+          <NavLink as="a" href="/#contacts">
             CONTACTS
           </NavLink>
         </NavLinks>

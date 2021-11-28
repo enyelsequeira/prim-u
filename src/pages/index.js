@@ -20,6 +20,7 @@ import {
 } from "../components";
 import { Divider } from "../components/global-components";
 import { dataTransformer } from "../helpers/data-transformer";
+import { getAllPolicies } from "../helpers/mdx";
 import BaseLayout from "../layouts/base";
 
 export default function Home({
@@ -30,6 +31,7 @@ export default function Home({
   banner,
   footerData,
   freelancersSalons,
+  policies,
 }) {
   return (
     <BaseLayout>
@@ -65,7 +67,7 @@ export default function Home({
 
       <FooterBanner data={footerData} />
       <SubscribeSection />
-      <Footer />
+      <Footer policies={policies} />
     </BaseLayout>
   );
 }
@@ -90,6 +92,7 @@ export async function getStaticProps() {
     allQuestions,
   } = dataTransformer(res);
 
+  const policies = await getAllPolicies();
   return {
     props: {
       data: res.items,
@@ -103,6 +106,7 @@ export async function getStaticProps() {
       freelancersSalons,
       beautyProducts,
       allQuestions,
+      policies,
     },
   };
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   FooterList,
   FooterSection,
@@ -6,7 +7,7 @@ import {
   RightSection,
 } from "./footer.styles";
 
-const Footer = () => {
+const Footer = ({ policies }) => {
   return (
     <FooterSection px={[20, 20, 40, 40, "0px"]} id="contacts">
       <MiniSectionWrapper>
@@ -14,26 +15,21 @@ const Footer = () => {
           Prim-U app © {new Date().getFullYear()}{" "}
         </FooterTitles>
         <FooterList>
-          <a href="https://prim-u.com/" target="_blank" rel="noreferrer">
-            {" "}
-            PRIM-U App
-          </a>
+          <Link href="/">
+            <a> PRIM-U App</a>
+          </Link>
         </FooterList>
-        <FooterList>
-          <a href="https://prim-u.com/privacy-policy/" target="_blank" rel="noreferrer">
-            PRIM-U Privacy Policy
-          </a>
-        </FooterList>
-        <FooterList>
-          <a href="https://prim-u.com/ucg-policy/" target="_blank" rel="noreferrer">
-            Prim-U User Generated Content Policy
-          </a>
-        </FooterList>
-        <FooterList>
-          <a href="https://prim-u.com/terms-of-use/" target="_blank" rel="noreferrer">
-            Prim-U Website Terms of Use
-          </a>
-        </FooterList>
+
+        {policies &&
+          policies.map((policy) => {
+            return (
+              <FooterList>
+                <Link href={`/policies/${policy.slug}`}>
+                  <a>{policy.title}</a>
+                </Link>
+              </FooterList>
+            );
+          })}
       </MiniSectionWrapper>
 
       <RightSection>
