@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 import styled, { css } from "styled-components";
-import { fontSize, lineHeight, space, textAlign, width } from "styled-system";
+import { fontSize, lineHeight, space, textAlign, typography, width } from "styled-system";
 
 export const GlobalWrapper = styled.main`
   max-width: 1440px;
@@ -156,5 +156,90 @@ export const GlobalButton = styled.a`
   &:hover {
     background: ${(props) => props.theme.colors.purple};
     color: ${(props) => props.theme.colors.white};
+  }
+`;
+
+export const PageWrapper = styled.div`
+  margin: 5vw 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 767.69px) {
+    margin: 10vw 0;
+  }
+`;
+
+export const PageTitles = styled.div`
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+
+  ${space}
+  ${typography}
+  ${width}
+`;
+
+export const PageTitle = styled.h1`
+  ${space}
+  ${fontSize}
+  ${typography}
+  ${width}
+   font-family: ${(props) => props.theme.fonts.roboto};
+  color: ${(props) => props.theme.colors.purple};
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  @media screen and (max-width: 767.69px) {
+  }
+`;
+
+export const InfoWrapper = styled.div`
+  width: ${(props) => (props.body ? "90%" : "80%")};
+  margin: 1rem auto;
+  display: flex;
+  padding: ${(props) => (props.body ? "0 2rem" : "")};
+  flex-direction: column;
+  @media screen and (max-width: 767.69px) {
+    width: 100%;
+    padding: 0.4rem;
+  }
+`;
+
+export const Information = styled.p`
+  ${space}
+  ${fontSize}
+  ${typography}
+  ${width}
+   font-family: ${(props) => props.theme.fonts.condensed};
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+`;
+
+export const List = styled.ul`
+  list-style-type: circle !important;
+`;
+
+export const ListItem = styled.li`
+  ${space}
+  ${fontSize}
+  ${typography}
+  ${width}
+   font-family: ${(props) => props.theme.fonts.condensed};
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  list-style: circle !important;
+  text-align: justify;
+`;
+
+export const Table = styled.table`
+  border: 1px solid black;
+  border-collapse: collapse;
+  td {
+    border: 1px solid black;
   }
 `;

@@ -1,5 +1,16 @@
 import styled, { css } from "styled-components";
 
+const handleColorType = (color) => {
+  switch (color) {
+    case "primary":
+      return "#FFFFFF";
+    case "secondary":
+      return "#000000";
+    default:
+      return "#fff";
+  }
+};
+
 export const Nav = styled.nav`
   --padding: ${(props) => (props.isOpen ? "45px" : 0)};
   --opacity: ${(props) => (props.isOpen ? 1 : 0)};
@@ -7,9 +18,9 @@ export const Nav = styled.nav`
   --maxheight: ${(props) => (props.isOpen ? "100vh" : 0)};
   --color: ${(props) =>
     props.isOpen || props.lightNav ? props.theme.colors.black : props.theme.colors.white};
-  --colour: ${(props) => (props.lightNav ? props.theme.colors.black : props.theme.colors.white)};
-  --bgColor: ${(props) =>
-    props.isOpen || props.lightNav ? props.theme.colors.white : "transparent"};
+  --colour: ${({ color }) => handleColorType(color)};
+
+  --bgColor: ${(props) => (props.isOpen || props.lightNav ? props.theme.colors.white : "black")};
   ${(props) =>
     props.isOpen || props.lightNav
       ? css`
@@ -35,8 +46,9 @@ export const Nav = styled.nav`
   max-width: 1440px;
   max-height: 80px;
   padding: ${(props) => (props.lightNav ? "15px 4vw 20px" : "20px 4vw")};
-  background-color: ${(props) => (props.lightNav ? props.theme.colors.white : "transparent")};
+  background-color: ${(props) => (props.lightNav ? props.theme.colors.white : "black")};
   transition: all 0.2s, background 0.3s 0.05s, padding-bottom 0.3s;
+
   @media screen and (max-width: 767.9px) {
     background-color: transparent;
     max-height: 100vh;
