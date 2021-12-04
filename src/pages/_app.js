@@ -4,9 +4,11 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import Theme from "../styles/theme/theme";
 import * as gtag from "../../lib/gtag";
+import { UseIsWindow } from "../hooks/use-is-window";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  UseIsWindow();
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url);
@@ -20,13 +22,9 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <Theme>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-      />
+      <Script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`} />
       <Script
         id="gtag-init"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];

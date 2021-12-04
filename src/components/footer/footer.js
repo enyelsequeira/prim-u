@@ -38,12 +38,13 @@ const Footer = ({ policies }) => {
             Contact us
           </FooterTitles>
           <FooterList>
-            <a href="mailto:info@prim-u.com<"> info@prim-u.com</a>
+            <a href="mailto:info@prim-u.com" target="_blank" rel="noreferrer">
+              {" "}
+              info@prim-u.com
+            </a>
           </FooterList>
           <FooterList>
-            <a href="tel=+27-0600703045" target="_blank" rel="noreferrer">
-              +27-0600703045
-            </a>
+            <a href="tel:+27-0600703045">+27-0600703045</a>
           </FooterList>
         </MiniSectionWrapper>
 
