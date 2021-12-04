@@ -74,8 +74,8 @@ export default function Home({
 
 export async function getStaticProps() {
   const client = createClient({
-    space: process.env.CONTENTFULSPACE,
-    accessToken: process.env.ACCESS_TOKEN,
+    space: process.env.NEXT_PUBLIC_CONTENTFULSPACE,
+    accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
   });
   const res = await client.getEntries();
 
