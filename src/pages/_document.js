@@ -60,7 +60,7 @@ export default class MyDocument extends Document {
 
           {/* google ad script added */}
           <Script
-            data-ad-client="UA-12247593-1"
+            data-ad-client="UA-122475935-1"
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
@@ -68,7 +68,7 @@ export default class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `
                (adsbygoogle = window.adsbygoogle || []).push({
-                   google_ad_client: "UA-12247593-1",
+                   google_ad_client: "UA-122475935-1",
                    enable_page_level_ads: true
               });
                 `,
