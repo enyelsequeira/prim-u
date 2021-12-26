@@ -1,13 +1,12 @@
 /* eslint-disable prettier/prettier */
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+// import { useEffect } from "react";
+// import { useRouter } from "next/router";
 import Theme from "../styles/theme/theme";
-import * as gtag from "../../lib/gtag";
+// import * as gtag from "../../lib/gtag";
 import { UseIsWindow } from "../hooks/use-is-window";
 
 export default function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-  // UseIsWindow();
+  UseIsWindow();
   // useEffect(() => {
   //   const handleRouteChange = (url) => {
   //     gtag.pageview(url);
