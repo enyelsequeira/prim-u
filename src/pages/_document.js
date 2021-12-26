@@ -58,6 +58,22 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
+          {/* testing this out moving this part from the app */}
+
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-177884234-1" />
+          <Script
+            id="gtag-init"
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-177884234-1', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
           {/* google ad script added */}
           <Script
             data-ad-client="UA-122475935-1"
