@@ -6,11 +6,12 @@ import path from "path";
 import MDXComponents from "../../components/mdx-components";
 import { getAllPolicies, policiesFilePaths, PoliciesPath } from "../../helpers/mdx";
 import PoliciesLayout from "../../layouts/policies-layout";
+import styles from "./policies.module.css";
 
 export default function PoliciesPages({ source, frontMatter }) {
   return (
     <PoliciesLayout data={frontMatter}>
-      <main>
+      <main className={`${styles["privacy-policy"]}`}>
         <MDXRemote {...source} components={MDXComponents} />
       </main>
     </PoliciesLayout>
