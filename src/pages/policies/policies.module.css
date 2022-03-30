@@ -1,0 +1,28 @@
+.privacy-policy > h1 {
+  font-size: 4rem;
+  line-height: 35px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+.privacy-policy > hr:nth-child(2) {
+  margin-bottom: 7px;
+}
+
+.privacy-policy > hr:nth-child(3) {
+  margin-bottom: 70px;
+}
+
+.privacy-policy > p {
+  font-size: 2rem;
+  line-height: 33px;
+  margin: 15px 0;
+}
+
+.privacy-policy > p > strong {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 33px;
+}
