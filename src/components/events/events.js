@@ -17,8 +17,9 @@ const Events = ({ data }) => {
               src={`https:${card.fields.servicesImages.fields.file.url}`}
               title={card.fields.bigCardsTitle}
               text={[card.fields.description.content[0].content[0].value]}
-              buttonText="Make a Booking"
-              href="https://www.prim-u.app/en/list"
+              buttonText="Our Products & Services"
+              href="
+              https://claudiazammar02.wixsite.com/primu/products"
               altImageName={card.fields.servicesImages.fields.title}
             />
           );

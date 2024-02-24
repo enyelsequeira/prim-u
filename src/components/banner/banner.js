@@ -10,7 +10,7 @@ function Banner({ data }) {
         altImageName={data[0].fields.images[0].fields.title}
         banner={data[0].fields.description}
         href={data[0].fields.link}
-        buttonText="Make a Booking"
+        buttonText="Our Product & Services"
       />
       {/* <Regulations /> */}
     </Main>

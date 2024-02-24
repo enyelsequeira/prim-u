@@ -2,7 +2,7 @@
   "name": "nextjs-ts-starter",
   "version": "0.1.0",
   "scripts": {
-    "dev": "next dev",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --ext js,ts,jsx,tsx"
