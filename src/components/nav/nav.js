@@ -71,7 +71,7 @@ function NavBar() {
             as="a"
             target="_blank"
             rel="noreferrer"
-            href="/https://ludovicacivai5.wixsite.com/prim---u/blank-4">
+            href="https://ludovicacivai5.wixsite.com/prim---u/blank-4">
             CONTACTS
           </NavLink>
         </NavLinks>
