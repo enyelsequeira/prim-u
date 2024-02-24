@@ -67,7 +67,11 @@ function NavBar() {
             {" "}
             BLOG
           </NavLink>
-          <NavLink as="a" href="/#contacts">
+          <NavLink
+            as="a"
+            target="_blank"
+            rel="noreferrer"
+            href="/https://ludovicacivai5.wixsite.com/prim---u/blank-4">
             CONTACTS
           </NavLink>
         </NavLinks>
