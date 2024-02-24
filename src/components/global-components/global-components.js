@@ -5,7 +5,7 @@ import { fontSize, lineHeight, space, textAlign, typography, width } from "style
 export const GlobalWrapper = styled.main`
   max-width: 1440px;
   width: 100%;
-  margin: auto; ;
+  margin: auto;
 `;
 
 export const GlobalSection = styled.section`
@@ -151,7 +151,8 @@ export const GlobalButton = styled.a`
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
-  width: 235px;
+  max-width: 315px;
+  width: 100%;
   height: 60px;
   &:hover {
     background: ${(props) => props.theme.colors.purple};

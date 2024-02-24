@@ -35,8 +35,19 @@ function NavBar() {
 
         <NavIcon onClick={() => setIsOpen(!isOpen)} />
         <NavLinks>
-          <NavLink as="a" href="https://www.prim-u.app/en/list" target="_blank" rel="noreferrer">
-            MAKE A BOOKING
+          <NavLink
+            as="a"
+            href="https://claudiazammar02.wixsite.com/primu/about-prim-u-for-u"
+            target="_blank"
+            rel="noreferrer">
+            PRIM-U FOR-U
+          </NavLink>
+          <NavLink
+            as="a"
+            href="https://claudiazammar02.wixsite.com/primu/sustainability"
+            target="_blank"
+            rel="noreferrer">
+            SUSTAINABILITY
           </NavLink>
           <NavLink
             as="a"
@@ -47,6 +58,14 @@ function NavBar() {
           </NavLink>
           <NavLink as="a" href="/#faq">
             FAQ
+          </NavLink>
+          <NavLink
+            as="a"
+            target="_blank"
+            rel="noreferrer"
+            href="https://claudiazammar02.wixsite.com/primu/blog">
+            {" "}
+            BLOG
           </NavLink>
           <NavLink as="a" href="/#contacts">
             CONTACTS
